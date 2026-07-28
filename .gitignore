@@ -1,0 +1,15 @@
+*.wav
+*.aiff
+*.flac
+*~
+#*
+*.pdf
+*.midi
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+venv/
+__pycache__/
+*.pyc
