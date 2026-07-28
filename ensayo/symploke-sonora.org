@@ -1,0 +1,53 @@
+#+TITLE: Hacia una Ontología Materialista de la Música desde la Experiencia Vital
+#+SUBTITLE: Filosofía, sonido y soberanía tecnológica — Postulación como Sabedor ante el Grupo Tántalo
+#+AUTHOR: Rigel Valencia Osorio, hijo de Beatriz y Guillermo
+#+DATE: Julio de 2026
+#+LANGUAGE: es
+#+OPTIONS: toc:t num:t
+#+STARTUP: customid
+
+# ============================================================
+# CONFIGURACIÓN PARA EXPORTACIÓN A PDF (estilo ensayo amplio)
+# ============================================================
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [14pt, a4paper]
+#+LATEX_HEADER: \usepackage[utf8]{inputenc}
+#+LATEX_HEADER: \usepackage[T1]{fontenc}
+#+LATEX_HEADER: \usepackage[spanish,es-tabla]{babel}
+#+LATEX_HEADER: \usepackage{libertine}
+#+LATEX_HEADER: \usepackage{libertinust1math}
+#+LATEX_HEADER: \usepackage{inconsolata}
+#+LATEX_HEADER: \usepackage{textalpha}
+#+LATEX_HEADER: \usepackage{textcomp}
+#+LATEX_HEADER: \usepackage{geometry}
+#+LATEX_HEADER: \geometry{a4paper, left=3.5cm, right=3cm, top=3cm, bottom=3cm}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhf{}
+#+LATEX_HEADER: \fancyhead[LE,RO]{\large\thepage}
+#+LATEX_HEADER: \fancyhead[RE]{\large\nouppercase{\leftmark}}
+#+LATEX_HEADER: \fancyhead[LO]{\large\nouppercase{\rightmark}}
+#+LATEX_HEADER: \renewcommand{\headrulewidth}{0.4pt}
+#+LATEX_HEADER: \usepackage{titlesec}
+#+LATEX_HEADER: \titleformat{\section}{\normalfont\Huge\bfseries}{\thesection}{1em}{}
+#+LATEX_HEADER: \titleformat{\subsection}{\normalfont\LARGE\bfseries}{\thesubsection}{1em}{}
+#+LATEX_HEADER: \titleformat{\subsubsection}{\normalfont\Large\bfseries}{\thesubsubsection}{1em}{}
+#+LATEX_HEADER: \usepackage{setspace}
+#+LATEX_HEADER: \onehalfspacing
+#+LATEX_HEADER: \usepackage{indentfirst}
+#+LATEX_HEADER: \setlength{\parindent}{1.5em}
+#+LATEX_HEADER: \setlength{\parskip}{0.6em plus 0.2em minus 0.2em}
+#+LATEX_HEADER: \usepackage{microtype}
+#+LATEX_HEADER: \usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+
+* Resumen Ejecutivo
+  :PROPERTIES:
+  :CUSTOM_ID: resumen
+  :END:
+
+El presente documento constituye una postulación como Sabedor ante el
+Grupo de Investigación Tántalo del Departamento de Filosofía de la
+Universidad de Caldas.
+
+[El contenido completo del ensayo se irá añadiendo en commits sucesivos.]
