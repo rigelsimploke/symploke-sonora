@@ -1,0 +1,242 @@
+#+TITLE: Defensa Oral — Sabedor en Filosofía de la Música
+#+SUBTITLE: Hacia una Ontología Materialista de la Música desde la Experiencia Vital
+#+AUTHOR: Rigel Valencia Osorio
+#+DATE: Julio de 2026
+#+OPTIONS: toc:nil num:nil
+
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js@5.0.4
+#+REVEAL_THEME: black
+#+REVEAL_TRANS: slide
+#+REVEAL_PLUGINS: (markdown notes zoom)
+#+REVEAL_EXTRA_CSS: .reveal h1 { color: #D4AC0D; text-shadow: 2px 2px 4px #000; } .reveal h2 { color: #922B21; } .reveal blockquote { background: rgba(26, 82, 118, 0.3); border-left: 4px solid #1A5276; padding: 1em; } .reveal .small { font-size: 0.7em; } .reveal .highlight { color: #D4AC0D; font-weight: bold; }
+
+* Portada
+
+#+REVEAL: split
+
+#+BEGIN_EXPORT html
+<div style="background: url('file:///home/spock/Documents/symploke-sonora/img/column.jpg') center/cover no-repeat; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-shadow: 2px 2px 8px #000; padding: 2em;">
+  <h1 style="color:#D4AC0D; font-size: 2.2em; margin-bottom: 0.3em;">Hacia una Ontología Materialista de la Música</h1>
+  <h2 style="color:#922B21; font-size: 1.3em; margin-bottom: 1em;">desde la Experiencia Vital</h2>
+  <p style="font-size: 1em;">Rigel Valencia Osorio — Julio de 2026</p>
+  <p style="font-size: 0.85em; font-style:italic; max-width: 70%; margin-top: 1em;">Postulación como Sabedor — Grupo Tántalo, Departamento de Filosofía, Universidad de Caldas</p>
+</div>
+#+END_EXPORT
+
+* Mi posición ante este tribunal
+
+#+REVEAL: split
+
+# Mi posición
+
+Soy filolaico. La materia es discontinua.
+
+No vengo a pedir un título. Vengo a proponer un programa de investigación.
+
+La música no es un lenguaje: es una realidad ontológica que se manifiesta en tres géneros de materialidad ($M_1$, $M_2$, $M_3$) que se entrelazan (*symploké*) sin confundirse.
+
+Mi tradición es el materialismo filosófico de la Escuela de Toledo. La de ustedes, mayoritariamente, la Teoría Crítica de Frankfurt.
+
+No aspiro a convertir a nadie. Aspiro a demostrar que el 15% también produce conocimiento riguroso.
+
+* El problema
+
+#+REVEAL: split
+
+# La música no es un lenguaje
+
+> «De lo que no se puede hablar, mejor es callar.» — Wittgenstein
+
+La música no dice nada: lo muestra todo.
+
+El lenguaje se funda en $M_3$ (concepto). La música se funda en $M_1$ (vibración).
+
+Un niño tararea sin saber qué es una escala. La música no requiere concepto para existir.
+
+* Los tres pilares
+
+#+REVEAL: split
+
+# Tres pilares del pluralismo
+
+## Gustavo Bueno
+
+| Pilar | Concepto |
+|-------|----------|
+| **Symploké** (συμπλοκή) | Entrelazamiento sin fusión |
+| **Discontinuidad** | La materia no es una unidad |
+| **No-monismo** | Ni idealismo ni materialismo grosero |
+
+* Tres pilares — Diagrama
+
+#+REVEAL: split
+
+#+ATTR_REVEAL: :width 65%
+[[file:///home/spock/Documents/symploke-sonora/img/tres_pilares.png]]
+
+* Tres géneros de materialidad
+
+#+REVEAL: split
+
+# $M_1$, $M_2$, $M_3$ — Vicente Chuliá
+
+- $M_1$: Materia física (ondas, instrumentos, aire que vibra)
+- $M_2$: Percepción (oído, cuerpo, sensaciones propioceptivas)
+- $M_3$: Concepto (teoría, partitura, código)
+
+$$M_i \subset E \subset M$$
+
+* Volumen Tridimensional — Chuliá
+
+#+REVEAL: split
+
+# Coordenadas XYZ de la música
+
+#+BEGIN_EXPORT html
+<iframe src="file:///home/spock/Documents/symploke-sonora/img/coordenadas_xyz_interactivo.html" 
+        width="100%" height="500px" 
+        frameborder="0" 
+        style="background:#1a1a2e; border-radius:8px;">
+</iframe>
+#+END_EXPORT
+
+* Pitágoras vs. Filolao
+
+#+REVEAL: split
+
+# El debate fundacional (s. V a.C.)
+
+| Pitágoras (monismo) | Filolao (no-monismo) |
+|---------------------|---------------------|
+| El número explica la música | Número y música son géneros distintos |
+| Unidad abstracta | Límites e ilimitados |
+
+## Soy filolaico. La materia es discontinua.
+
+* Monocordio — Proporciones
+
+#+REVEAL: split
+
+#+ATTR_REVEAL: :width 75%
+[[file:///home/spock/Documents/symploke-sonora/img/monocordio_pitagoras.png]]
+
+* Genealogía del saber musical
+
+#+REVEAL: split
+
+# De Guido a Xenakis
+
+1. Guido de Arezzo (c. 1026) — Notación musical
+2. Fux (1725) — Contrapunto
+3. Rameau (1722) — Armonía como ciencia
+4. Schoenberg (1923) — Dodecafonismo
+5. Babbitt (1958) — Time-point system
+6. Xenakis (1954) — Música estocástica
+
+La academia siempre se resiste al cambio de paradigma (Kuhn, Mejía Rivera).
+
+* Quadrivium
+
+#+REVEAL: split
+
+# Quadrivium y tecnología
+
+Aritmética → Geometría → Música → Astronomía
+
+En la era del silicio: SuperCollider + Emacs + LilyPond + R
+
+El software libre como resistencia.
+
+* Fourier y los armónicos
+
+#+REVEAL: split
+
+#+ATTR_REVEAL: :width 85%
+[[file:///home/spock/Documents/symploke-sonora/img/fourier_armonicos.png]]
+
+* Ligeti y los metrónomos
+
+#+REVEAL: split
+
+#+ATTR_REVEAL: :width 85%
+[[file:///home/spock/Documents/symploke-sonora/img/ligeti_metronomos.png]]
+
+* Xenakis — Paraboloide hiperbólico (Interactivo)
+
+#+REVEAL: split
+
+# La geometría del sonido
+
+## Pabellón Philips (1958) = Metastaseis (1954)
+
+#+BEGIN_EXPORT html
+<iframe src="xenakis_paraboloide.html" 
+        width="100%" height="500px" 
+        frameborder="0" 
+        style="background:#1a1a2e; border-radius:8px;">
+</iframe>
+#+END_EXPORT
+
+* La música no es un lenguaje
+
+#+REVEAL: split
+
+# Wittgenstein y el límite
+
+> «La música es, en cierto sentido, el arte más profundo. Porque no dice nada, pero lo dice todo.» — Wittgenstein
+
+El lenguaje se funda en $M_3$. La música se funda en $M_1$.
+
+* Mi praxis
+
+#+REVEAL: split
+
+# Ecología de herramientas libres
+
+SuperCollider + Csound + FoxDot + Hydrogen + Ardour + LSP + AMS + JackControl + Emacs/Lisp + LilyPond + R + Bash
+
+Cada programa es un género discontinuo. Entrelazados (*symploké*), producen una totalidad que ninguno podría producir por separado.
+
+* Frankfurt vs. Toledo
+
+#+REVEAL: split
+
+# Dos escuelas, dos ontologías
+
+| Eje | Frankfurt | Toledo |
+|-----|-----------|--------|
+| Fundamento | Acción comunicativa (Habermas) | Eutaxia (Bueno) |
+| Música | Industria cultural (Adorno) | Ontología materialista (Chuliá) |
+| Sujeto | Ciudadano comunicativo | Sujeto operatorio corporal |
+
+No pido que abandonen Frankfurt. Pido que reconozcan que Toledo también produce conocimiento.
+
+* Petición
+
+#+REVEAL: split
+
+# Lo que propongo
+
+No pido un título. Propongo un programa de investigación.
+
+- **Preparación especial:** Formación musical y filosófica
+- **Preparación empírica:** Territorios sin Estado, músicos naturales, Resistencia Cultural
+- **Preparación técnica:** Ecología de software libre, composición algorítmica
+
+Que un comité curricular evalúe mi trayectoria y trace una ruta formativa continua.
+
+* Cierre
+
+#+REVEAL: split
+
+# Cierre
+
+> «La dificultad del camino recorrido no es un obstáculo, sino el método mismo del conocimiento auténtico.» — Estanislao Zuleta
+
+> «Sin la música, ninguna disciplina puede ser perfecta, porque nada existe sin ella.» — San Isidoro de Sevilla
+
+---
+
+Rigel Valencia Osorio
+Ῥίγελ Οὐαλένθιος Ὀσώριος
+Julio de 2026

@@ -1581,22 +1581,128 @@ armónica. Su *Traité de l'harmonie* (1722) no es un manual de
 composición: es un intento de reducir la música a principios
 naturales.
 
-Rameau partió de una observación empírica: la serie de armónicos.
-Todo sonido contiene en sí mismo una serie de frecuencias secundarias
-—los armónicos— que determinan su timbre. Esa serie no es arbitraria:
-sigue proporciones matemáticas fijas. La armonía no es una convención
+Partió de una observación empírica: la serie de armónicos. Todo sonido
+contiene en sí mismo una serie de frecuencias secundarias —los
+armónicos— que determinan su timbre. Esa serie no es arbitraria: sigue
+proporciones matemáticas fijas. La armonía no es una convención
 cultural: es una propiedad física del sonido. Tres conceptos resumen
 su revolución: el bajo fundamental, la inversión de los acordes y el
-acorde como unidad básica de la música.
+acorde como unidad básica de la música. El bajo fundamental es el
+principio que Rameau descubrió en 1722: toda armonía puede reducirse a
+una sucesión de acordes cuyas fundamentales se mueven por intervalos
+de quinta o tercera.
 
 Rameau fue criticado en su tiempo. Los defensores de la tradición
 contrapuntística —los "Lullystes"— lo acusaron de ser un "mero
 teórico", a pesar de que Rameau era también un gran compositor de
-óperas. La lucha entre los Lullystes y los "Rameauneurs" fue una
-lucha de paradigmas. Y como en toda lucha de paradigmas, la academia
-se resistió al cambio. Rameau no vivió para ver la aceptación plena de
-su sistema, pero su *Traité* se convirtió en la base de la enseñanza
+óperas. La lucha entre los Lullystes y los "Rameauneurs" fue una lucha
+de paradigmas. Y como en toda lucha de paradigmas, la academia se
+resistió al cambio. Rameau no vivió para ver la aceptación plena de su
+sistema, pero su *Traité* se convirtió en la base de la enseñanza
 armónica hasta nuestros días.
+
+#+BEGIN_SRC supercollider :results none
+// Rameau: bajo fundamental y enlace de acordes
+// Traité de l'harmonie, 1722 — SuperCollider, 2026
+
+s.boot;
+
+(
+// SynthDef para cada nota del acorde
+SynthDef(\rameau, { |out=0, freq=440, amp=0.08, gate=1|
+    var sig, env;
+    env = EnvGen.kr(Env.asr(0.02, 1, 0.3), gate, doneAction: 2);
+    sig = Mix.ar([
+        SinOsc.ar(freq, 0, 0.5),
+        SinOsc.ar(freq * 2, 0, 0.2),
+        SinOsc.ar(freq * 3, 0, 0.1)
+    ]);
+    sig = sig * env * amp;
+    Out.ar(out, sig!2);
+}).add;
+)
+
+(
+// Progresión de acordes según el bajo fundamental
+// I (Do mayor) -> V (Sol mayor) -> I (Do mayor)
+// Fundamentales: Do -> Sol -> Do (movimiento de quinta)
+~progresion_rameau = Routine({
+    var acordes = [
+        [60, 64, 67],  // Do mayor (C-E-G) - Tónica
+        [67, 71, 74],  // Sol mayor (G-B-D) - Dominante
+        [60, 64, 67],  // Do mayor (C-E-G) - Tónica
+        [60, 65, 69],  // La menor (A-C-E) - Subdominante relativa
+        [67, 71, 74],  // Sol mayor (G-B-D) - Dominante
+        [60, 64, 67]   // Do mayor (C-E-G) - Tónica
+    ];
+    var duraciones = [2.0, 1.5, 2.0, 1.5, 1.5, 3.0];
+
+    ("=== Rameau: bajo fundamental ===").postln;
+    acordes.do { |notas, i|
+        var nombre = switch(i,
+            0, {"I — Tónica (Do mayor)"},
+            1, {"V — Dominante (Sol mayor)"},
+            2, {"I — Tónica (Do mayor)"},
+            3, {"vi — Subdominante relativa (La menor)"},
+            4, {"V — Dominante (Sol mayor)"},
+            5, {"I — Tónica (Do mayor) — cierre"}
+        );
+        ("→ " ++ nombre).postln;
+
+        // Tocar el acorde: tres notas simultáneas
+        notas.do { |midi|
+            Synth(\rameau, [\freq, midi.midicps, \amp, 0.06]);
+        };
+
+        duraciones[i].wait;
+    };
+    ("=== El bajo fundamental organiza la armonía ===").postln;
+});
+
+~progresion_rameau.play;
+)
+#+END_SRC
+
+**** La Tensión entre Fux y Rameau: Paradigma y Dialéctica
+     :PROPERTIES:
+     :CUSTOM_ID: tension-fux-rameau
+     :END:
+
+La publicación del *Traité de l'harmonie* de Rameau en 1722 y del
+*Gradus ad Parnassum* de Fux en 1725 no fue una coincidencia: fue el
+choque de dos paradigmas. Fux representa la culminación de la
+tradición contrapuntística: la música como arte de combinar líneas
+melódicas independientes. Su método, basado en el estilo de
+Palestrina, fue utilizado por Bach, Haydn, Mozart y Beethoven como
+fundamento de su oficio. Rameau representa una nueva forma de entender
+la música: la armonía como principio fundamental, la homofonía como
+textura donde una voz principal se apoya en un acompañamiento
+acórdico.
+
+Esta tensión entre polifonía y homofonía es un ejemplo claro de lo que
+Thomas Kuhn llamó un *cambio de paradigma*. Durante siglos, el
+paradigma dominante fue el contrapunto; Rameau propuso uno nuevo. Pero
+este cambio no fue pacífico: la teoría de Rameau fue recibida con
+hostilidad por los defensores de la tradición. La lucha entre los
+"Lullystes" y los "Rameauneurs" fue una lucha de paradigmas.
+
+Desde la perspectiva hegeliana, esta lucha no es un obstáculo; es el
+motor de la historia. La tesis —la polifonía como paradigma
+dominante— genera su antítesis —la homofonía como desafío— y de esa
+contradicción surge una síntesis que no es la simple suma de ambas,
+sino una transformación del campo musical. La música del Clasicismo y
+del Romanticismo no es ni puramente polifónica ni puramente
+homofónica; es una síntesis de ambas tensiones.
+
+Así, la tensión entre Fux y Rameau no es un simple debate técnico; es
+un ejemplo de cómo el conocimiento musical avanza a través de la
+contradicción. La academia, al resistirse a las innovaciones de
+Rameau, no hizo sino poner en marcha el proceso dialéctico que, con el
+tiempo, llevaría a la aceptación de su sistema como fundamento de la
+teoría armónica moderna. Y esa misma resistencia es la que hoy
+encuentro en mi camino: la academia puede tardar en reconocer nuevos
+saberes, pero la historia demuestra que el cambio, aunque lento, es
+inevitable.
 
 **** La tecnología que los unió: el piano forte
      :PROPERTIES:
@@ -1675,12 +1781,58 @@ timbres que él organizó como quien diseña un edificio.
      :END:
 
 Mozart fue el primer compositor que intentó vivir como freelance, sin
-mecenas. Fracasó. Murió en la pobreza. Pero en ese fracaso hay una
-lección materialista: la música no es solo inspiración; es economía.
-La tecnología de Mozart era el piano forte y la orquesta, pero sobre
-todo era la ópera: un género que unificaba música, texto, escenografía
-y público. En *Don Giovanni* (1787) y *La flauta mágica* (1791),
-Mozart exploró los límites de la armonía tonal al servicio del drama.
+mecenas. Fracasó. Murió en la pobreza. Pero en sus partituras no hay
+rastro de ese fracaso: *Eine kleine Nachtmusik*, K. 525 (1787), es una
+ecuación resuelta con sonidos. Simetría, equilibrio, perfección
+formal. La tecnología de Mozart era el piano forte y la orquesta,
+pero sobre todo era la ópera: un género que unificaba música, texto,
+escenografía y público. En *Don Giovanni* (1787) y *La flauta mágica*
+(1791), exploró los límites de la armonía tonal al servicio del drama.
+
+Esta disociación entre la vida material y la obra es una lección
+ontológica. Mozart no expresaba su sufrimiento en la música —eso lo
+haría Beethoven después—: lo ocultaba bajo una superficie de
+elegancia. La materia sonora ($M_1$) no refleja necesariamente la
+materia biográfica ($M_2$). La música no es un diario íntimo: es una
+organización de vibraciones que puede ser independiente de las
+emociones de quien la produce. El idealismo romántico quiere que el
+arte exprese el alma del artista. Mozart demuestra lo contrario.
+
+#+BEGIN_SRC lilypond :file /home/spock/Documents/symploke-sonora/img/mozart_nachtmusik.png :width 600
+\version "2.24.0"
+
+\score {
+  \new StaffGroup <<
+    \new Staff {
+      \clef "treble"
+      \key g \major
+      \time 4/4
+      \partial 4
+      d''8.\p d''16 |
+      d''4 r8 d''8 e''8. d''16 d''4 |
+      r8 d''8 g''8. fis''16 e''8. d''16 c''8. b'16 |
+      a'4 r8 a'8 b'8. a'16 a'4 |
+    }
+    \new Staff {
+      \clef "bass"
+      \key g \major
+      \time 4/4
+      \partial 4
+      r4 |
+      g,1 | g, | d, | d, |
+    }
+  >>
+  \layout {
+    indent = 0
+    ragged-right = ##f
+  }
+}
+#+END_SRC
+
+#+RESULTS:
+
+#+CAPTION: W.A. Mozart — Eine kleine Nachtmusik, K. 525 (1787)
+[[file:/home/spock/Documents/symploke-sonora/img/mozart_nachtmusik.png]]
 
 **** Ludwig van Beethoven (1770-1827): la subjetividad como forma
      :PROPERTIES:
@@ -1873,6 +2025,38 @@ producía, qué efectos especiales permitía. Berlioz no preguntaba "¿qué
 significa este instrumento?", sino "¿qué puede hacer este
 instrumento?". Esa pregunta es materialista.
 
+#+BEGIN_SRC R :results output graphics :file /home/spock/Documents/symploke-sonora/img/berlioz_orquesta.png :width 900 :height 500
+library(ggplot2)
+
+orquesta <- data.frame(
+  seccion = c("Cuerdas", "Maderas", "Metales", "Percusión", "Arpas"),
+  cantidad = c(60, 10, 13, 4, 4)
+)
+
+ggplot(orquesta, aes(x = reorder(seccion, -cantidad), y = cantidad, fill = seccion)) +
+  geom_col(width = 0.6, color = "white", linewidth = 0.5) +
+  geom_text(aes(label = paste0(cantidad, " músicos")), vjust = -0.5, size = 5, fontface = "bold") +
+  scale_fill_manual(values = c(
+    "Cuerdas" = "#922B21",
+    "Maderas" = "#1A5276", 
+    "Metales" = "#D4AC0D",
+    "Percusión" = "#6C3483",
+    "Arpas" = "#117864"
+  )) +
+  labs(title = "Sinfonía Fantástica — Hector Berlioz (1830)",
+       subtitle = "Más de 90 músicos. La orquesta como laboratorio tímbrico.",
+       x = "", y = "Número de músicos") +
+  theme_minimal(base_size = 16) +
+  theme(axis.text.x = element_text(face = "bold", size = 14),
+        plot.title = element_text(face = "bold", size = 20, hjust = 0.5),
+        plot.subtitle = element_text(color = "gray40", size = 14, hjust = 0.5),
+        legend.position = "none")
+#+END_SRC
+
+#+RESULTS:
+
+#+CAPTION: Distribución de la orquesta en la Sinfonía Fantástica de Berlioz
+[[file:/home/spock/Documents/symploke-sonora/img/berlioz_orquesta.png]]
 **** Franz Liszt (1811-1886): el virtuosismo como tecnología
      :PROPERTIES:
      :CUSTOM_ID: liszt
@@ -2240,23 +2424,139 @@ $M_1$ y $M_2$. Schoenberg lo intentó. No lo logró. Pero su intento
 abrió un campo de posibilidades que compositores como Webern, Boulez
 y el propio Babbitt explorarían durante décadas.
 
+#+BEGIN_SRC supercollider :results none
+// Schoenberg: serie dodecafónica sonificada
+// Pierrot Lunaire, Op. 21 (1912) — SuperCollider, 2026
+
+s.boot;
+
+(
+// SynthDef para cada nota de la serie
+SynthDef(\serie, { |out=0, freq=440, amp=0.1, gate=1|
+    var sig, env;
+    env = EnvGen.kr(Env.perc(0.01, 0.8, 1, -4), gate, doneAction: 2);
+    sig = SinOsc.ar(freq, 0, amp) * env;
+    Out.ar(out, sig!2);
+}).add;
+)
+
+(
+// Rutina: tocar la serie en sus formas original, inversa y retrógrada
+~serie_schoenberg = Routine({
+    // Serie original P0: Do, Do#, Re, Re#, Mi, Fa, Fa#, Sol, Sol#, La, La#, Si
+    var p0 = [60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71];
+    // Inversa: espejo alrededor de la primera nota
+    var inversa = p0.collect { |n| 60 - (n - 60) };
+    // Retrógrada: la serie al revés
+    var retrograda = p0.reverse;
+
+    ("=== Schoenberg: serie dodecafónica ===").postln;
+    ("Serie original P0").postln;
+    p0.do { |n| Synth(\serie, [\freq, n.midicps, \amp, 0.08]); 0.3.wait };
+    1.wait;
+
+    ("Serie inversa").postln;
+    inversa.do { |n| Synth(\serie, [\freq, n.midicps, \amp, 0.06]); 0.3.wait };
+    1.wait;
+
+    ("Serie retrógrada").postln;
+    retrograda.do { |n| Synth(\serie, [\freq, n.midicps, \amp, 0.06]); 0.3.wait };
+    1.wait;
+
+    ("Las doce notas sin jerarquía. Ninguna subordinada a otra.").postln;
+});
+
+~serie_schoenberg.play;
+)
+#+END_SRC
+
+
+
 **** Igor Stravinsky (1882-1971): el camaleón
      :PROPERTIES:
      :CUSTOM_ID: stravinsky
      :END:
 
 Stravinsky no siguió un camino lineal: cambió de estilo como quien
-cambia de herramienta. Su *Consagración de la primavera* (1913)
-provocó un escándalo en París —el público gritaba, los bailarines no
-podían oír la orquesta— con sus ritmos violentos y sus disonancias
-politonales. Luego abrazó el neoclasicismo. Luego, ya en los años
-cincuenta, adoptó el serialismo que había rechazado durante décadas.
+cambia de herramienta. El 29 de mayo de 1913, en el Théâtre des
+Champs-Élysées de París, el público enloqueció. No era para menos: su
+*Consagración de la primavera* superponía un acorde de Mi bemol mayor
+con un Fa bemol mayor —politonalidad pura— y sus ritmos violentos
+ningún oído educado en el Romanticismo podía procesar. Los bailarines
+no oían la orquesta; Nijinsky gritaba los compases desde el lateral.
+Stravinsky escapó por una ventana trasera. La música no volvería a ser
+la misma.
 
-Stravinsky es la prueba de que la música del siglo XX no fue una línea
-recta hacia la atonalidad, sino un campo de fuerzas donde convivían
-tendencias opuestas. Su famosa frase —«la tradición no es el culto a
-las cenizas, sino la transmisión del fuego»— es un manifiesto
+Luego abrazó el neoclasicismo. Luego, ya en los años cincuenta, adoptó
+el serialismo que había rechazado durante décadas. Stravinsky es la
+prueba de que la música del siglo XX no fue una línea recta hacia la
+atonalidad, sino un campo de fuerzas donde convivían tendencias
+opuestas. Su famosa frase —«la tradición no es el culto a las
+cenizas, sino la transmisión del fuego»— es un manifiesto
 materialista: la tradición no es un museo, sino un laboratorio.
+
+#+BEGIN_SRC lilypond :file /home/spock/Documents/symploke-sonora/img/stravinsky_consagracion1.png :width 600
+\version "2.24.0"
+
+\score {
+  \new PianoStaff <<
+    \new Staff {
+      \clef "treble"
+      \time 2/4
+      <ees' g' bes' e''>8 <ees' g' bes' e''> <ees' g' bes' e''> <ees' g' bes' e''> |
+      <fes' aes' ces'' f''>8 <fes' aes' ces'' f''> <fes' aes' ces'' f''> <fes' aes' ces'' f''> |
+    }
+    \new Staff {
+      \clef "bass"
+      \time 2/4
+      <ees, ees'>8 <ees, ees'> <ees, ees'> <ees, ees'> |
+      <fes, fes'>8 <fes, fes'> <fes, fes'> <fes, fes'> |
+    }
+  >>
+  \layout {
+    indent = 0
+    ragged-right = ##f
+  }
+}
+#+END_SRC
+
+#+RESULTS:
+[[file:/home/spock/Documents/symploke-sonora/img/stravinsky_consagracion1.png]]
+
+#+CAPTION: I. Stravinsky — Acorde politonal de La consagración de la primavera (1913)
+[[file:/home/spock/Documents/symploke-sonora/img/stravinsky_consagracion.png]]
+
+#+BEGIN_SRC lilypond :file /home/spock/Documents/symploke-sonora/img/stravinsky_consagracion.png :width 600
+\version "2.24.0"
+
+\score {
+  \new PianoStaff <<
+    \new Staff {
+      \clef "treble"
+      \time 2/4
+      <ees' g' bes' e''>8 <ees' g' bes' e''> <ees' g' bes' e''> <ees' g' bes' e''> |
+      <fes' aes' ces'' f''>8 <fes' aes' ces'' f''> <fes' aes' ces'' f''> <fes' aes' ces'' f''> |
+    }
+    \new Staff {
+      \clef "bass"
+      \time 2/4
+      <ees, ees'>8 <ees, ees'> <ees, ees'> <ees, ees'> |
+      <fes, fes'>8 <fes, fes'> <fes, fes'> <fes, fes'> |
+    }
+  >>
+  \layout {
+    indent = 0
+    ragged-right = ##f
+  }
+}
+#+END_SRC
+
+#+RESULTS:
+
+#+CAPTION: I. Stravinsky — La consagración de la primavera (1913)
+[[
+file:/home/spock/Documents/symploke-sonora/img/stravinsky_consagracion.png]]
+
 
 **** La mecánica cuántica y la crisis de la certeza
      :PROPERTIES:
@@ -2319,6 +2619,36 @@ los noventa, James McCartney creó SuperCollider. La cadena es larga,
 pero el eslabón inicial está aquí: el theremin, el estudio
 electroacústico, el ordenador.
 
+#+BEGIN_SRC supercollider :results none
+// John Cage: 4'33'' (1952)
+// Tres movimientos de silencio. La música es lo que suena.
+
+s.boot;
+
+(
+~cage_433 = Routine({
+    ("=== John Cage: 4'33'' (1952) ===").postln;
+    ("Primer movimiento: 33 segundos").postln;
+    ("El compositor no controla el sonido.").postln;
+    ("Escuche el ambiente. Eso es la música.").postln;
+    33.wait;
+
+    ("Segundo movimiento: 2 minutos 40 segundos").postln;
+    ("No hay silencio. Siempre hay algo que suena.").postln;
+    160.wait;
+
+    ("Tercer movimiento: 1 minuto 20 segundos").postln;
+    ("La música no es un objeto: es un proceso.").postln;
+    80.wait;
+
+    ("Fin de 4'33''. ¿Escuchó algo?").postln;
+});
+
+~cage_433.play;
+)
+#+END_SRC
+
+
 **** György Ligeti (1923-2006): la micropolifonía
      :PROPERTIES:
      :CUSTOM_ID: ligeti-siglo-xx
@@ -2339,62 +2669,57 @@ ninguno de los metrónomos contenía por sí solo. La materia, al
 agotarse, revela sus estructuras subyacentes. No hay director, no hay
 partitura: hay materia que se organiza.
 
-#+BEGIN_SRC R :results output graphics :file /home/spock/Documents/symploke-sonora/img/ligeti_metronomos.png :width 1000 :height 600
+#+BEGIN_SRC R :results output graphics :file /home/spock/Documents/symploke-sonora/img/ligeti_metronomos.png :width 900 :height 500
 library(ggplot2)
-library(dplyr)
 
-set.seed(1962)  # Año del Poème Symphonique
+set.seed(1962)
 
-# Simular 100 metrónomos con tempos aleatorios
-n_metronomos <- 100
-tempos <- runif(n_metronomos, 40, 208)  # Tempos entre 40 y 208 BPM
-duraciones <- 1 / (tempos / 60)  # Duración de cada tick en segundos
+n <- 40
+tempos <- runif(n, 40, 208)
+duraciones <- runif(n, 30, 180)
 
-# Simular el tiempo total (cuando el último metrónomo se detiene)
-tiempo_total <- 300  # segundos
-
-# Generar ticks para cada metrónomo
-datos_ticks <- data.frame()
-for(i in 1:n_metronomos) {
-  ticks_tiempo <- seq(0, tiempo_total, by = duraciones[i])
-  # La cuerda se agota antes en metrónomos más rápidos
-  max_ticks <- rpois(1, tempos[i] * 3)  # Aproximadamente 3 minutos de cuerda
-  if(length(ticks_tiempo) > max_ticks) {
-    ticks_tiempo <- ticks_tiempo[1:max_ticks]
-  }
-  if(length(ticks_tiempo) > 0) {
-    datos_ticks <- rbind(datos_ticks, data.frame(
+datos <- data.frame()
+for(i in 1:n) {
+  n_ticks <- floor(duraciones[i] / (60 / tempos[i]))
+  if(n_ticks > 0) {
+    ticks <- seq(0, duraciones[i], length.out = n_ticks)
+    datos <- rbind(datos, data.frame(
       metronomo = i,
-      tiempo = ticks_tiempo,
+      tiempo = ticks,
       tempo = tempos[i]
     ))
   }
 }
 
-# Gráfico
-ggplot(datos_ticks, aes(x = tiempo, y = metronomo, color = tempo)) +
-  geom_point(shape = 124, size = 0.3, alpha = 0.6) +  # shape 124 = línea vertical
+ggplot(datos, aes(x = tiempo, y = metronomo, color = tempo)) +
+  geom_point(shape = "|", size = 0.5, alpha = 0.6) +
   scale_color_gradientn(colors = c("#1A5276", "#6C3483", "#922B21", "#D4AC0D"),
                         name = "Tempo (BPM)") +
   labs(title = "Poème Symphonique — György Ligeti (1962)",
-       subtitle = "100 metrónomos, 100 tempos. La materia se sincroniza al agotarse.",
-       x = "Tiempo (segundos)",
-       y = "Metrónomo nº") +
-  theme_minimal(base_size = 14) +
-  theme(plot.title = element_text(face = "bold", size = 18, hjust = 0.5),
-        plot.subtitle = element_text(color = "gray40", size = 12, hjust = 0.5),
-        axis.text.y = element_blank(),
-        axis.ticks.y = element_blank(),
-        panel.grid.major.y = element_blank(),
-        panel.grid.minor.y = element_blank(),
-        legend.position = "bottom")
+       subtitle = "40 metrónomos. Sin director. Sin partitura. La materia se sincroniza al agotarse.",
+       x = "Tiempo (segundos)", y = "Metrónomo nº") +
+  theme(
+    plot.background = element_rect(fill = "#1a1a2e", color = NA),
+    panel.background = element_rect(fill = "#1a1a2e", color = NA),
+    panel.grid.major = element_line(color = "gray20", linewidth = 0.2),
+    panel.grid.minor = element_blank(),
+    plot.title = element_text(face = "bold", size = 17, hjust = 0.5, color = "#eee"),
+    plot.subtitle = element_text(color = "gray60", size = 11, hjust = 0.5),
+    axis.title = element_text(color = "#ccc", size = 12),
+    axis.text = element_text(color = "#aaa", size = 10),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    legend.background = element_rect(fill = "#1a1a2e", color = NA),
+    legend.text = element_text(color = "#ccc"),
+    legend.title = element_text(color = "#ccc"),
+    legend.position = "bottom"
+  )
 #+END_SRC
 
 #+RESULTS:
 
-#+CAPTION: Simulación del Poème Symphonique de Ligeti — Del caos al orden
+#+CAPTION: Simulación del Poème Symphonique de Ligeti
 [[file:/home/spock/Documents/symploke-sonora/img/ligeti_metronomos.png]]
-
 **** Iannis Xenakis (1922-2001): el arquitecto del sonido
      :PROPERTIES:
      :CUSTOM_ID: xenakis-siglo-xx
@@ -2412,6 +2737,114 @@ que se deslizan, planos que se intersectan. La partitura de Xenakis no
 es una sucesión de notas: es un plano arquitectónico. El eje
 horizontal es el tiempo, el eje vertical es la altura. Xenakis no
 componía para un espacio: componía con el espacio.
+
+#+BEGIN_SRC R :results output graphics :file /home/spock/Documents/symploke-sonora/img/xenakis_paraboloide.png :width 800 :height 600
+library(ggplot2)
+library(viridis)
+
+# Datos del paraboloide hiperbólico
+x <- seq(-3, 3, length.out = 80)
+y <- seq(-3, 3, length.out = 80)
+grid <- expand.grid(x = x, y = y)
+grid$z <- grid$x^2 - grid$y^2
+
+ggplot(grid, aes(x = x, y = y, fill = z)) +
+  geom_tile() +
+  scale_fill_viridis(option = "magma", name = "Z = X² - Y²") +
+  geom_contour(aes(z = z), color = "white", alpha = 0.3, linewidth = 0.3) +
+  labs(title = "Paraboloide Hiperbólico — Pabellón Philips (1958)",
+       subtitle = "La misma ecuación que Xenakis usó para Metastaseis (1954)",
+       x = "X", y = "Y") +
+  coord_fixed() +
+  theme_minimal(base_size = 14) +
+  theme(plot.background = element_rect(fill = "#1a1a2e", color = NA),
+        panel.background = element_rect(fill = "#1a1a2e", color = NA),
+        plot.title = element_text(face = "bold", size = 18, hjust = 0.5, color = "#eee"),
+        plot.subtitle = element_text(color = "gray60", size = 12, hjust = 0.5),
+        axis.text = element_text(color = "#aaa"),
+        axis.title = element_text(color = "#ccc"),
+        legend.background = element_rect(fill = "#1a1a2e", color = NA),
+        legend.text = element_text(color = "#ccc"),
+        legend.title = element_text(color = "#ccc"),
+        panel.grid.major = element_line(color = "gray20", linewidth = 0.2),
+        panel.grid.minor = element_blank())
+#+END_SRC
+
+#+RESULTS:
+
+#+CAPTION: Paraboloide hiperbólico — La geometría del Pabellón Philips
+[[file:/home/spock/Documents/symploke-sonora/img/xenakis_paraboloide.png]]
+#+BEGIN_SRC R :results output html :file /home/spock/Documents/symploke-sonora/img/xenakis_paraboloide.html :exports results
+library(plotly)
+
+x <- seq(-3, 3, length.out = 50)
+y <- seq(-3, 3, length.out = 50)
+z <- outer(x, y, function(x, y) x^2 - y^2)
+
+fig <- plot_ly(x = x, y = y, z = z, type = "surface")
+fig
+#+END_SRC
+
+#+RESULTS:
+#+begin_export html
+#+end_export
+
+#+BEGIN_SRC supercollider :results none
+// Música estocástica inspirada en Xenakis
+// Control estadístico: el compositor define la distribución,
+// el algoritmo genera los eventos individuales
+// Xenakis, Metastaseis, 1954
+
+s.boot;
+
+(
+// SynthDef: cada "grano" es un evento sonoro independiente
+SynthDef(\grano_xenakis, { |out=0, freq=440, amp=0.1, pan=0, duracion=0.1|
+    var sig, env;
+    env = EnvGen.kr(Env.perc(0.01, duracion, 1, -4), doneAction: 2);
+    sig = SinOsc.ar(freq, 0, amp) * env;
+    Out.ar(out, Pan2.ar(sig, pan));
+}).add;
+)
+
+(
+// Rutina estocástica: nube de sonidos controlada estadísticamente
+~nube_estocastica = Routine({
+    var densidad = 20;        // Eventos por segundo (textura)
+    var centro_freq = 440;    // Frecuencia central (La4)
+    var dispersion = 200;     // Dispersión alrededor del centro
+    var duracion_base = 0.15; // Duración base de cada grano
+
+    loop {
+        // Frecuencia: distribución gaussiana alrededor del centro
+        var freq = centro_freq + (dispersion * rrand(-1.0, 1.0)).gauss(0.5);
+        // Amplitud: valores bajos para nubes suaves
+        var amp = exprand(0.02, 0.08);
+        // Panorámica: distribución espacial aleatoria
+        var pan = rrand(-0.8, 0.8);
+        // Duración variable de cada grano
+        var dur = duracion_base * rrand(0.5, 2.0);
+
+        Synth(\grano_xenakis, [
+            \freq, freq.max(50).min(2000),
+            \amp, amp,
+            \pan, pan,
+            \duracion, dur
+        ]);
+
+        (1.0 / densidad).wait;  // Control de densidad
+    };
+});
+
+// Iniciar la nube estocástica
+~nube_estocastica.play;
+)
+
+// Para detener: Cmd + . (o Ctrl + .)
+#+END_SRC
+
+
+
 
 **** Milton Babbitt (1916-2011): el tiempo discontinuo
      :PROPERTIES:
@@ -2449,3 +2882,372 @@ creatividad. La información se convirtió en el nuevo paradigma. Y en
 ese paradigma, el hacker —el músico-programador, el filósofo del
 código— encontró su lugar.
 
+*** El siglo XXI: el hacker como músico-filósofo
+    :PROPERTIES:
+    :CUSTOM_ID: siglo-xxi
+    :END:
+
+El siglo XXI no empezó en el año 2000. Empezó en 1971, cuando Richard
+Stallman —entonces un joven programador del MIT— se topó con una
+impresora Xerox que se atascaba constantemente. Stallman quiso
+modificar el código para que la impresora avisara a los usuarios
+cuando se atascaba. Xerox se negó a darle el código fuente.
+
+Ese gesto —negar el acceso al código— es el pecado original de la era
+digital. Stallman respondió fundando la Free Software Foundation y
+escribiendo la GNU General Public License: un documento legal que
+garantiza cuatro libertades fundamentales: usar, estudiar, redistribuir
+y mejorar el software. El software libre no es una cuestión técnica:
+es una cuestión ética. Y la ética hacker —acceso libre, desconfianza
+de la autoridad, mérito basado en la calidad del trabajo— es la
+aplicación de esa ética al mundo digital.
+
+**** El ordenador como instrumento musical
+     :PROPERTIES:
+     :CUSTOM_ID: ordenador-instrumento
+     :END:
+
+El ordenador no fue diseñado para hacer música. Fue diseñado para
+calcular trayectorias balísticas, descifrar códigos enemigos, procesar
+datos. Pero como toda tecnología, una vez liberada de su propósito
+original, encontró usos imprevistos.
+
+En 1957, Max Mathews escribió MUSIC I en un IBM 704: el primer
+programa de síntesis digital. El ordenador tardaba horas en generar
+unos segundos de sonido. Pero el principio estaba establecido: el
+cálculo podía convertirse en vibración. En los años ochenta, Miller
+Puckette creó Pure Data, un entorno de programación gráfica para
+síntesis de audio. En los años noventa, James McCartney creó
+SuperCollider, un lenguaje de programación diseñado específicamente
+para la síntesis y el procesamiento de audio en tiempo real.
+
+SuperCollider no es un programa: es un laboratorio ontológico. Cada
+línea de código es un experimento sobre $M_1$ (la vibración), mediado
+por $M_2$ (la percepción en tiempo real) y organizado por $M_3$ (el
+concepto formalizado en algoritmos). Cuando escribo un sintetizador en
+SuperCollider, estoy haciendo lo mismo que Rameau cuando analizaba la
+serie de armónicos: explorar las leyes materiales del sonido. La
+diferencia es que Rameau tenía una pluma; yo tengo un teclado.
+Rameau tardaba meses en publicar un tratado; yo tardo milisegundos en
+evaluar una función.
+
+El algoritmo Karplus-Strong (1983) es un ejemplo de cómo un modelo
+físico puede recrear el sonido de una cuerda frotada usando un delay
+con retroalimentación. Kevin Karplus y Alex Strong demostraron que un
+ruido blanco filtrado por una línea de retardo con pérdida de energía
+produce un sonido sorprendentemente orgánico. No es una grabación: es
+una ecuación que vibra.
+ 
+#+BEGIN_SRC supercollider :results none
+// Karplus-Strong con sustain (cuerda frotada - violonchelo)
+// La excitación es continua, no un pulso
+
+// Liberar memoria y reiniciar servidor
+s.freeAll;
+s.quit;
+s.boot;
+
+(
+SynthDef(\ks_comb, { |out=0, freq=220, amp=0.2, decay=3, pan=0|
+    var sig, delayTime;
+    delayTime = freq.reciprocal;
+    sig = WhiteNoise.ar(amp) * EnvGen.kr(Env.perc(0.001, decay), doneAction: 2);
+    sig = CombC.ar(sig, 0.5, delayTime, decay);
+    sig = LPF.ar(sig, freq * 4 + 100);
+    sig = sig * 2;
+    Out.ar(out, Pan2.ar(sig, pan));
+}).add;
+)
+
+// Probar con una nota
+x = Synth(\ks_comb, [\freq, 220, \amp, 0.3, \decay, 4]);
+x.free;
+
+// Melodía con sustain
+~melodia = Pbind(
+    \instrument, \ks_comb,
+    \midinote, Pseq([48, 52, 55, 60, 64, 67, 72, 67, 64, 60, 55, 52, 48], inf),
+    \dur, Pseq([1, 0.5, 0.5, 1, 0.5, 0.5, 2, 0.5, 0.5, 1, 0.5, 0.5, 2], inf),
+    \amp, 0.15,
+    \decay, 4
+).play;
+
+// Detener
+~melodia.stop;
+#+END_SRC
+
+En el laboratorio de Fourier, en cambio, no modelamos una cuerda:
+descomponemos el sonido en sus armónicos constituyentes y los
+activamos uno a uno. Cada parcial es controlable; el timbre resultante
+es la suma de todos ellos. Es la demostración práctica de que el
+timbre no es magia: es combinatoria.
+
+#+BEGIN_SRC supercollider :results none
+// Laboratorio de Fourier: control de armónicos individuales
+// Cada armónico es un parcial que puede activarse/desactivarse
+// El timbre resultante es la suma de todos los parciales activos
+
+// Liberar memoria y reiniciar servidor
+s.freeAll;
+s.quit;
+s.boot;
+
+(
+SynthDef(\fourier_lab, { |out=0, freq=220, amp=0.08|
+    var sig;
+    sig = Mix.ar(16.collect { |i|
+        var n = i + 1;
+        var active = NamedControl.kr(("arm_" ++ n).asSymbol, 1, 0.02);
+        SinOsc.ar(freq * n, 0, 1/n) * active
+    });
+    sig = sig * amp;
+    Out.ar(out, sig!2);
+}).add;
+)
+
+// Probar con fundamental sola (seno puro)
+x = Synth(\fourier_lab, [\freq, 220, \amp, 0.15]);
+
+// Activar armónicos uno a uno
+x.set(\arm_2, 1);  // 2do armónico (octava)
+x.set(\arm_3, 1);  // 3er armónico (quinta)
+x.set(\arm_4, 1);  // 4to armónico (doble octava)
+x.set(\arm_5, 1);  // 5to armónico (tercera mayor)
+
+// Apagar la fundamental para escuchar solo armónicos
+x.set(\arm_1, 0);
+
+// Volver a encenderla
+x.set(\arm_1, 1);
+
+// Activar impares para aproximar onda cuadrada
+x.set(\arm_7, 1);
+x.set(\arm_9, 1);
+x.set(\arm_11, 1);
+
+// Liberar
+x.free;
+#+END_SRC
+
+Si el laboratorio de Fourier descompone el sonido en armónicos, la
+síntesis granular lo fragmenta en partículas temporales: granos de
+entre 10 y 50 milisegundos. Cada grano está envuelto en una curva
+gaussiana —nace suave, crece hasta un pico, decae suavemente— para
+evitar los clics que producirían los cortes bruscos. Miles de granos
+superpuestos crean texturas que van desde nubes etéreas hasta paisajes
+industriales. Es el equivalente sonoro del puntillismo de Georges
+Seurat: en *Tarde de domingo en la isla de La Grande Jatte*
+(1884-1886), los colores no se mezclan en la paleta, sino en el ojo
+del espectador. De la suma de puntos diminutos emerge una totalidad
+que ninguno de ellos contenía.
+
+
+#+BEGIN_SRC supercollider :results none
+// Síntesis granular: nubes de partículas sonoras
+// Cada grano es una onda sinusoidal microscópica
+// La textura emerge de la superposición de miles de granos
+
+// Liberar memoria y reiniciar servidor
+s.freeAll;
+s.quit;
+s.boot;
+
+(
+SynthDef(\granular, { |out=0, freq=440, amp=0.1, density=50, spread=0.5|
+    var sig, trig, grains;
+    // Generar granos a una densidad controlada (granos por segundo)
+    trig = Dust.ar(density);
+    grains = GrainSin.ar(
+        numChannels: 2,
+        trigger: trig,
+        dur: 0.02,                    // Duración de cada grano: 20 ms
+        freq: freq * LFNoise1.kr(3).range(1 - spread, 1 + spread),
+        pan: LFNoise1.kr(5).range(-1, 1)
+    );
+    sig = grains * amp * 0.5;
+    Out.ar(out, sig);
+}).add;
+)
+
+// Probar con diferentes densidades
+x = Synth(\granular, [\freq, 220, \amp, 0.15, \density, 20, \spread, 0.1]);
+x.set(\density, 100);  // Más granos: textura más densa
+x.set(\density, 500);  // Muy denso: casi un sonido continuo
+x.set(\density, 10);   // Pocos granos: textura punteada
+x.set(\spread, 0.5);   // Más variación de frecuencia
+x.set(\freq, 440);     // Cambiar frecuencia base
+
+// Liberar
+x.free;
+
+// Evolución de una nube granular
+(
+~nube = Pbind(
+    \instrument, \granular,
+    \freq, Pseq([110, 220, 330, 440, 330, 220, 110], inf),
+    \dur, 4,
+    \density, Pseq([10, 50, 200, 500, 200, 50, 10], inf),
+    \spread, Pseq([0.05, 0.1, 0.3, 0.5, 0.3, 0.1, 0.05], inf),
+    \amp, 0.1
+).play;
+)
+
+// Detener
+~nube.stop;
+#+END_SRC
+
+#+BEGIN_SRC R :results output graphics :file /home/spock/Documents/symploke-sonora/img/seurat_puntillismo.png :width 800 :height 500
+library(ggplot2)
+
+set.seed(1884)  # Año de La Grande Jatte
+
+# Crear una cuadrícula de puntos como un lienzo puntillista
+n_puntos <- 3000
+datos <- data.frame(
+  x = runif(n_puntos, 0, 10),
+  y = runif(n_puntos, 0, 6),
+  # Los colores no están mezclados: son puntos puros
+  color = sample(c("#1A5276", "#922B21", "#D4AC0D", "#6C3483", "#2E86C1", "#E74C3C"), 
+                 n_puntos, replace = TRUE)
+)
+
+ggplot(datos, aes(x = x, y = y, color = color)) +
+  geom_point(size = 1.5, alpha = 0.7) +
+  scale_color_identity() +
+  labs(title = "Puntillismo de Seurat — La Grande Jatte (1884-1886)",
+       subtitle = "Cada punto es un color puro. La mezcla ocurre en el ojo, no en el lienzo.") +
+  theme_void() +
+  theme(plot.background = element_rect(fill = "#FAF0E6", color = NA),
+        plot.title = element_text(face = "bold", size = 16, hjust = 0.5),
+        plot.subtitle = element_text(color = "gray40", size = 11, hjust = 0.5))
+#+END_SRC
+
+#+RESULTS:
+
+[[file:~/Documents/symploke-sonora/img/seurat_puntillismo.png][seurat_puntillismo]]
+
+#+BEGIN_SRC R :results output graphics :file /home/spock/Documents/symploke-sonora/img/gaussiana_granular.png :width 800 :height 450
+library(ggplot2)
+
+# Simular una envolvente gaussiana (campana)
+t <- seq(-3, 3, length.out = 200)
+gaussiana <- exp(-t^2 / 2)
+
+# Simular granos individuales con envolvente gaussiana
+granos <- data.frame()
+set.seed(42)
+for(i in 1:12) {
+  centro <- runif(1, -2, 2)
+  amplitud <- runif(1, 0.3, 1)
+  t_grano <- seq(centro - 0.6, centro + 0.6, length.out = 80)
+  grano <- amplitud * exp(-((t_grano - centro)^2) / 0.08)
+  granos <- rbind(granos, data.frame(
+    tiempo = t_grano,
+    amplitud = grano,
+    grano = factor(i)
+  ))
+}
+
+# Gráfico principal: envolvente gaussiana
+p1 <- ggplot(data.frame(t = t, y = gaussiana), aes(x = t, y = y)) +
+  geom_line(color = "#1A5276", linewidth = 1.5) +
+  labs(title = "Envolvente Gaussiana",
+       subtitle = "Cada grano respira: nace suave, crece, decae",
+       x = "", y = "") +
+  theme_minimal(base_size = 12) +
+  theme(plot.title = element_text(face = "bold", hjust = 0.5),
+        plot.subtitle = element_text(color = "gray40", hjust = 0.5))
+
+# Gráfico de granos
+p2 <- ggplot(granos, aes(x = tiempo, y = amplitud, color = grano, group = grano)) +
+  geom_line(linewidth = 0.8) +
+  scale_color_viridis_d(guide = "none") +
+  labs(title = "Granos individuales con envolvente gaussiana",
+       subtitle = "12 granos. Superpuestos, crean una textura.",
+       x = "Tiempo", y = "Amplitud") +
+  theme_minimal(base_size = 12) +
+  theme(plot.title = element_text(face = "bold", hjust = 0.5),
+        plot.subtitle = element_text(color = "gray40", hjust = 0.5))
+
+# Superponer usando patchwork
+library(patchwork)
+p1 / p2 +
+  plot_annotation(
+    title = "Síntesis Granular: la envolvente gaussiana",
+    subtitle = "Cada grano es una onda sinusoidal microscópica envuelta en una campana de Gauss",
+    theme = theme(plot.title = element_text(face = "bold", size = 16, hjust = 0.5),
+                  plot.subtitle = element_text(color = "gray40", size = 11, hjust = 0.5))
+  )
+#+END_SRC
+
+#+RESULTS:
+
+[[file:~/Documents/symploke-sonora/img/gaussiana_granular.png][envolvente gaussiana]]
+**** Mi praxis: una ecología de herramientas libres
+     :PROPERTIES:
+     :CUSTOM_ID: mi-praxis
+     :END:
+
+No trabajo con una herramienta: trabajo con una ecología de
+herramientas que se entrelazan. SuperCollider para la síntesis. Csound
+para la orquestación. FoxDot para el live coding. Hydrogen para la
+percusión. Ardour para la mezcla. LSP y AMS para los efectos.
+JackControl para enrutar el audio entre aplicaciones. Emacs para
+escribir, documentar, programar, controlar. LilyPond para la notación.
+R para los gráficos. Bash para los scripts. El kernel real-time como
+base material de todo lo anterior.
+
+Esta ecología no es un capricho: es una necesidad ontológica. Cada
+programa es un género discontinuo de materialidad computacional.
+Ninguno puede hacerlo todo. Pero entrelazados (*symploké*), producen
+una totalidad que ninguno podría producir por separado.
+
+Mi método es una herencia del jazz: cambio de pantallas, modifico el
+código en la marcha, lo llevo al extremo. No parto de la nada:
+modifico, forkéo, reapropio. La mayoría de mis códigos son
+modificaciones de códigos libres. Como dicta la ética hacker: el
+conocimiento no tiene dueño.
+
+**** La música como dato, el dato como música
+     :PROPERTIES:
+     :CUSTOM_ID: musica-dato
+     :END:
+
+En la era digital, la música es un archivo. Un archivo es una
+secuencia de bits. Una secuencia de bits es un número. Un número es
+cálculo. La música se ha convertido en lo que Pitágoras intuyó y
+Fourier demostró: vibración organizada matemáticamente.
+
+Pero hay una diferencia fundamental. Pitágoras creía que el número era
+el principio de todas las cosas. El materialismo filosófico afirma lo
+contrario: el número es una categoría que emerge de la materia cuando
+esta se organiza. El código no es la música: es una representación de
+la música. La música es un evento sonoro que se da en el tiempo y en
+el espacio; el código es un plano que permite reconstruir ese evento.
+
+Confundir el código con la música es el pecado original del idealismo
+digital. Es lo mismo que hizo Pitágoras con el monocordio: confundir
+el instrumento con el cosmos. El ordenador no es la música: es una
+herramienta para pensar la música. Como el monocordio. Como la
+notación de Guido de Arezzo. Como el piano forte.
+
+**** La soberanía tecnológica como elección
+     :PROPERTIES:
+     :CUSTOM_ID: soberania-tecnologica
+     :END:
+
+En un mundo donde el software privativo controla la producción, la
+distribución y el consumo de música, elegir el software libre es un
+acto político. No porque el software libre sea "mejor" en términos
+técnicos —a veces lo es, a veces no—, sino porque garantiza la
+autonomía del usuario. Un músico que usa software privativo depende de
+una corporación para producir su propio sonido. Un músico que usa
+software libre depende de su propia capacidad de aprender, modificar y
+compartir.
+
+Esta elección no es inevitable: es una decisión consciente dentro de
+un campo de fuerzas donde el software privativo y el software libre
+competen. Yo elijo el software libre. No porque sea la única opción,
+sino porque es coherente con una ontología que afirma que el
+conocimiento no tiene dueño y que las herramientas que producen
+materia sonora deben ser, ellas mismas, libres.
