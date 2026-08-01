@@ -2649,6 +2649,8 @@ s.boot;
 #+END_SRC
 
 
+
+
 **** György Ligeti (1923-2006): la micropolifonía
      :PROPERTIES:
      :CUSTOM_ID: ligeti-siglo-xx
@@ -3251,3 +3253,521 @@ competen. Yo elijo el software libre. No porque sea la única opción,
 sino porque es coherente con una ontología que afirma que el
 conocimiento no tiene dueño y que las herramientas que producen
 materia sonora deben ser, ellas mismas, libres.
+
+
+** Genealogía de la Computación: del ábaco al ordenador
+   :PROPERTIES:
+   :CUSTOM_ID: genealogia-computacion
+   :END:
+
+El ordenador no nació de la nada. Es el resultado de una larga cadena
+de invenciones que fueron transformando la relación entre el ser
+humano y el cálculo. Cada eslabón de esa cadena es una tecnología que
+amplió las posibilidades del pensamiento. Y cada tecnología, como
+hemos visto, no es neutral: condiciona lo que se puede pensar y lo que
+se puede hacer.
+
+*** El ábaco y el algoritmo
+    :PROPERTIES:
+    :CUSTOM_ID: abaco
+    :END:
+
+El ábaco —inventado en Mesopotamia hacia el 2700 a.C., difundido por
+griegos, romanos, chinos y mayas— es la primera máquina de calcular.
+No hace cálculos por sí mismo: externaliza la memoria. Las cuentas en
+las varillas representan cantidades que el cerebro puede manipular
+visualmente. El ábaco no piensa: hace visible el pensamiento.
+
+En la música, el ábaco tiene un equivalente: el monocordio de
+Pitágoras. Ambos son tecnologías de visualización de relaciones
+matemáticas. El ábaco muestra números; el monocordio muestra
+proporciones. Ambos son precursores del ordenador: máquinas que no
+piensan, pero que permiten pensar mejor.
+
+*** Leibniz y la máquina de calcular
+    :PROPERTIES:
+    :CUSTOM_ID: leibniz-maquina
+    :END:
+
+Gottfried Wilhelm Leibniz (1646-1716) no solo desarrolló el cálculo
+infinitesimal y definió la música como «aritmética inconsciente del
+alma». En 1673 presentó en Londres una máquina de calcular capaz de
+sumar, restar, multiplicar y dividir. Era una caja de madera con
+ruedas dentadas y una manivela: un cerebro mecánico.
+
+Leibniz soñó con un lenguaje universal —la *characteristica
+universalis*— que permitiera expresar todo el conocimiento humano en
+símbolos y resolver cualquier disputa mediante el cálculo. Ese sueño
+es el precursor directo de la inteligencia artificial. Leibniz no lo
+logró, pero su máquina de calcular demostró que el razonamiento podía
+ser mecanizado.
+
+#+BEGIN_SRC R :results output
+# Máquina de Leibniz (1673): suma, resta, multiplicación, división
+# Emulación lógica de la Staffelwalze
+
+maquina_leibniz <- function(a, b, operacion = "suma") {
+  switch(operacion,
+    "suma" = a + b,
+    "resta" = a - b,
+    "multiplicacion" = {
+      # Leibniz: la multiplicación es suma repetida
+      resultado <- 0
+      for(i in 1:abs(b)) {
+        resultado <- resultado + a
+      }
+      if(b < 0) resultado <- -resultado
+      resultado
+    },
+    "division" = {
+      # Leibniz: la división es resta repetida
+      if(b == 0) return(NA)
+      cociente <- 0
+      resto <- abs(a)
+      while(resto >= abs(b)) {
+        resto <- resto - abs(b)
+        cociente <- cociente + 1
+      }
+      if((a < 0 && b > 0) || (a > 0 && b < 0)) cociente <- -cociente
+      cociente
+    }
+  )
+}
+
+# Demostración
+cat("=== Máquina de Leibniz (1673) ===\n")
+cat("Suma: 15 + 27 =", maquina_leibniz(15, 27, "suma"), "\n")
+cat("Resta: 42 - 19 =", maquina_leibniz(42, 19, "resta"), "\n")
+cat("Multiplicación: 6 × 8 =", maquina_leibniz(6, 8, "multiplicacion"), "\n")
+cat("División: 144 ÷ 12 =", maquina_leibniz(144, 12, "division"), "\n")
+#+END_SRC
+
+#+RESULTS:
+: === Máquina de Leibniz (1673) ===
+: Suma: 15 + 27 = 42 
+: Resta: 42 - 19 = 23 
+: Multiplicación: 6 × 8 = 48 
+: División: 144 ÷ 12 = 12 
+
+#+BEGIN_SRC supercollider :results none
+// Máquina de Leibniz en SuperCollider (1673)
+// La Staffelwalze como sintetizador: cada operación produce un sonido
+// "La música es aritmética inconsciente del alma" — Leibniz, 1712
+
+s.boot;
+
+// SynthDef: un tono por cada operación
+(
+SynthDef(\leibniz_tono, { |out=0, freq=440, amp=0.1, duracion=0.3|
+    var sig, env;
+    env = EnvGen.kr(Env.perc(0.01, duracion, 1, -4), doneAction: 2);
+    sig = SinOsc.ar(freq, 0, amp) * env;
+    Out.ar(out, sig!2);
+}).add;
+)
+
+// Ejecutar la máquina de Leibniz
+(
+~leibniz_sonoro = Routine({
+    var a = 15, b = 27;
+    var suma = a + b;
+    var resta = a - b;
+    var multi = a * b;
+    var div = if(b != 0) { a / b } { 0 };
+
+    ("=== Máquina de Leibniz (1673) - Sonora ===").postln;
+    ("Entrada: a = " ++ a ++ ", b = " ++ b).postln;
+
+    ("Suma: " ++ a ++ " + " ++ b ++ " = " ++ suma).postln;
+    Synth(\leibniz_tono, [\freq, (60 + suma).midicps, \amp, 0.1, \duracion, 0.5]);
+    0.6.wait;
+
+    ("Resta: " ++ a ++ " - " ++ b ++ " = " ++ resta).postln;
+    Synth(\leibniz_tono, [\freq, (60 + resta.abs).midicps, \amp, 0.08, \duracion, 0.5]);
+    0.6.wait;
+
+    ("Multiplicación: " ++ a ++ " × " ++ b ++ " = " ++ multi).postln;
+    Synth(\leibniz_tono, [\freq, (60 + (multi % 40)).midicps, \amp, 0.06, \duracion, 0.5]);
+    0.6.wait;
+
+    ("División: " ++ a ++ " ÷ " ++ b ++ " = " ++ div).postln;
+    Synth(\leibniz_tono, [\freq, (60 + (div * 40).asInteger).midicps, \amp, 0.05, \duracion, 0.5]);
+    0.6.wait;
+
+    ("Leibniz: 'La música es aritmética inconsciente del alma'").postln;
+});
+
+~leibniz_sonoro.play;
+)
+#+END_SRC
+
+*** Babbage y la máquina analítica
+    :PROPERTIES:
+    :CUSTOM_ID: babbage
+    :END:
+
+Charles Babbage (1791-1871), matemático británico, diseñó dos máquinas
+que nunca llegó a construir completamente: la máquina diferencial
+(1822), para calcular tablas matemáticas sin errores humanos, y la
+máquina analítica (1837), capaz de ejecutar cualquier tipo de cálculo
+mediante instrucciones programadas en tarjetas perforadas.
+
+La máquina analítica era, en esencia, un ordenador mecánico. Tenía una
+unidad de procesamiento (el «molino»), una memoria (el «almacén») y un
+sistema de entrada/salida basado en las tarjetas perforadas del telar
+de Jacquard. Babbage no la construyó por falta de fondos y por
+conflictos con su ingeniero jefe, pero su diseño era correcto. En
+1991, el Museo de Ciencias de Londres construyó una réplica funcional:
+la máquina funciona.
+
+*** Ada Lovelace: la primera programadora
+    :PROPERTIES:
+    :CUSTOM_ID: ada-lovelace
+    :END:
+
+Ada Lovelace (1815-1852), hija del poeta Lord Byron, fue la primera
+persona en comprender que la máquina analítica de Babbage no era solo
+una calculadora: era una máquina de propósito general capaz de
+manipular símbolos, no solo números. En sus notas a la traducción de
+un artículo sobre la máquina (1843), Lovelace escribió el primer
+algoritmo diseñado para ser ejecutado por una máquina: un método para
+calcular los números de Bernoulli.
+
+Lovelace intuyó algo que tardaríamos un siglo en comprender
+plenamente: que una máquina de calcular podía convertirse en una
+máquina de crear. Escribió: «La máquina analítica no tiene
+pretensión alguna de originar nada. Puede hacer cualquier cosa que
+sepamos ordenarle que haga». Es la definición más precisa de lo que
+hoy llamamos un programa.
+
+*** Turing y la máquina universal
+    :PROPERTIES:
+    :CUSTOM_ID: turing
+    :END:
+
+Alan Turing (1912-1954), matemático británico, formalizó en 1936 el
+concepto de «máquina universal»: un dispositivo teórico capaz de
+simular cualquier otra máquina. La máquina de Turing no era un objeto
+físico, sino un modelo matemático: una cinta infinita, un cabezal que
+lee y escribe símbolos, un conjunto de reglas. Esa abstracción es el
+fundamento de todos los ordenadores modernos.
+
+Durante la Segunda Guerra Mundial, Turing trabajó en Bletchley Park
+descifrando los códigos de la máquina Enigma, utilizada por los nazis
+para encriptar sus comunicaciones. La máquina Enigma —un dispositivo
+electromecánico con rotores y conexiones— era una tecnología de
+ocultación. Turing construyó una tecnología de revelación: la
+«Bombe», un ordenador primitivo que automatizaba el descifrado.
+
+La relación entre Turing y la música es indirecta pero profunda.
+Turing no era músico, pero su concepto de «máquina universal» es el
+fundamento de todos los sintetizadores digitales. SuperCollider, Pure
+Data, Csound: todos son máquinas de Turing aplicadas al sonido.
+
+*** Von Neumann y la arquitectura del ordenador moderno
+    :PROPERTIES:
+    :CUSTOM_ID: von-neumann
+    :END:
+
+John von Neumann (1903-1957), matemático húngaro-estadounidense,
+definió en 1945 la arquitectura que siguen usando todos los
+ordenadores modernos: una unidad de procesamiento, una memoria que
+almacena tanto datos como instrucciones, y un bus que las conecta. La
+arquitectura von Neumann permitió que los programas no fueran cables,
+sino datos: se podían modificar, copiar, distribuir.
+
+Esa flexibilidad es la que permite que un mismo ordenador pueda
+ejecutar un procesador de texto, un navegador de internet o un
+sintetizador. La arquitectura von Neumann es, en el fondo, una
+ontología: la materia computacional ($M_1$) es indiferente a lo que
+representa. Los mismos bits que codifican una sinfonía de Beethoven
+pueden codificar una imagen o un texto. El significado no está en la
+materia: está en la interpretación ($M_3$).
+
+*** Del ordenador al sintetizador
+    :PROPERTIES:
+    :CUSTOM_ID: ordenador-sintetizador
+    :END:
+
+En 1957, Max Mathews escribió MUSIC I en un IBM 704: el primer
+programa de síntesis digital. El ordenador tardaba horas en generar
+unos segundos de sonido. Pero el principio estaba establecido: el
+cálculo podía convertirse en vibración.
+
+En los años ochenta, Miller Puckette creó Pure Data, un entorno de
+programación gráfica para síntesis de audio. En los años noventa,
+James McCartney creó SuperCollider, un lenguaje de programación
+diseñado específicamente para la síntesis y el procesamiento de audio
+en tiempo real.
+
+El ordenador ya no es una herramienta: es un instrumento. Y el músico
+que programa no es un técnico: es un filósofo que explora las leyes
+materiales del sonido mediante código.
+
+*** La ética hacker y la música libre
+    :PROPERTIES:
+    :CUSTOM_ID: etica-hacker-musica
+    :END:
+
+En 1971, Richard Stallman —entonces un joven programador del MIT— se
+topó con una impresora Xerox que se atascaba constantemente. Stallman
+quiso modificar el código para que la impresora avisara a los usuarios
+cuando se atascaba. Xerox se negó a darle el código fuente.
+
+Ese gesto —negar el acceso al código— es el pecado original de la era
+digital. Stallman respondió fundando la Free Software Foundation y
+escribiendo la GNU General Public License: un documento legal que
+garantiza cuatro libertades fundamentales: usar, estudiar, redistribuir
+y mejorar el software.
+
+La ética hacker —acceso libre, desconfianza de la autoridad, mérito
+basado en la calidad del trabajo— es la aplicación de esa ética al
+mundo digital. Y en la música, el software libre no es una preferencia
+técnica: es una posición ontológica. Si la música es materia sonora,
+las herramientas que la producen deben ser libres. No por ideología,
+sino por coherencia materialista: el conocimiento no tiene dueño.
+
+
+*** Brian Ferneyhough y la Nueva Complejidad: un espejo incómodo
+    :PROPERTIES:
+    :CUSTOM_ID: ferneyhough
+    :END:
+
+Brian Ferneyhough (1943-) es la figura más visible de la Nueva
+Complejidad. Británico, formado en el Royal College of Music, profesor
+en Friburgo, La Haya, Stanford y San Diego. Ha recibido el Premio
+Ernst von Siemens (2007), dotado con 200,000 euros, uno de los
+galardones más prestigiosos de la música contemporánea europea. Su
+música se programa regularmente en Donaueschingen, Darmstadt e IRCAM,
+instituciones financiadas con fondos públicos.
+
+**** La partitura como campo de fuerzas
+     :PROPERTIES:
+     :CUSTOM_ID: ferneyhough-partitura
+     :END:
+
+Ferneyhough escribe partituras que ningún intérprete puede ejecutar
+con precisión absoluta. Ritmos anidados —tresillos dentro de
+quintillos dentro de septillos—, microtonos, dinámicas que cambian
+nota a nota, articulaciones obsesivamente especificadas. La partitura
+no es una instrucción: es un campo de fuerzas. El intérprete debe
+negociar con la imposibilidad.
+
+Desde el materialismo filosófico, Ferneyhough representa el idealismo
+musical llevado a su paroxismo. La partitura ($M_3$) se independiza
+del sonido ($M_1$) y de la percepción ($M_2$). El compositor no espera
+que su música sea ejecutada tal como la escribió: espera que la
+tensión entre lo escrito y lo ejecutable genere una experiencia
+estética. La idea desborda la materia.
+
+#+BEGIN_SRC lilypond :file /home/spock/Documents/symploke-sonora/img/nueva_complejidad_ritmos.png :width 700
+\version "2.24.0"
+
+\score {
+  \new Staff {
+    \time 4/4
+    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    \cadenzaOn
+    % Tresillo dentro de quintillo: la marca de la Nueva Complejidad
+    \tuplet 5/4 {
+      c''8 \tuplet 3/2 { d''16 e'' f'' } g'' a''
+    }
+    \tuplet 7/8 {
+      b''16 c''' d''' e''' f''' g''' a'''
+    }
+    \tuplet 5/4 {
+      \tuplet 3/2 { c''16 d'' e'' } \tuplet 3/2 { f'' g'' a'' } b'' c'''
+    }
+    \bar "|."
+  }
+  \layout {
+    indent = 0
+    ragged-right = ##f
+  }
+}
+#+END_SRC
+
+#+RESULTS:
+
+#+CAPTION: Ritmos anidados al estilo de la Nueva Complejidad
+[[file:/home/spock/Documents/symploke-sonora/img/nueva_complejidad_ritmos.png]]
+
+#+BEGIN_SRC supercollider :results none
+// Nueva Complejidad: polirritmia extrema en SuperCollider
+// Cinco voces independientes, cada una con su propia lógica temporal
+// Inspirado en Ferneyhough: la partitura como campo de fuerzas
+
+s.boot;
+
+(
+// SynthDef simple para cada voz
+SynthDef(\voz_compleja, { |out=0, freq=440, amp=0.08, gate=1, pan=0|
+    var sig, env;
+    env = EnvGen.kr(Env.perc(0.01, 0.3, 1, -4), gate, doneAction: 2);
+    sig = SinOsc.ar(freq, 0, amp) * env;
+    Out.ar(out, Pan2.ar(sig, pan));
+}).add;
+)
+
+(
+// Cinco voces con patrones rítmicos independientes
+~complejidad = Routine({
+    var voces = 5;
+    var patrones = [
+        // Voz 1: quintillos (5 notas en espacio de 4)
+        Pbind(\instrument, \voz_compleja,
+            \midinote, Pseq([72, 74, 76, 77, 79], inf),
+            \dur, 0.16, \amp, 0.06, \pan, -0.8),
+        // Voz 2: septillos (7 notas en espacio de 4)
+        Pbind(\instrument, \voz_compleja,
+            \midinote, Pseq([60, 62, 64, 65, 67, 69, 71], inf),
+            \dur, 0.114, \amp, 0.05, \pan, -0.4),
+        // Voz 3: tresillos (3 notas en espacio de 2)
+        Pbind(\instrument, \voz_compleja,
+            \midinote, Pseq([48, 52, 55, 60, 64, 67], inf),
+            \dur, 0.333, \amp, 0.06, \pan, 0),
+        // Voz 4: onceillos (11 notas en espacio de 8)
+        Pbind(\instrument, \voz_compleja,
+            \midinote, Pseq([67, 65, 64, 62, 60, 59, 57, 55, 53, 52, 50], inf),
+            \dur, 0.145, \amp, 0.04, \pan, 0.4),
+        // Voz 5: treceavos (13 notas en espacio de 8)
+        Pbind(\instrument, \voz_compleja,
+            \midinote, Pseq([36, 38, 40, 41, 43, 45, 47, 48, 50, 52, 53, 55, 57], inf),
+            \dur, 0.123, \amp, 0.05, \pan, 0.8)
+    ];
+
+    ("=== Nueva Complejidad: polirritmia extrema ===").postln;
+    ("Cinco voces, cinco lógicas temporales independientes").postln;
+    ("Ningún intérprete humano puede ejecutar esto con precisión").postln;
+
+    // Iniciar todas las voces
+    patrones.do { |patron, i|
+        ("Voz " ++ (i+1) ++ " iniciada").postln;
+        patron.play;
+    };
+
+    30.wait;  // Dejar sonar durante 30 segundos
+
+    ("La partitura como campo de fuerzas: imposible, pero real.").postln;
+});
+
+~complejidad.play;
+)
+
+// Para detener: Cmd + .
+#+END_SRC
+
+#+BEGIN_SRC supercollider :results none
+// Nueva Complejidad: polirritmia extrema en SuperCollider
+// Cinco voces independientes, cada una con su propia lógica temporal
+// Inspirado en Ferneyhough: la partitura como campo de fuerzas
+
+s.boot;
+
+(
+// SynthDef simple para cada voz
+SynthDef(\voz_compleja, { |out=0, freq=440, amp=0.08, gate=1, pan=0|
+    var sig, env;
+    env = EnvGen.kr(Env.perc(0.01, 0.3, 1, -4), gate, doneAction: 2);
+    sig = SinOsc.ar(freq, 0, amp) * env;
+    Out.ar(out, Pan2.ar(sig, pan));
+}).add;
+)
+
+(
+// Cinco voces con patrones rítmicos independientes
+~complejidad = Routine({
+    var voces = 5;
+    var patrones = [
+        // Voz 1: quintillos (5 notas en espacio de 4)
+        Pbind(\instrument, \voz_compleja,
+            \midinote, Pseq([72, 74, 76, 77, 79], inf),
+            \dur, 0.16, \amp, 0.06, \pan, -0.8),
+        // Voz 2: septillos (7 notas en espacio de 4)
+        Pbind(\instrument, \voz_compleja,
+            \midinote, Pseq([60, 62, 64, 65, 67, 69, 71], inf),
+            \dur, 0.114, \amp, 0.05, \pan, -0.4),
+        // Voz 3: tresillos (3 notas en espacio de 2)
+        Pbind(\instrument, \voz_compleja,
+            \midinote, Pseq([48, 52, 55, 60, 64, 67], inf),
+            \dur, 0.333, \amp, 0.06, \pan, 0),
+        // Voz 4: onceillos (11 notas en espacio de 8)
+        Pbind(\instrument, \voz_compleja,
+            \midinote, Pseq([67, 65, 64, 62, 60, 59, 57, 55, 53, 52, 50], inf),
+            \dur, 0.145, \amp, 0.04, \pan, 0.4),
+        // Voz 5: treceavos (13 notas en espacio de 8)
+        Pbind(\instrument, \voz_compleja,
+            \midinote, Pseq([36, 38, 40, 41, 43, 45, 47, 48, 50, 52, 53, 55, 57], inf),
+            \dur, 0.123, \amp, 0.05, \pan, 0.8)
+    ];
+
+    ("=== Nueva Complejidad: polirritmia extrema ===").postln;
+    ("Cinco voces, cinco lógicas temporales independientes").postln;
+    ("Ningún intérprete humano puede ejecutar esto con precisión").postln;
+
+    // Iniciar todas las voces
+    patrones.do { |patron, i|
+        ("Voz " ++ (i+1) ++ " iniciada").postln;
+        patron.play;
+    };
+
+    30.wait;  // Dejar sonar durante 30 segundos
+
+    ("La partitura como campo de fuerzas: imposible, pero real.").postln;
+});
+
+~complejidad.play;
+)
+
+// Para detener: C- c C-s
+#+END_SRC
+
+
+**** Un espejo incómodo
+     :PROPERTIES:
+     :CUSTOM_ID: ferneyhough-espejo
+     :END:
+
+Ferneyhough es, para este ensayo, un espejo incómodo. Representa todo
+lo que la academia europea valora: complejidad, especialización,
+innovación formal, financiación institucional. Y representa todo lo
+que a este ensayo le falta: títulos, reconocimiento, acceso a los
+circuitos de legitimación.
+
+Pero el espejo también refleja lo contrario. Ferneyhough escribe
+música que no se puede tocar. Este ensayo describe música que se toca
+sin necesidad de ser escrita. Ferneyhough trabaja dentro de la
+academia. Este ensayo trabaja desde fuera, intentando entrar.
+Ferneyhough confía en $M_3$ (el concepto) y desconfía de $M_2$ (la
+percepción). Este ensayo confía en $M_1$ (la materia sonora) y en
+$M_2$ (la experiencia incorporada), y considera que $M_3$ debe estar
+al servicio de ambas.
+
+La pregunta no es quién tiene razón. La pregunta es por qué la
+complejidad de Ferneyhough es financiada con fondos públicos europeos
+y la complejidad de un músico que ha atravesado retenes paramilitares
+para enseñar a leer partituras en pueblos sin presencia estatal no
+recibe apoyo alguno. La respuesta no es musical: es política. La
+academia financia lo que se parece a ella.
+
+**** Contrafactual
+     :PROPERTIES:
+     :CUSTOM_ID: ferneyhough-contrafactual
+     :END:
+
+¿Qué tendría que ocurrir para que la academia colombiana reconociera
+como Sabedor a alguien que no pasó por sus aulas? Que la academia
+dejara de definir el saber por los títulos y empezara a definirlo por
+la práctica. Que la universidad aplicara la ley que ya existe —la Ley
+30 de 1992, la figura del Sabedor— en lugar de ignorarla. Que la
+complejidad de la vida —la que se aprende en las zonas de conflicto,
+en los barrios marginados, en las comunidades de software libre—
+fuera considerada tan valiosa como la complejidad de las partituras.
+
+Eso es lo que este ensayo solicita. No un privilegio: el cumplimiento
+de una ley que ya está vigente. No una excepción: la aplicación de un
+principio que la propia academia latinoamericana ha validado a través
+de la Investigación-Acción Participativa de Fals Borda. No un favor:
+justicia epistémica.
+
+
