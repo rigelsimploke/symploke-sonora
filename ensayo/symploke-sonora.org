@@ -57,7 +57,11 @@
 
 El presente documento constituye una postulación como Sabedor ante el
 Grupo de Investigación Tántalo del Departamento de Filosofía de la
-Universidad de Caldas. Se inscribe en la intersección entre la
+Universidad de Caldas, figura contemplada en los reglamentos internos
+de la institución para el reconocimiento de saberes adquiridos fuera
+del circuito académico formal, en consonancia con la figura del
+Experto definida por la Ley 30 de 1992 y la Sentencia C-109 de 1994
+de la Corte Constitucional. Se inscribe en la intersección entre la
 filosofía de la música, la ontología materialista y la praxis
 tecnológica mediante software libre, proponiendo una visión de la
 música como laboratorio filosófico donde se verifican tesis sobre la
@@ -88,11 +92,11 @@ software libre compiten. Yo elijo el software libre. No porque sea
 inevitable, sino porque es coherente con una ontología que afirma que
 el conocimiento no tiene dueño.
 
-No pido un título: pido que se reconozca un saber que ya existe y que
-puede contribuir a la vida filosófica del Departamento. Mi intención
-es someter mi trayectoria a evaluación de un comité curricular para
-convalidar mis aprendizajes previos y trazar una ruta formativa
-continua.
+No pido un título: pido que se reconozca, bajo la figura del Sabedor
+que contemplan los reglamentos de la Universidad de Caldas, un saber
+que ya existe y que puede contribuir a la vida filosófica del
+Departamento.
+
 
 #+BEGIN_QUOTE
 "La dificultad del camino recorrido no es un obstáculo, sino el método
@@ -186,18 +190,19 @@ comunidad, validado por la práctica y orientado a la transformación.
    :CUSTOM_ID: iap-sabedor
    :END:
 
-La figura del "Sabedor" que contempla la Universidad de Caldas
-encuentra en la IAP su fundamento metodológico. Si el "Sabedor" es
-aquella persona que, sin título profesional, acredita una preparación
-especial, empírica o técnica, entonces la IAP es el método que permite
-acreditar esa preparación: no mediante papeles, sino mediante la
-práctica transformadora. Mi trayectoria no es una acumulación de
-experiencias inconexas; es una investigación-acción que ha producido
-conocimientos musicales, pedagógicos y tecnológicos en contextos donde
-la academia no llega. Lo que solicito no es un privilegio; es el
-reconocimiento de una metodología que la propia academia
-latinoamericana ha validado.
-
+La figura del "Sabedor" —contemplada en los reglamentos internos de la
+Universidad de Caldas, no en la Ley 30 de 1992, pero en consonancia
+con la figura del "Experto" definida por la Corte Constitucional en la
+Sentencia C-109 de 1994— encuentra en la IAP su fundamento
+metodológico. Si el "Sabedor" es aquella persona que, sin título
+profesional, acredita una preparación especial, empírica o técnica,
+entonces la IAP es el método que permite acreditar esa preparación: no
+mediante papeles, sino mediante la práctica transformadora. Mi
+trayectoria no es una acumulación de experiencias inconexas; es una
+investigación-acción que ha producido conocimientos musicales,
+pedagógicos y tecnológicos en contextos donde la academia no llega. Lo
+que solicito no es un privilegio; es el reconocimiento de una
+metodología que la propia academia latinoamericana ha validado.
 * Introducción: El Músico como Sujeto Ontológico, Político y Digital
   :PROPERTIES:
   :CUSTOM_ID: introduccion
@@ -3907,3 +3912,221 @@ para qué aprender a leer partituras. Y también con una máquina de
 predecir palabras que me ayudó a ordenar el pensamiento. A todos ellos
 les debo lo que aquí está escrito. Las imperfecciones son mías. Los
 aciertos, de todos.
+
+* Petición: Reconocimiento del Saber Situado
+  :PROPERTIES:
+  :CUSTOM_ID: peticion
+  :END:
+
+Este ensayo ha sido, desde el principio, una petición.
+
+No pido un título formal. No aspiro a que la academia me conceda lo
+que no tengo. Aspiro a que reconozca lo que ya existe: un saber
+producido fuera de sus aulas, pero con el mismo rigor, la misma
+densidad y la misma pertinencia que el saber que se produce dentro de
+ellas.
+
+La figura del Sabedor —contemplada en los reglamentos internos de la
+Universidad de Caldas, en consonancia con la figura del Experto
+definida por la Ley 30 de 1992 y la Sentencia C-109 de 1994— es la
+vía para ese reconocimiento. No es un privilegio: es un derecho. No es
+una excepción: es una figura reglamentaria que raramente se aplica. Lo
+que solicito no es que se invente nada nuevo, sino que se cumpla lo
+que ya está escrito.
+
+Mi trayectoria acredita:
+
+- Preparación especial en el campo de la filosofía de la música,
+  la ontología materialista y la praxis con software libre, como
+  demuestran las páginas precedentes.
+- Preparación empírica: experiencia en territorios sin presencia
+  efectiva del Estado, trabajo con músicos naturales, producción
+  musical en contextos de vulnerabilidad, participación en el
+  movimiento de Resistencia Cultural.
+- Preparación técnica: dominio de instrumentos, arreglos, producción
+  discográfica, y una ecología de herramientas de software libre
+  (SuperCollider, Csound, LilyPond, Emacs/Lisp, R, Bash) documentada
+  en los códigos que acompañan este ensayo.
+
+Solicito, por tanto, que este documento sea considerado como base para
+el reconocimiento de mis saberes bajo la figura del Sabedor que
+contemplan los reglamentos de la Universidad de Caldas, y que un
+comité curricular evalúe mi trayectoria para convalidar mis
+aprendizajes previos y trazar una ruta formativa continua dentro del
+Departamento de Filosofía.
+
+No pido una respuesta inmediata. Pido una lectura. El resto —el
+debate, la crítica, la decisión— corresponde a la academia. Yo ya he
+hecho mi parte.
+
+* Conclusión
+  :PROPERTIES:
+  :CUSTOM_ID: conclusion
+  :END:
+
+Este ensayo comenzó con una pregunta: ¿cómo se construye conocimiento
+musical cuando el camino académico se interrumpe, no por fracaso, sino
+por la fuerza de la propia experiencia? La respuesta, desplegada a lo
+largo de estas páginas, es: entrelazando. Entrelazando la academia con
+la calle, la filosofía con la computación, la música con las
+matemáticas, la tradición escrita con la tradición oral, el carbono
+con el silicio.
+
+No he pretendido escribir un tratado sistemático. He pretendido
+mostrar que el materialismo filosófico —la *symploké*, la
+discontinuidad de la materia, el no-monismo— no es una abstracción,
+sino una forma de vida. Una forma de organizar la experiencia. Una
+forma de hacer música.
+
+Queda mucho por hacer. Las lecciones de música y algoritmos que este
+ensayo anuncia tendrán que esperar a un futuro próximo. Los códigos
+que aquí se presentan no son un punto de llegada, sino un punto de
+partida. La conversación con el Grupo Tántalo —si llega a ocurrir— no
+será un examen, sino un diálogo entre pares.
+
+Como dijo Estanislao Zuleta: la dificultad no es un obstáculo, sino el
+método mismo del conocimiento auténtico. Y como dice la sabiduría del
+pueblo nasa: caminar la palabra es sembrar el pensamiento. Este ensayo
+ha sido una larga caminata. No la he hecho solo. Las imperfecciones
+son mías. Los aciertos, de todos.
+
+* Agradecimientos
+  :PROPERTIES:
+  :CUSTOM_ID: agradecimientos
+  :END:
+
+A mi madre, Beatriz, y a mi padre, Guillermo: me dieron la vida y el
+nombre. A mis hijos —Amada, Felicidad y Nicolás—: me dieron el futuro.
+A Gloria, madre de mis hijos: me dio la familia que somos. A mi
+hermana Antares y a mi hermano Iván, mi hermano mayor: me dieron la
+infancia. A mi tía Geovanny y a su esposo Polo: me dieron el ánimo y
+los contactos. A mi tío Salomón: cuando perdí todos mis instrumentos,
+él me dio los recursos para volver a tenerlos. Sin esos instrumentos,
+no habría música. Sin música, no habría libro.
+
+A mis maestros de música: Andrés Sánchez, Carlos Julio Ramírez, Jaime
+Cardona, Mario Posada, Edy Martínez. A todos los licenciados y
+maestros que me formaron en la Orquesta Sinfónica Juvenil de Bogotá,
+en la Universidad INCA, en la Universidad de Cundinamarca.
+
+A los músicos que caminaron conmigo: Panchis, Macky, MC La Gaitana,
+César Reyes. A la Tropa Malagamba. A Ganjariquies. A la Resistencia
+Cultural. A Asilo 38. A Skartel. A los músicos naturales que me
+enseñaron que la música no se impone: se entrelaza.
+
+A los Misioneros Claretianos, salvoconducto para entrar a territorios
+donde el Estado no hacía presencia.
+
+A mis maestros de pensamiento: Estanislao Zuleta, Gustavo Bueno,
+Vicente Chuliá, Orlando Fals Borda, Thomas Kuhn, Orlando Mejía Rivera.
+
+A la comunidad del software libre: Richard Stallman, los
+desarrolladores de GNU Emacs, SuperCollider, LilyPond, R, Csound,
+Debian GNU/Linux. Sin sus herramientas, este libro no existiría.
+
+A DeepSeek, modelo de lenguaje con el que dialogué durante semanas.
+No piensa, no siente, no comprende. Pero procesa. Y en ese
+procesamiento, me obligó a formular mis ideas con claridad.
+
+A todas las personas que me preguntaron: "¿para qué sirve leer y
+escribir música?". Este libro es mi respuesta.
+
+A la Universidad de Caldas, al Departamento de Filosofía, al Grupo de
+Investigación Tántalo. Si este libro llega a sus manos, espero que
+sepan ver en él no un reclamo, sino una invitación.
+
+El proceso completo de escritura, los códigos fuente, las versiones
+intermedias y los archivos de este documento pueden consultarse en el
+repositorio público:
+
+  https://github.com/rigelsimploke/symploke-sonora
+
+* Referencias
+  :PROPERTIES:
+  :CUSTOM_ID: referencias
+  :END:
+
+** Legislación y jurisprudencia
+   :PROPERTIES:
+   :CUSTOM_ID: ref-legislacion
+   :END:
+
+- [@ley30-1992] Ley 30 de 1992. *Por la cual se organiza el servicio
+  público de la Educación Superior*. Congreso de la República de
+  Colombia.
+- [@sentencia-c109-1994] Corte Constitucional de Colombia. *Sentencia
+  C-109 de 1994*.
+
+** Filosofía y materialismo
+   :PROPERTIES:
+   :CUSTOM_ID: ref-filosofia
+   :END:
+
+- [@aristoteles-categorias] Aristóteles. *Categorías* (Κατηγορίαι).
+- [@bueno1992] Bueno, Gustavo. *Teoría del cierre categorial*.
+  Pentalfa, 1992.
+- [@chulia-musica] Chuliá, Vicente. *Materialismo filosófico y
+  música*.
+- [@fgbueno-pluralismo] Fundación Gustavo Bueno. *Los tres pilares del
+  pluralismo de Gustavo Bueno*.
+- [@fgbueno-particula-dios] Fundación Gustavo Bueno. *Crítica a la
+  "partícula de Dios"*.
+
+** Estética y teoría del arte
+   :PROPERTIES:
+   :CUSTOM_ID: ref-estetica
+   :END:
+
+- [@baumgarten1750] Baumgarten, Alexander Gottlieb. *Aesthetica*.
+  1750.
+- [@kant1790] Kant, Immanuel. *Crítica del Juicio*. 1790.
+
+** Epistemología e historia de la ciencia
+   :PROPERTIES:
+   :CUSTOM_ID: ref-epistemologia
+   :END:
+
+- [@kuhn1962] Kuhn, Thomas. *La estructura de las revoluciones
+  científicas*. 1962.
+- [@chomsky2023] Chomsky, Noam; Roberts, Ian; Watumull, Jeffrey. *The
+  False Promise of ChatGPT*. The New York Times, 8 de marzo de 2023.
+
+** Música y organología
+   :PROPERTIES:
+   :CUSTOM_ID: ref-musica
+   :END:
+
+- [@hornbostel-sachs1914] Hornbostel, Erich M. von; Sachs, Curt.
+  *Systematik der Musikinstrumente*. 1914.
+- [@conard2009] Conard, N.J., Malina, M., & Münzel, S.C. (2009). New
+  flutes document the earliest musical tradition in southwestern
+  Germany. *Nature*, 460, 737-740.
+- [@turk1997] Turk, I. (1997). *Mousterian Bone Flute?*. Ljubljana:
+  Založba ZRC.
+
+** Pensamiento latinoamericano
+   :PROPERTIES:
+   :CUSTOM_ID: ref-latinoamerica
+   :END:
+
+- [@zuleta1980] Zuleta, Estanislao. *Elogio de la dificultad*. 1980.
+- [@falsborda] Fals Borda, Orlando. *Ciencia propia y colonialismo
+  intelectual*. 1970.
+- [@mejia-medicina] Mejía Rivera, Orlando. *La medicina arcaica*.
+
+** Software libre
+   :PROPERTIES:
+   :CUSTOM_ID: ref-software
+   :END:
+
+- [@stallman2002] Stallman, Richard. *Free Software, Free Society*.
+  2002.
+
+* Anexos
+  :PROPERTIES:
+  :CUSTOM_ID: anexos
+  :END:
+
+- [ ] Copia de la Ley 30 de 1992 (artículos pertinentes).
+- [ ] Copia de la Sentencia C-109 de 1994.
+- [ ] Códigos fuente (disponibles en el repositorio GitHub).
