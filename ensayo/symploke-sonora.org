@@ -1,4 +1,3 @@
-
 #+TITLE: Hacia una Ontología Materialista de la Música desde la Experiencia Vital
 #+SUBTITLE: Filosofía, sonido y soberanía tecnológica — Postulación como Sabedor ante el Grupo Tántalo
 #+AUTHOR: Rigel Valencia Osorio, hijo de Beatriz y Guillermo
@@ -41,14 +40,10 @@
 #+LATEX_HEADER: \setlength{\parskip}{0.6em plus 0.2em minus 0.2em}
 #+LATEX_HEADER: \usepackage{microtype}
 #+LATEX_HEADER: \usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+#+LATEX_HEADER: \usepackage[backend=biber,style=authoryear]{biblatex}
+#+LATEX_HEADER: \addbibresource{/home/spock/Documents/symploke-sonora/referencias.bib}
+#+LATEX_HEADER: \setlength{\headheight}{14.0pt}
 #+LATEX_HEADER: \hyphenation{elo-gio}
-#+LATEX_HEADER: \usepackage[spanish]{babel}
-#+LATEX_HEADER: \selectlanguage{spanish}
-
-
-# ============================================================
-# PARTE 1: QUIÉN SOY
-# ============================================================
 
 * Resumen Ejecutivo
   :PROPERTIES:
@@ -61,12 +56,7 @@ Universidad de Caldas, figura contemplada en los reglamentos internos
 de la institución para el reconocimiento de saberes adquiridos fuera
 del circuito académico formal, en consonancia con la figura del
 Experto definida por la Ley 30 de 1992 y la Sentencia C-109 de 1994
-de la Corte Constitucional. Se inscribe en la intersección entre la
-filosofía de la música, la ontología materialista y la praxis
-tecnológica mediante software libre, proponiendo una visión de la
-música como laboratorio filosófico donde se verifican tesis sobre la
-discontinuidad de la materia, el entrelazamiento de géneros
-(*symploké*) y la crítica al idealismo subjetivista.
+de la Corte Constitucional.
 
 Se expone una trayectoria formativa que constituye una dialéctica
 constante entre la academia formal y el conocimiento empírico. A
@@ -96,7 +86,6 @@ No pido un título: pido que se reconozca, bajo la figura del Sabedor
 que contemplan los reglamentos de la Universidad de Caldas, un saber
 que ya existe y que puede contribuir a la vida filosófica del
 Departamento.
-
 
 #+BEGIN_QUOTE
 "La dificultad del camino recorrido no es un obstáculo, sino el método
@@ -203,6 +192,7 @@ investigación-acción que ha producido conocimientos musicales,
 pedagógicos y tecnológicos en contextos donde la academia no llega. Lo
 que solicito no es un privilegio; es el reconocimiento de una
 metodología que la propia academia latinoamericana ha validado.
+
 * Introducción: El Músico como Sujeto Ontológico, Político y Digital
   :PROPERTIES:
   :CUSTOM_ID: introduccion
@@ -249,7 +239,7 @@ entre la música y el cálculo lambda, entre la organología y la
 arquitectura de un sistema operativo, entre la notación musical y un
 lenguaje de programación. Estoy acostumbrado a los cambios de
 paradigma (παράδειγμα, *parádeigma*: modelo, patrón), como los
-describe Kuhn en su epistemología.
+describe Kuhn en su epistemología \autocite{kuhn1962}.
 
 Soy materialista, en el sentido preciso del materialismo filosófico
 de Gustavo Bueno y su desarrollo musical por Vicente Chuliá. No soy
@@ -284,6 +274,7 @@ propia experiencia?
   :PROPERTIES:
   :CUSTOM_ID: trayectoria
   :END:
+
 
 ** Formación académica formal
    :PROPERTIES:
@@ -549,7 +540,7 @@ materialista de Gustavo Bueno, pues son el fundamento de todo el
 edificio teórico que aquí se despliega. No se trata de tres ideas
 independientes, sino de tres aspectos de una misma ontología
 (ὀντολογία, *ontología*: discurso sobre el ente) que se implican
-mutuamente [cite:@bueno1992] [cite:@fgbueno-pluralismo].
+mutuamente \autocite{bueno1992} \autocite{fgbueno-pluralismo}.
 
 *** Symploké (συμπλοκή): el entrelazamiento de las cosas
     :PROPERTIES:
@@ -4045,6 +4036,20 @@ repositorio público:
   :PROPERTIES:
   :CUSTOM_ID: referencias
   :END:
+
+#+LATEX: \printbibliography
+
+* Anexos
+  :PROPERTIES:
+  :CUSTOM_ID: anexos
+  :END:
+
+- [ ] Copia de la Ley 30 de 1992 (artículos pertinentes).
+- [ ] Copia de la Sentencia C-109 de 1994.
+- [ ] Evidencias de formación académica.
+- [ ] Evidencias de producción musical (*Anarcolombia*, arreglos).
+- [ ] Cartas de referencia (si aplica).
+- [ ] Códigos fuente (disponibles en el repositorio GitHub).
 
 ** Legislación y jurisprudencia
    :PROPERTIES:

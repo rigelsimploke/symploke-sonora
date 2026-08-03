@@ -1,4 +1,4 @@
-% Created 2026-08-02 dom 19:30
+% Created 2026-08-02 dom 22:55
 % Intended LaTeX compiler: pdflatex
 \documentclass[14pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
@@ -40,9 +40,10 @@
 \setlength{\parskip}{0.6em plus 0.2em minus 0.2em}
 \usepackage{microtype}
 \usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+\usepackage[backend=biber,style=authoryear]{biblatex}
+\addbibresource{/home/spock/Documents/symploke-sonora/referencias.bib}
+\setlength{\headheight}{14.0pt}
 \hyphenation{elo-gio}
-\usepackage[spanish]{babel}
-\selectlanguage{spanish}
 \author{Rigel Valencia Osorio, hijo de Beatriz y Guillermo}
 \date{Julio de 2026}
 \title{Hacia una Ontología Materialista de la Música desde la Experiencia Vital\\\medskip
@@ -60,19 +61,14 @@
 \tableofcontents
 
 \section{Resumen Ejecutivo}
-\label{sec:org8c2b344}
+\label{resumen}
 El presente documento constituye una postulación como Sabedor ante el
 Grupo de Investigación Tántalo del Departamento de Filosofía de la
 Universidad de Caldas, figura contemplada en los reglamentos internos
 de la institución para el reconocimiento de saberes adquiridos fuera
 del circuito académico formal, en consonancia con la figura del
 Experto definida por la Ley 30 de 1992 y la Sentencia C-109 de 1994
-de la Corte Constitucional. Se inscribe en la intersección entre la
-filosofía de la música, la ontología materialista y la praxis
-tecnológica mediante software libre, proponiendo una visión de la
-música como laboratorio filosófico donde se verifican tesis sobre la
-discontinuidad de la materia, el entrelazamiento de géneros
-(\textbf{symploké}) y la crítica al idealismo subjetivista.
+de la Corte Constitucional.
 
 Se expone una trayectoria formativa que constituye una dialéctica
 constante entre la academia formal y el conocimiento empírico. A
@@ -103,14 +99,13 @@ que contemplan los reglamentos de la Universidad de Caldas, un saber
 que ya existe y que puede contribuir a la vida filosófica del
 Departamento.
 
-
 \begin{quote}
 "La dificultad del camino recorrido no es un obstáculo, sino el método
 mismo del conocimiento auténtico."
 — Estanislao Zuleta
 \end{quote}
 \section{Defensa Metodológica: La Investigación-Acción Participativa como Fundamento}
-\label{sec:org7603796}
+\label{defensa-metodologica}
 Mi presencia en los territorios del Ariari, en el Distrito de
 Aguablanca, en los ensambles de jazz de la Universidad INCA y en las
 comunidades de software libre no ha sido la de un observador externo
@@ -122,7 +117,7 @@ que se inscribe en la tradición de la Investigación-Acción
 Participativa (IAP), consolidada por el sociólogo colombiano Orlando
 Fals Borda.
 \subsection{La IAP como metodología del Sur Global}
-\label{sec:org26ed332}
+\label{iap-sur-global}
 La IAP, nacida en el Sur Global como respuesta crítica a las
 metodologías extractivistas del Norte, sostiene que el conocimiento
 no se produce en la distancia aséptica entre un sujeto que investiga
@@ -143,7 +138,7 @@ con los músicos naturales: mi tarea no era enseñarles, sino encontrar
 estrategias para que ellos tuvieran herramientas sin perder su
 esencia. Ellos me enseñaron tanto como yo pude ofrecerles.
 \subsection{Fals Borda: ciencia y liberación}
-\label{sec:org74887d9}
+\label{fals-borda}
 Orlando Fals Borda (1925-2008), sociólogo colombiano, es una de las
 figuras más influyentes del pensamiento latinoamericano. Fundador de
 la IAP junto con Paulo Freire y otros intelectuales del Sur, Fals
@@ -162,7 +157,7 @@ la física y de la computación, no para adornar un currículum, sino
 para liberar un saber que ha sido producido en los márgenes de la
 academia y que merece ser reconocido en su centro.
 \subsection{Blindaje frente a dos críticas}
-\label{sec:org720daf3}
+\label{blindaje-criticas}
 Esta metodología me blinda frente a dos críticas que la academia
 podría hacer a mi ensayo. La primera es la del "extractivismo
 epistemológico": ¿con qué derecho viene este músico sin título a
@@ -175,7 +170,7 @@ conocimiento que emerge de la IAP no es la opinión de un individuo;
 es el producto de una relación dialéctica entre el investigador y la
 comunidad, validado por la práctica y orientado a la transformación.
 \subsection{La IAP y la figura del Sabedor}
-\label{sec:orgb9b2e66}
+\label{iap-sabedor}
 La figura del "Sabedor" —contemplada en los reglamentos internos de la
 Universidad de Caldas, no en la Ley 30 de 1992, pero en consonancia
 con la figura del "Experto" definida por la Corte Constitucional en la
@@ -190,7 +185,7 @@ pedagógicos y tecnológicos en contextos donde la academia no llega. Lo
 que solicito no es un privilegio; es el reconocimiento de una
 metodología que la propia academia latinoamericana ha validado.
 \section{Introducción: El Músico como Sujeto Ontológico, Político y Digital}
-\label{sec:org5e8fb7d}
+\label{introduccion}
 El músico no es un producto de la industria y el comercio; tampoco
 niega su valía. Esta es la primera afirmación que sostiene este
 ensayo, y quizás la más incómoda para una sociedad que ha reducido el
@@ -232,7 +227,7 @@ entre la música y el cálculo lambda, entre la organología y la
 arquitectura de un sistema operativo, entre la notación musical y un
 lenguaje de programación. Estoy acostumbrado a los cambios de
 paradigma (παράδειγμα, \textbf{parádeigma}: modelo, patrón), como los
-describe Kuhn en su epistemología.
+describe Kuhn en su epistemología \autocite{kuhn1962}.
 
 Soy materialista, en el sentido preciso del materialismo filosófico
 de Gustavo Bueno y su desarrollo musical por Vicente Chuliá. No soy
@@ -263,11 +258,11 @@ universal: ¿cómo se construye conocimiento musical cuando el camino
 académico se interrumpe, no por fracaso, sino por la fuerza de la
 propia experiencia?
 \section{Trayectoria Formativa: Dialéctica entre Academia y Experiencia}
-\label{sec:orgf14250b}
+\label{trayectoria}
 \subsection{Formación académica formal}
-\label{sec:org67a11b4}
+\label{formacion-academica}
 \subsubsection{Orquesta Sinfónica Juvenil de Bogotá}
-\label{sec:orge519e66}
+\label{orquesta-juvenil}
 A los quince años inicié mis estudios básicos en la Orquesta
 Sinfónica Juvenil de Bogotá, donde adquirí las bases de la
 interpretación musical en formato orquestal. Mi instrumento principal
@@ -277,7 +272,7 @@ arreglista y guitarrista. Con él tomé mis primeros rudimentos de
 solfeo y senté las bases técnicas que me acompañarían durante toda mi
 trayectoria.
 \subsubsection{Servicio militar — Banda de Guerra}
-\label{sec:org3fa6879}
+\label{servicio-militar}
 Durante el servicio militar obligatorio, me desempeñé como cornetista
 y trompetista en la Banda de Guerra. Allí aprendí a ejecutar el "toque
 de silencio": una obra musical simple, de pocas notas, que se toca con
@@ -287,12 +282,12 @@ cara de la moneda: nunca me preguntaron si debía tocarse también
 cuando muere un guerrillero o un paramilitar. Esa pregunta me acompañó
 durante años, y aún no tiene respuesta.
 \subsubsection{Universidad INCA de Colombia}
-\label{sec:org79af5c7}
+\label{universidad-inca}
 Estudié tres años en la Universidad INCA de Colombia: dos años como
 guitarrista clásico y un tercer año en el programa de jazz, donde
 aprendí de los ensambles que dirigía el músico Edy Martínez.
 \subsubsection{Universidad de Cundinamarca — Facultad de Música}
-\label{sec:orga670940}
+\label{universidad-cundinamarca}
 Tuve la oportunidad de estudiar en la Universidad de Cundinamarca,
 Facultad de Música, con una beca obtenida por haber sido el mejor
 estudiante en el primer semestre. Allí conocí a Carlos Julio Ramírez,
@@ -321,7 +316,7 @@ límites, y así poder componer mejor. La guitarra es mi instrumento
 principal; el piano es mi herramienta pedagógica y el ordenador mi
 DAW.
 \subsection{Formación autodidacta en Ciencias de la Computación y Software Libre}
-\label{sec:org78bd9b6}
+\label{formacion-computacion}
 De manera paralela a mi trayectoria musical, y por iniciativa propia,
 he cultivado una formación rigurosa en ciencias de la computación. No
 fue una imposición curricular: fue un acto de libertad. Estudié los
@@ -338,7 +333,7 @@ computación no es metafórica ni es una identidad; es un caso de
 programación funcional, comparte con la música una estructura de
 aplicación, abstracción y recursividad.
 \subsubsection{Emacs/Lisp como entorno filosófico}
-\label{sec:org97f62a0}
+\label{emacs-lisp}
 Utilizo Emacs como entorno integrado: allí escribo partituras en
 LilyPond, documento en org-mode, programo en Elisp, analizo datos en
 R, controlo SuperCollider para síntesis de audio en tiempo real, y
@@ -349,7 +344,7 @@ en Elisp es un experimento ontológico: el ciclo READ-EVAL-PRINT de
 Lisp es el mismo ciclo de la improvisación musical: propuesta,
 ejecución, escucha, corrección.
 \subsubsection{Kernel real-time y JackControl: la materia del tiempo}
-\label{sec:orge35b871}
+\label{kernel-jack}
 El kernel de mi sistema está compilado con opciones de \textbf{preemption} y
 baja latencia (\textbf{real-time}), porque sé —materialistamente— que el
 sonido es materia en el tiempo. Un \textbf{buffer underrun} no es un error
@@ -361,7 +356,7 @@ sigue sonando. A veces el portátil colapsa —un xrun, un buffer
 underrun—, pero el músico sigue adelante. No hay errores en la música,
 decía Miles Davis: se generan oportunidades.
 \subsubsection{El método: cambiar pantallas, heredar del jazz}
-\label{sec:org3f56a86}
+\label{metodo-jazz}
 Mi metodología de trabajo es una herencia del jazz: cambio de
 pantallas para ir viendo el código preestablecido, lo modifico en la
 marcha, lo llevo al extremo. No parto de la nada —*ex nihilo*—:
@@ -370,9 +365,9 @@ modificaciones de códigos libres. Como dicta la ética hacker: la
 información debe ser libre, el conocimiento no tiene dueño, y el
 mérito se juzga por la calidad del trabajo, no por los títulos.
 \subsection{Formación empírica y experiencia de campo}
-\label{sec:org839fc6f}
+\label{formacion-empirica}
 \subsubsection{Territorios sin presencia efectiva del Estado: el laboratorio ontológico}
-\label{sec:org45d20f9}
+\label{territorios-conflicto}
 He tocado en territorios del Meta, en la región del Ariari, donde la
 presencia efectiva del Estado colombiano ha sido históricamente
 intermitente o nula debido al conflicto armado interno. No los llamo
@@ -394,14 +389,14 @@ Un vallenato en la tienda, un rap que denuncie los "falsos positivos".
 Y luego está uno, en medio de todo eso, con una guitarra al hombro y
 un "toque de silencio" que no distingue entre muertos.
 \subsubsection{Trabajo con músicos naturales}
-\label{sec:orgc1bfeef}
+\label{musicos-naturales}
 He trabajado con músicos naturales: aquellos que aprendieron a tocar
 de oído, sin partituras. Allí aprendí que el conocimiento musical no
 se impone, sino que se entrelaza (\textbf{symploké}). Mi tarea no era
 enseñarles, sino encontrar estrategias para que ellos tuvieran
 herramientas sin perder su esencia.
 \subsubsection{Distrito de Aguablanca, Cali — Producción musical en la periferia}
-\label{sec:org7688642}
+\label{aguablanca}
 He estado en guetos como el Distrito de Aguablanca en Cali. Allí las
 personas con poco acceso a la educación quieren expresarse como
 pueden, y encuentran en la música de las periferias —como el hip hop
@@ -411,7 +406,7 @@ He visto morir a músicos con talento inmenso; compañeros que cayeron
 en el camino. He entendido que la música en Colombia no es un lujo:
 es un acto de supervivencia, una forma de resistencia y de memoria.
 \subsubsection{La Tropa Malagamba: una biografía de \textbf{symploké}}
-\label{sec:org2dc8399}
+\label{tropa-malagamba}
 A principios de los años dos mil, en una montaña de La Calera, conocí
 a Francisco Magyarof —Panchis—, guitarrista gitano formado en la
 tradición de Django Reinhardt. Desde el primer acorde, hubo
@@ -455,18 +450,18 @@ Hace unos años perdí el contacto con mi grupo. La música en Colombia
 no es entretenimiento: es supervivencia. Y a veces, ni siquiera eso
 alcanza.
 \section{Marco Teórico: Filosofía Materialista de la Música}
-\label{sec:org5638919}
+\label{marco-teorico}
 \subsection{Los Tres Pilares del Pluralismo de Gustavo Bueno}
-\label{sec:orgd44dce5}
+\label{tres-pilares}
 Antes de desarrollar los géneros de materialidad, es necesario
 explicitar los tres pilares sobre los que se sostiene el pluralismo
 materialista de Gustavo Bueno, pues son el fundamento de todo el
 edificio teórico que aquí se despliega. No se trata de tres ideas
 independientes, sino de tres aspectos de una misma ontología
 (ὀντολογία, \textbf{ontología}: discurso sobre el ente) que se implican
-mutuamente (??, ????) (??, a).
+mutuamente \autocite{bueno1992} \autocite{fgbueno-pluralismo}.
 \subsubsection{Symploké (συμπλοκή): el entrelazamiento de las cosas}
-\label{sec:org533e19c}
+\label{symploke-pilar}
 El término \textbf{symploké} proviene de Platón y significa
 "entrelazamiento". Bueno lo recupera para designar la posición
 ontológica que se sitúa entre dos extremos igualmente erróneos: el
@@ -521,7 +516,7 @@ ggplot() +
 \caption{Los Tres Pilares del Pluralismo de Gustavo Bueno}
 \end{figure}
 \subsubsection{Discontinuidad de la materia}
-\label{sec:org57beefd}
+\label{discontinuidad-pilar}
 La materia no es una sustancia (\textbf{substantia}, traducción latina del
 griego ὑπόστασις, \textbf{hypóstasis}: lo que subyace) unitaria que se
 despliega en diversos aspectos, sino que se da en géneros de
@@ -529,7 +524,7 @@ materialidad irreductibles entre sí. \(M_1\) (materia física), \(M_2\)
 (materia perceptiva) y \(M_3\) (materia conceptual) no son grados de una
 misma realidad, sino discontinuidades ontológicas.
 \subsubsection{No-monismo}
-\label{sec:org8b1a213}
+\label{no-monismo-pilar}
 Si la materia es discontinua, entonces no puede ser reducida a un
 principio único (μόνος, \textbf{mónos}: único, solo). El no-monismo rechaza
 tanto el monismo idealista como el monismo materialista grosero.
@@ -538,7 +533,7 @@ materialidad. La música no es solo vibración (\(M_1\)), ni solo
 percepción (\(M_2\)), ni solo concepto (\(M_3\)): es las tres, pero
 precisamente porque ninguna de ellas puede absorber a las otras dos.
 \subsection{Antecedentes Filosóficos: De los presocráticos a Aristóteles}
-\label{sec:org68b031c}
+\label{antecedentes-filosoficos}
 El materialismo filosófico no surge de la nada. Sus tesis —la
 discontinuidad de la materia, el entrelazamiento de géneros, la música
 como ontología— fueron anticipadas, negadas o desviadas por la
@@ -549,7 +544,7 @@ Pero antes de la tradición escrita, hubo música. Los hallazgos
 arqueológicos lo confirman: en la cueva de Hohle Fels, en el suroeste
 de Alemania, se encontraron flautas talladas en hueso de buitre y
 marfil de mamut datadas entre 40,000 y 43,000 años de antigüedad
-(??, a). Son los instrumentos musicales más antiguos
+(??, ????). Son los instrumentos musicales más antiguos
 conocidos fabricados por \textbf{Homo sapiens}. En Divje Babe, Eslovenia, un
 fémur de oso de las cavernas con perforaciones —datado entre 43,000 y
 60,000 años— podría ser una flauta neandertal, aunque su origen sigue
@@ -568,7 +563,7 @@ rastreo de esa reflexión, desde los presocráticos hasta Aristóteles,
 atendiendo no solo a lo que pensaron, sino a las tecnologías concretas
 que tenían a su disposición para pensarla.
 \subsubsection{Los presocráticos: el número, el devenir y el ser}
-\label{sec:org141579d}
+\label{presocraticos}
 La filosofía nace con una pregunta que sigue siendo la nuestra: ¿de
 qué está hecho el mundo? Los presocráticos respondieron de maneras que
 aún resuenan en la ontología musical.
@@ -605,7 +600,7 @@ Y es también la tensión que recorre la historia de la música: ¿es la
 música un flujo que nunca se repite, o es una estructura que subyace
 bajo las apariencias sonoras?
 \subsubsection{Pitágoras y el monocordio: la tecnología al servicio de la ontología}
-\label{sec:orgca8ac2a}
+\label{pitagoras-antecedentes}
 Pitágoras de Samos (c. 570-495 a.C.) merece un lugar aparte. No solo
 fue el primero en matematizar la música, sino que lo hizo con una
 tecnología concreta: el monocordio (μονόχορδον, \textbf{monóchordon}: una
@@ -696,7 +691,7 @@ tecnología: el monocordio no medía el universo; medía una cuerda
 tensada en una caja de madera. Confundir el instrumento con el cosmos
 es el pecado original del idealismo musical.
 \subsubsection{Arquitas de Tarento y la acústica materialista}
-\label{sec:orgd628716}
+\label{arquitas}
 Arquitas de Tarento (c. 428-347 a.C.), contemporáneo de Platón, fue
 el primero en formular una teoría física del sonido que no recurría a
 la armonía celeste. El sonido, según Arquitas, es vibración que se
@@ -706,7 +701,7 @@ vapor— y se le atribuye la invención de la polea y el tornillo. Su
 enfoque tecnológico influyó en la acústica griega y anticipó, veinte
 siglos antes, la física del sonido como fenómeno material.
 \subsubsection{Platón: la música como educación del alma}
-\label{sec:org065cbe9}
+\label{platon-antecedentes}
 Platón (c. 427-347 a.C.) hereda el pitagorismo pero lo lleva al
 terreno político y pedagógico. En \textbf{La República}, la música no es un
 entretenimiento: es un instrumento de formación del ciudadano. Los
@@ -720,7 +715,7 @@ sobre la materia perceptiva (\(M_2\)). Retroceso: subsume la música a la
 política y la moral, negándole autonomía ontológica. La música no es
 valiosa por sí misma, sino por sus efectos. Es un medio, no un fin.
 \subsubsection{Aristóteles y las Categorías (Κατηγορίαι, \textbf{Kategoríai})}
-\label{sec:org16587f1}
+\label{aristoteles-categorias}
 Aristóteles (384-322 a.C.) es el primer filósofo que ofrece un sistema
 de categorías para describir la realidad sin reducirla a un principio
 único. Frente al monismo pitagórico y al idealismo platónico,
@@ -756,7 +751,7 @@ a las condiciones materiales del sonido hace de Aristóteles un
 precursor del materialismo musical, aunque su teoría de la música como
 catarsis lo mantuviera aún dentro del paradigma idealista.
 \subsubsection{Del Liceo a Roma: los estoicos y la música como orden cósmico}
-\label{sec:orgeb98147}
+\label{estoicos}
 Los estoicos —Zenón de Citio (c. 334-262 a.C.), Séneca (4 a.C.-65
 d.C.), Epicteto (55-135 d.C.)— heredaron la idea platónica de que la
 música refleja el orden del cosmos, pero la desvincularon de la
@@ -771,7 +766,7 @@ sino en un medio para la sabiduría. Esta tensión entre la música como
 arte liberal y la música como mero entretenimiento recorrerá toda la
 Edad Media hasta llegar a Boecio y San Isidoro.
 \subsubsection{De Roma a la Ilustración: un puente necesario}
-\label{sec:orgef83d9a}
+\label{puente-roma-ilustracion}
 Entre Séneca y Wolff transcurren doce siglos. No es posible —ni
 necesario— recorrerlos todos. Pero sí es necesario trazar un puente
 que conecte la música como orden cósmico (los estoicos) con la música
@@ -781,7 +776,7 @@ de su tiempo, prepararon el terreno para que la música se convirtiera
 en un problema filosófico autónomo.
 \begin{enumerate}
 \item Boecio (c. 480-524 d.C.): las tres músicas
-\label{sec:org35f6a55}
+\label{boecio}
 Boecio, en \textbf{De institutione musica}, recupera el monocordio pitagórico
 y establece una clasificación que dominará todo el pensamiento
 medieval: la música \textbf{mundana} (la armonía del cosmos), la música
@@ -792,14 +787,14 @@ demostrar empíricamente las proporciones que los pitagóricos habían
 intuido. Boecio no era un músico: era un matemático que usaba el
 sonido para enseñar aritmética.
 \item San Isidoro de Sevilla (c. 560-636): el \textbf{quadrivium}
-\label{sec:org29741da}
+\label{isidoro-puente}
 San Isidoro, en las \textbf{Etimologías}, consagra la música como una de las
 cuatro artes matemáticas del \textbf{quadrivium}: aritmética, geometría,
 música y astronomía. Su frase —«sin la música, ninguna disciplina
 puede ser perfecta»— no es un elogio: es una definición. La música no
 es adorno: es fundamento.
 \item Al-Farabi (872-950) y Avicena (980-1037): el puente islámico
-\label{sec:org66b97d1}
+\label{farabi-avicena}
 Mientras Europa entraba en la Edad Media, el mundo islámico preservaba
 y expandía la tradición griega. Al-Farabi, en el \textbf{Gran libro de la
 música}, sistematizó la teoría musical árabe y la conectó con la
@@ -807,7 +802,7 @@ física aristotélica. Avicena, en el \textbf{Canon de la medicina}, estudió
 los efectos terapéuticos del sonido sobre el cuerpo. La música no era
 solo matemática: era medicina.
 \item Guido de Arezzo (c. 991-1033): la notación como tecnología
-\label{sec:orgc1d27ec}
+\label{guido-puente}
 Guido de Arezzo no fue un filósofo, pero su invención —la notación
 musical en tetragrama— transformó la música en un objeto de estudio.
 Antes de Guido, la música se transmitía oralmente. Después de Guido,
@@ -815,7 +810,7 @@ se podía escribir, leer, comparar, analizar. La notación es una
 tecnología de fijación que permite la acumulación de conocimiento.
 Sin Guido, no hay tratado. Sin tratado, no hay ciencia musical.
 \item Gioseffo Zarlino (1517-1590): la armonía como ciencia
-\label{sec:orgc185570}
+\label{zarlino}
 En el Renacimiento, Zarlino sistematizó el contrapunto en \textbf{Le
 institutioni harmoniche} (1558). Su tecnología era la imprenta: por
 primera vez, las partituras y los tratados se difundían masivamente.
@@ -823,7 +818,7 @@ Zarlino describió los acordes triádicos y sus inversiones, sentando
 las bases de la armonía moderna. La música dejaba de ser un arte de
 oficio para convertirse en una ciencia de proporciones.
 \item Vincenzo Galilei (c. 1520-1591): la crítica al pitagorismo
-\label{sec:orgf229449}
+\label{vincenzo-puente}
 Vincenzo Galilei, padre de Galileo, fue el primero en criticar
 empíricamente el pitagorismo musical. En su \textbf{Diálogo de la música
 antigua y moderna} (1581), demostró que la relación entre la tensión
@@ -833,7 +828,7 @@ La música no es número puro (\(M_3\)): es materia que vibra (\(M_1\)).
 Su tecnología era el laúd y la experimentación doméstica. Su
 heredero sería Galileo, que aplicaría el mismo método al cosmos.
 \item Johannes Kepler (1571-1630): el último pitagórico
-\label{sec:orgdd5bd7c}
+\label{kepler-puente}
 Kepler, en \textbf{Harmonices Mundi} (1619), intentó demostrar que las
 órbitas planetarias correspondían a intervalos musicales. Su
 tecnología era el telescopio: sin él, no habría podido observar las
@@ -843,7 +838,7 @@ perfectos, sino elipses— es una lección ontológica: el cosmos no es
 una sinfonía. Pero su intuición —que las mismas leyes matemáticas
 gobiernan las órbitas y las cuerdas— era correcta.
 \item René Descartes (1596-1650): la música como mecánica
-\label{sec:org5dffe50}
+\label{descartes-puente}
 Descartes, en su \textbf{Compendium Musicae} (1618), trató la música como un
 estímulo mecánico de las pasiones. El sonido golpea el oído, el oído
 transmite la vibración al cerebro, el cerebro produce una emoción.
@@ -852,7 +847,7 @@ causal de eventos físicos. Esta reducción mecanicista es,
 paradójicamente, un avance materialista: la música no necesita
 espíritu para funcionar.
 \item Isaac Newton (1643-1727): el cálculo como lenguaje
-\label{sec:orgcff7f3d}
+\label{newton-puente}
 Newton no escribió sobre música. Pero su cálculo infinitesimal
 —desarrollado en paralelo con Leibniz— proporcionó la herramienta
 matemática que permitiría analizar el sonido como un fenómeno
@@ -863,7 +858,7 @@ Sin análisis espectral, no hay síntesis digital. La tecnología de
 Newton —el cálculo— es, tres siglos después, la tecnología de
 SuperCollider.
 \item Gottfried Wilhelm Leibniz (1646-1716): la aritmética inconsciente
-\label{sec:orged19003}
+\label{leibniz-puente}
 Leibniz, rival de Newton en la invención del cálculo, sí escribió
 sobre música. Su definición —«la música es un ejercicio oculto de
 aritmética del alma que no sabe que está contando»— es el puente
@@ -872,7 +867,7 @@ es racional. El alma cuenta sin saberlo. Esta idea —que la percepción
 musical es un proceso cognitivo, no solo sensorial— será el
 fundamento de la estética como disciplina filosófica.
 \item Christian Wolff (1679-1754): la sistematización
-\label{sec:org47019ba}
+\label{wolff-puente}
 Wolff, discípulo de Leibniz, fue el gran sistematizador de la
 filosofía alemana anterior a Kant. Dividió el conocimiento en ciencias
 racionales (lógica, metafísica) y ciencias empíricas (física,
@@ -883,7 +878,7 @@ Baumgarten. Su tecnología era la imprenta y el aula universitaria: la
 filosofía se enseñaba, se discutía, se sistematizaba.
 \end{enumerate}
 \subsubsection{Christian Wolff, Alexander Baumgarten y el nacimiento de la Estética}
-\label{sec:org3508871}
+\label{wolff-baumgarten-estetica}
 El puente que conduce de Leibniz a Kant pasa por dos figuras
 fundamentales: Christian Wolff (1679-1754) y Alexander Gottlieb
 Baumgarten (1714-1762). Wolff sistematizó la filosofía alemana;
@@ -892,7 +887,7 @@ hicieron con la tecnología de su tiempo: la imprenta, el aula
 universitaria, el tratado sistemático.
 \begin{enumerate}
 \item Wolff y la división del conocimiento
-\label{sec:org6b45188}
+\label{wolff}
 Wolff, discípulo de Leibniz, fue el gran sistematizador de la
 filosofía alemana anterior a Kant. Dividió el conocimiento en ciencias
 racionales (lógica, metafísica) y ciencias empíricas (física,
@@ -922,7 +917,7 @@ estética de Baumgarten no es católica: es protestante. No busca la
 belleza como esplendor sensorial, sino el conocimiento sensible como
 forma inferior pero legítima de conocimiento.
 \item Baumgarten y la invención de la Estética
-\label{sec:orga3fcbc8}
+\label{baumgarten}
 Alexander Gottlieb Baumgarten acuñó el término "estética" (αἰσθητική,
 \textbf{aisthetiké}: ciencia del conocimiento sensible) en su obra
 \textbf{Aesthetica} (1750). Con este gesto, Baumgarten separó las bellas
@@ -952,7 +947,7 @@ propiedad de la materia (\(M_1\)) para convertirse en una experiencia
 del sujeto (\(M_2\)). La estética idealista —que Kant llevará a su
 culminación— comienza aquí.
 \item La dialéctica entre estética y bellas artes
-\label{sec:org1b87387}
+\label{dialectica-estetica}
 La unificación de las bellas artes bajo el concepto de "estética" tuvo
 una consecuencia paradójica: separó el arte de la ciencia. Antes de
 Baumgarten, la música era una ciencia matemática (el \textbf{quadrivium}).
@@ -970,7 +965,7 @@ este ensayo denuncia: la música se enseña en conservatorios, la
 física en facultades de ciencias, y nadie le explica al músico que las
 supercuerdas vibran ni al físico que la serie de armónicos es música.
 \item Kant y el juicio estético
-\label{sec:org1c41922}
+\label{kant-estetica}
 Immanuel Kant (1724-1804) asumió el andamiaje de Wolff y Baumgarten y
 lo transformó en la \textbf{Crítica del Juicio} (1790). Kant no era músico,
 pero su teoría del juicio estético definiría la forma en que la
@@ -1008,7 +1003,7 @@ registro. Su conocimiento de la música era puramente conceptual
 sobre ella fue tan pobre.
 \end{enumerate}
 \subsubsection{Música y ciencia en el siglo XVII: dos tríos en paralelo}
-\label{sec:orgf8a8e5f}
+\label{trios-siglo-xvii}
 El siglo XVII fue un siglo de revoluciones. La ciencia abandonó a
 Aristóteles; la música abandonó el Renacimiento. Dos tríos —uno de
 científicos y filósofos, otro de músicos— transformaron la forma de
@@ -1018,7 +1013,7 @@ sino un campo de fuerzas que puede ser medido, analizado y
 transformado.
 \begin{enumerate}
 \item El trío científico: Galileo, Bacon, Descartes
-\label{sec:org06fc1ea}
+\label{trio-cientifico}
 Galileo Galilei (1564-1642) apuntó el telescopio al cielo y demostró
 que la materia celeste es igual a la terrestre. Pero Galileo también
 era laudista: su padre, Vincenzo Galilei, fue el primer crítico
@@ -1037,7 +1032,7 @@ mecánica corporal. El sonido golpea el oído, el oído transmite la
 vibración al cerebro, el cerebro produce una emoción. Todo es cadena
 causal. La música no es un misterio: es un mecanismo.
 \item El trío musical: Monteverdi, Frescobaldi, Schütz
-\label{sec:org28a06de}
+\label{trio-musical}
 Claudio Monteverdi (1567-1643) rompió con la polifonía renacentista y
 fundó la \textbf{seconda pratica}: la música debe servir al texto, no al
 revés. En su ópera \textbf{Orfeo} (1607), la voz humana es el centro y la
@@ -1056,7 +1051,7 @@ Monteverdi. Lo llevó a Alemania, donde lo fusionó con la tradición
 luterana del coral. Schütz es el eslabón que conecta el Renacimiento
 italiano con el Barroco alemán. Sin Schütz, no hay Bach.
 \item Paralelismos sin contacto directo
-\label{sec:orgfca0ac7}
+\label{paralelismos-siglo-xvii}
 Monteverdi y Galileo compartieron ciudad (Venecia) y mecenas. Aunque
 no hay registro de que se conocieran, el padre de Galileo —Vincenzo
 Galilei— fue un teórico musical que desafió el pitagorismo con el
@@ -1073,7 +1068,7 @@ pasiones son mecánicas; en Schütz, son sonido. Pero ambos entendieron
 que la música no es un ornamento: es una tecnología de transformación
 afectiva.
 \item La tecnología que los unió
-\label{sec:orgd40e8f8}
+\label{tecnologia-siglo-xvii}
 El telescopio de Galileo, el teclado de Frescobaldi, la orquesta de
 Monteverdi, el método inductivo de Bacon, el tratado de Descartes, la
 fusión de estilos de Schütz: todos son tecnologías. Unas miran al
@@ -1090,7 +1085,7 @@ tres casos, la tecnología no es un medio pasivo: es una extensión del
 cuerpo y del pensamiento.
 \end{enumerate}
 \subsubsection{El siglo XVIII: cálculo, contrapunto y armonía}
-\label{sec:orgd46873c}
+\label{siglo-xviii}
 El siglo XVIII fue el siglo de la razón. La ciencia perfeccionó el
 telescopio —con los reflectores de Newton y Herschel— y abrazó el
 cálculo infinitesimal. La música abandonó la polifonía renacentista y
@@ -1098,7 +1093,7 @@ abrazó la armonía tonal. Dos herramientas —el cálculo y el bajo
 continuo— transformaron la forma de entender el universo y el sonido.
 \begin{enumerate}
 \item Newton y Leibniz: el cálculo como lenguaje
-\label{sec:orgaf4cc08}
+\label{newton-leibniz}
 Isaac Newton (1643-1727) y Gottfried Wilhelm Leibniz (1646-1716)
 desarrollaron el cálculo infinitesimal de forma independiente. La
 disputa por la prioridad —que amargó los últimos años de ambos— no
@@ -1133,7 +1128,7 @@ Sin Fourier, no hay análisis espectral. Sin análisis espectral, no hay
 síntesis digital. Sin síntesis digital, no hay SuperCollider. La
 cadena es larga, pero el eslabón inicial está aquí.
 \item Johann Sebastian Bach (1685-1750): el cálculo del contrapunto
-\label{sec:orgb0f3581}
+\label{bach}
 Bach no conocía el cálculo de Newton ni de Leibniz. Pero su música es
 cálculo aplicado al sonido. Una fuga de Bach es un sistema de
 ecuaciones donde cada voz es una variable que depende de las demás. El
@@ -1349,7 +1344,7 @@ SynthDef(\organo6, { |out=0, freq=440, amp=0.05, gate=1, pan=0|
 // ~p1.stop; ~p2.stop; ~p3.stop; ~p4.stop; ~p5.stop; ~p6.stop;
 \end{verbatim}
 \item Jean-Philippe Rameau (1683-1764): la armonía como ciencia
-\label{sec:orga104e04}
+\label{rameau-siglo-xviii}
 Rameau fue el Newton de la música. Así como Newton unificó la física
 terrestre y la celeste, Rameau unificó la práctica musical y la teoría
 armónica. Su \textbf{Traité de l'harmonie} (1722) no es un manual de
@@ -1438,7 +1433,7 @@ SynthDef(\rameau, { |out=0, freq=440, amp=0.08, gate=1|
 )
 \end{verbatim}
 \item La Tensión entre Fux y Rameau: Paradigma y Dialéctica
-\label{sec:org188649d}
+\label{tension-fux-rameau}
 La publicación del \textbf{Traité de l'harmonie} de Rameau en 1722 y del
 \textbf{Gradus ad Parnassum} de Fux en 1725 no fue una coincidencia: fue el
 choque de dos paradigmas. Fux representa la culminación de la
@@ -1475,7 +1470,7 @@ encuentro en mi camino: la academia puede tardar en reconocer nuevos
 saberes, pero la historia demuestra que el cambio, aunque lento, es
 inevitable.
 \item La tecnología que los unió: el piano forte
-\label{sec:org7c170a1}
+\label{piano-forte}
 El siglo XVIII vio nacer una tecnología que transformaría la música
 para siempre: el piano forte. A diferencia del clavecín —que pellizca
 las cuerdas y no permite variar la intensidad—, el piano forte
@@ -1495,7 +1490,7 @@ mucho. Pero Mozart, Haydn y Beethoven crecerían con el piano forte
 como herramienta principal. La tecnología precede al pensamiento: el
 piano forte hizo posible la música del Clasicismo y del Romanticismo.
 \item Paralelismos y divergencias
-\label{sec:orgf52846a}
+\label{paralelismos-siglo-xviii}
 Newton y Bach nunca se conocieron. Leibniz y Bach sí: Leibniz
 frecuentaba la corte de Hannover, donde Bach trabajó brevemente. Pero
 no hay registro de un encuentro significativo.
@@ -1515,7 +1510,7 @@ el antepasado del algoritmo. La fuga de Bach es el antepasado del
 programa. La armonía de Rameau es el antepasado del sintetizador.
 \end{enumerate}
 \subsubsection{El Clasicismo vienés: Haydn, Mozart, Beethoven}
-\label{sec:org310275f}
+\label{clasicismo-vienes}
 Si el Barroco fue el siglo del cálculo, el Clasicismo fue el siglo de
 la forma. La música no solo debía ser bella: debía ser inteligible.
 La forma sonata —exposición, desarrollo, reexposición— se convirtió en
@@ -1523,7 +1518,7 @@ la arquitectura musical por excelencia. Tres compositores, los tres
 en Viena, llevaron esa arquitectura a su culminación.
 \begin{enumerate}
 \item Joseph Haydn (1732-1809): el inventor de la sinfonía
-\label{sec:org3fb3420}
+\label{haydn}
 Haydn no inventó la sinfonía, pero la convirtió en lo que hoy
 conocemos. Trabajó durante décadas para la familia Esterházy, aislado
 en un palacio rural, con una orquesta a su disposición. Ese
@@ -1532,7 +1527,7 @@ que ser original», escribió. La tecnología de Haydn era la orquesta
 clásica: cuerdas, maderas, metales, timbales. Un laboratorio de
 timbres que él organizó como quien diseña un edificio.
 \item Wolfgang Amadeus Mozart (1756-1791): la ópera como laboratorio
-\label{sec:org4e8ba1d}
+\label{mozart}
 Mozart fue el primer compositor que intentó vivir como freelance, sin
 mecenas. Fracasó. Murió en la pobreza. Pero en sus partituras no hay
 rastro de ese fracaso: \textbf{Eine kleine Nachtmusik}, K. 525 (1787), es una
@@ -1588,7 +1583,7 @@ arte exprese el alma del artista. Mozart demuestra lo contrario.
 \caption{W.A. Mozart — Eine kleine Nachtmusik, K. 525 (1787)}
 \end{figure}
 \item Ludwig van Beethoven (1770-1827): la subjetividad como forma
-\label{sec:orgad8823d}
+\label{beethoven-clasicismo}
 Beethoven no rompió con el Clasicismo: lo llevó a su límite. Su
 tecnología seguía siendo la orquesta y el piano forte. Pero su método
 era nuevo: la forma sonata ya no era un molde, sino un campo de
@@ -1605,7 +1600,7 @@ tempo —*Allegro*, *Andante*— describen el carácter de la obra, no una
 velocidad mecánica. La música, incluso para el compositor que abrazó
 el metrónomo, es más flexible que el determinismo de un artefacto.
 \item Kant, Hegel y la música del Clasicismo
-\label{sec:org0cc1e94}
+\label{kant-hegel-clasicismo}
 El Clasicismo vienés coincide con el idealismo alemán. Kant publicó la
 \textbf{Crítica del Juicio} en 1790, cuando Mozart componía \textbf{Così fan tutte}.
 Hegel dictó sus \textbf{Lecciones de Estética} en la década de 1820, cuando
@@ -1628,7 +1623,7 @@ material de vibraciones en el tiempo. Beethoven no expresaba
 sentimientos: organizaba sonidos. Que esos sonidos produzcan
 sentimientos en el oyente (\(M_2\)) es un efecto, no una causa.
 \item La tecnología del Clasicismo: el piano forte y la orquesta
-\label{sec:org1a31b3b}
+\label{tecnologia-clasicismo}
 El piano forte, que Bach había rechazado, se convirtió en el
 instrumento central del Clasicismo. Su capacidad para producir matices
 dinámicos —*piano* y \textbf{forte}, de ahí su nombre— permitió una
@@ -1670,7 +1665,7 @@ el piano solo doce. La materia (\(M_1\)) desborda siempre la convención
 (\(M_3\)).
 \end{enumerate}
 \subsubsection{Ludwig van Beethoven (1770-1827): la subjetividad como forma}
-\label{sec:org2da984a}
+\label{beethoven-clasicismo}
 Beethoven no rompió con el Clasicismo: lo llevó a su límite. Su
 tecnología seguía siendo la orquesta y el piano forte. Pero su método
 era nuevo: la forma sonata ya no era un molde, sino un campo de
@@ -1704,7 +1699,7 @@ cierre categorial: la culminación del Clasicismo que, al alcanzar su
 límite, abre el camino al Romanticismo.
 \begin{enumerate}
 \item El féretro y la antorcha: Schubert
-\label{sec:org970f639}
+\label{schubert-feretro}
 El 29 de marzo de 1827, Beethoven fue enterrado en el cementerio de
 Währing, en Viena. Entre los portadores del féretro había un joven de
 treinta años, admirador devoto del maestro: Franz Schubert
@@ -1725,7 +1720,7 @@ féretro. Dos mundos que se tocan en un gesto. La \textbf{symploké} hecha
 ritual funerario.
 \end{enumerate}
 \subsubsection{El Romanticismo: entre el sentimiento y la máquina}
-\label{sec:orgbdb2dca}
+\label{romanticismo}
 El Romanticismo musical suele presentarse como una rebelión del
 sentimiento contra la razón. Pero esa narrativa es engañosa. El siglo
 XIX fue también el siglo de la máquina de vapor, del ferrocarril, del
@@ -1737,7 +1732,7 @@ huida de la técnica: fue una negociación entre la emoción y la
 máquina.
 \begin{enumerate}
 \item Hector Berlioz (1803-1869): la orquesta como laboratorio
-\label{sec:orgde33fef}
+\label{berlioz}
 Berlioz llevó la orquesta a dimensiones colosales. Su \textbf{Sinfonía
 Fantástica} (1830) requería más de cien músicos, incluyendo cuatro
 arpas, campanas y una sección de vientos expandida. No era
@@ -1788,7 +1783,7 @@ ggplot(orquesta, aes(x = reorder(seccion, -cantidad), y = cantidad, fill = secci
 \caption{Distribución de la orquesta en la Sinfonía Fantástica de Berlioz}
 \end{figure}
 \item Franz Liszt (1811-1886): el virtuosismo como tecnología
-\label{sec:org570004b}
+\label{liszt}
 Liszt fue el primer virtuoso moderno. Su técnica pianística —escalas
 en octavas, saltos imposibles, arpegios que cubrían todo el teclado—
 no era un don natural: era una tecnología corporal desarrollada con
@@ -1801,7 +1796,7 @@ forma sonata. La música no debía seguir una arquitectura abstracta,
 sino un programa narrativo. Era un intento de unificar música y
 literatura, sonido y significado.
 \item Richard Wagner (1813-1883): la obra de arte total
-\label{sec:org5887ff9}
+\label{wagner-romanticismo}
 Wagner llevó el Romanticismo a su culminación y a su crisis. Su
 concepto de \textbf{Gesamtkunstwerk} —obra de arte total— pretendía unificar
 música, poesía, teatro, escenografía y arquitectura en una sola
@@ -1816,7 +1811,7 @@ sol\#— no resuelve: se desliza hacia otra tensión. La tonalidad se
 disuelve. Es el preludio del atonalismo que Schoenberg sistematizará
 medio siglo después.
 \item Mijaíl Bakunin (1814-1876) y Wagner: la revolución y la música
-\label{sec:org6c333b8}
+\label{bakunin-wagner}
 Wagner no fue solo un compositor: fue un revolucionario. Participó en
 el levantamiento de Dresde de 1849 junto al anarquista ruso Mijaíl
 Bakunin. Mientras Bakunin defendía las barricadas, Wagner imprimía
@@ -1831,7 +1826,7 @@ es liberación. Pero Wagner también fue un nacionalista alemán y un
 antisemita virulento. Su obra fue apropiada por el nazismo. La música
 no es neutral: puede ser liberación y puede ser opresión.
 \item Ciencia y tecnología en el siglo XIX
-\label{sec:orgc81db3d}
+\label{ciencia-siglo-xix}
 Mientras los románticos exaltaban el sentimiento, la ciencia avanzaba
 a un ritmo sin precedentes:
 
@@ -2046,7 +2041,7 @@ necesitaba matemáticas. El cosmos se había convertido en un sistema
 de ecuaciones.
 \end{itemize}
 \item Friedrich Nietzsche (1844-1900): la música como afirmación
-\label{sec:org231e358}
+\label{nietzsche-romanticismo}
 Nietzsche fue músico antes que filósofo. Compuso canciones, piezas
 para piano, intentos de ópera. Su admiración por Wagner fue devota
 —llegó a llamarlo «mi maestro»—, pero terminó en ruptura. En \textbf{El caso
@@ -2078,7 +2073,7 @@ no es un modelo de trayectoria. Mi apuesta es otra: seguir
 aprendiendo, seguir investigando, seguir haciendo música-filosofía
 mientras la academia me lo permita.
 \item Paralelismos y divergencias
-\label{sec:orgd74c096}
+\label{paralelismos-romanticismo}
 El Romanticismo musical y la ciencia del siglo XIX comparten un mismo
 horizonte: la exploración de lo invisible. Maxwell demostró que la luz
 es una onda; Berlioz demostró que la orquesta es un espectro. Hertz
@@ -2096,7 +2091,7 @@ romántico, con su culto al genio y al sentimiento, se aleja cada vez
 más de la materia.
 \end{enumerate}
 \subsubsection{El siglo XX: entre el control total y la indeterminación radical}
-\label{sec:org45be74e}
+\label{siglo-xx}
 El siglo XX fue el siglo de los extremos. La música se debatió entre
 el control total —Schoenberg, el dodecafonismo, el serialismo
 integral— y la indeterminación radical —Cage, el azar, el silencio—.
@@ -2107,7 +2102,7 @@ mundo. La música y la ciencia compartieron un mismo destino: la
 pérdida de la certidumbre.
 \begin{enumerate}
 \item Arnold Schoenberg (1874-1951) y la crisis de la tonalidad
-\label{sec:org915b115}
+\label{schoenberg-siglo-xx}
 Schoenberg no fue un destructor: fue un sistematizador. Diagnosticó
 que la tonalidad había llegado a su límite —Wagner y Debussy la habían
 llevado hasta un punto de tensión insostenible— y propuso un nuevo
@@ -2177,7 +2172,7 @@ SynthDef(\serie, { |out=0, freq=440, amp=0.1, gate=1|
 )
 \end{verbatim}
 \item Igor Stravinsky (1882-1971): el camaleón
-\label{sec:orgf3620d2}
+\label{stravinsky}
 Stravinsky no siguió un camino lineal: cambió de estilo como quien
 cambia de herramienta. El 29 de mayo de 1913, en el Théâtre des
 Champs-Élysées de París, el público enloqueció. No era para menos: su
@@ -2252,7 +2247,7 @@ materialista: la tradición no es un museo, sino un laboratorio.
 }
 \end{verbatim}
 \item La mecánica cuántica y la crisis de la certeza
-\label{sec:orge588927}
+\label{cuantica-siglo-xx}
 Mientras Schoenberg sistematizaba el dodecafonismo, la física
 desmontaba el determinismo newtoniano. En 1927, Werner Heisenberg
 (1901-1976) formuló el principio de incertidumbre: no se puede conocer
@@ -2269,7 +2264,7 @@ Einstein, que había ayudado a fundar la cuántica, se resistió hasta el
 final: «Dios no juega a los dados». Pero los dados estaban echados. La
 materia, a nivel fundamental, es probabilidad, no certeza.
 \item John Cage (1912-1992): la indeterminación como método
-\label{sec:orga6b747d}
+\label{cage}
 Cage estudió con Schoenberg. Pero llevó la lógica del control total
 hasta su inversión: si Schoenberg quería controlarlo todo, Cage quiso
 no controlar nada. Su obra \textbf{4'33''} (1952) —tres movimientos de
@@ -2283,7 +2278,7 @@ silencio no es ausencia: es presencia de lo impredecible. Su música no
 es un mensaje: es un campo de posibilidades. Y esa es, precisamente,
 la ontología de la mecánica cuántica.
 \item La tecnología del siglo XX: del theremin al ordenador
-\label{sec:org7702a94}
+\label{tecnologia-siglo-xx}
 El siglo XX fue el siglo de la electrónica. En 1920, León Theremin
 inventó el instrumento que lleva su nombre: dos antenas que detectan
 la posición de las manos y convierten el movimiento en sonido. No hay
@@ -2330,7 +2325,7 @@ s.boot;
 )
 \end{verbatim}
 \item György Ligeti (1923-2006): la micropolifonía
-\label{sec:org64d8e71}
+\label{ligeti-siglo-xx}
 Ligeti no siguió el camino de Schoenberg ni el de Cage. Su
 micropolifonía —capas de voces tan densas que el oído no puede
 distinguirlas— creaba texturas en movimiento, nubes sonoras que se
@@ -2399,7 +2394,7 @@ ggplot(datos, aes(x = tiempo, y = metronomo, color = tempo)) +
 \caption{Simulación del Poème Symphonique de Ligeti}
 \end{figure}
 \item Iannis Xenakis (1922-2001): el arquitecto del sonido
-\label{sec:orgb1da2b7}
+\label{xenakis-siglo-xx}
 Xenakis fue ingeniero civil antes que compositor. Colaboró con Le
 Corbusier en el Pabellón Philips de la Exposición Universal de
 Bruselas de 1958. Su música no era melodía ni armonía: era masa
@@ -2504,7 +2499,7 @@ SynthDef(\grano_xenakis, { |out=0, freq=440, amp=0.1, pan=0, duracion=0.1|
 // Para detener: Cmd + . (o Ctrl + .)
 \end{verbatim}
 \item Milton Babbitt (1916-2011): el tiempo discontinuo
-\label{sec:org0facdaa}
+\label{babbitt-siglo-xx}
 Babbitt fue matemático antes que compositor. Su \textbf{time-point system}
 trata el tiempo musical no como un flujo continuo —un compás, un
 pulso—, sino como una serie de puntos discretos, como píxeles en una
@@ -2519,7 +2514,7 @@ transformada en sonido electrónico (\(M_1\) de nuevo). La fórmula de
 Chuliá \(M_i \subset E \subset M\) encuentra en \textbf{Philomel} una de sus
 realizaciones más perfectas.
 \item Paralelismos y divergencias
-\label{sec:org4defe2c}
+\label{paralelismos-siglo-xx}
 El siglo XX fue el siglo de la bifurcación. La música académica se
 alejó del público; el público se alejó de la música académica. La
 ciencia se volvió incomprensible para el ciudadano medio; el ciudadano
@@ -2533,7 +2528,7 @@ ese paradigma, el hacker —el músico-programador, el filósofo del
 código— encontró su lugar.
 \end{enumerate}
 \subsubsection{El siglo XXI: el hacker como músico-filósofo}
-\label{sec:orgde8516f}
+\label{siglo-xxi}
 El siglo XXI no empezó en el año 2000. Empezó en 1971, cuando Richard
 Stallman —entonces un joven programador del MIT— se topó con una
 impresora Xerox que se atascaba constantemente. Stallman quiso
@@ -2550,7 +2545,7 @@ de la autoridad, mérito basado en la calidad del trabajo— es la
 aplicación de esa ética al mundo digital.
 \begin{enumerate}
 \item El ordenador como instrumento musical
-\label{sec:org59f9119}
+\label{ordenador-instrumento}
 El ordenador no fue diseñado para hacer música. Fue diseñado para
 calcular trayectorias balísticas, descifrar códigos enemigos, procesar
 datos. Pero como toda tecnología, una vez liberada de su propósito
@@ -2824,7 +2819,7 @@ p1 / p2 +
 
 \href{file:///home/spock/Documents/symploke-sonora/img/gaussiana\_granular.png}{envolvente gaussiana}
 \item Mi praxis: una ecología de herramientas libres
-\label{sec:org4c61421}
+\label{mi-praxis}
 No trabajo con una herramienta: trabajo con una ecología de
 herramientas que se entrelazan. SuperCollider para la síntesis. Csound
 para la orquestación. FoxDot para el live coding. Hydrogen para la
@@ -2845,7 +2840,7 @@ modifico, forkéo, reapropio. La mayoría de mis códigos son
 modificaciones de códigos libres. Como dicta la ética hacker: el
 conocimiento no tiene dueño.
 \item La música como dato, el dato como música
-\label{sec:org599daeb}
+\label{musica-dato}
 En la era digital, la música es un archivo. Un archivo es una
 secuencia de bits. Una secuencia de bits es un número. Un número es
 cálculo. La música se ha convertido en lo que Pitágoras intuyó y
@@ -2864,7 +2859,7 @@ el instrumento con el cosmos. El ordenador no es la música: es una
 herramienta para pensar la música. Como el monocordio. Como la
 notación de Guido de Arezzo. Como el piano forte.
 \item La soberanía tecnológica como elección
-\label{sec:orgfcea37a}
+\label{soberania-tecnologica}
 En un mundo donde el software privativo controla la producción, la
 distribución y el consumo de música, elegir el software libre es un
 acto político. No porque el software libre sea "mejor" en términos
@@ -2882,7 +2877,7 @@ conocimiento no tiene dueño y que las herramientas que producen
 materia sonora deben ser, ellas mismas, libres.
 \end{enumerate}
 \subsection{Genealogía de la Computación: del ábaco al ordenador}
-\label{sec:orga6d2a42}
+\label{genealogia-computacion}
 El ordenador no nació de la nada. Es el resultado de una larga cadena
 de invenciones que fueron transformando la relación entre el ser
 humano y el cálculo. Cada eslabón de esa cadena es una tecnología que
@@ -2890,7 +2885,7 @@ amplió las posibilidades del pensamiento. Y cada tecnología, como
 hemos visto, no es neutral: condiciona lo que se puede pensar y lo que
 se puede hacer.
 \subsubsection{El ábaco y el algoritmo}
-\label{sec:org28cc3b9}
+\label{abaco}
 El ábaco —inventado en Mesopotamia hacia el 2700 a.C., difundido por
 griegos, romanos, chinos y mayas— es la primera máquina de calcular.
 No hace cálculos por sí mismo: externaliza la memoria. Las cuentas en
@@ -2903,7 +2898,7 @@ matemáticas. El ábaco muestra números; el monocordio muestra
 proporciones. Ambos son precursores del ordenador: máquinas que no
 piensan, pero que permiten pensar mejor.
 \subsubsection{Leibniz y la máquina de calcular}
-\label{sec:org5b89550}
+\label{leibniz-maquina}
 Gottfried Wilhelm Leibniz (1646-1716) no solo desarrolló el cálculo
 infinitesimal y definió la música como «aritmética inconsciente del
 alma». En 1673 presentó en Londres una máquina de calcular capaz de
@@ -3009,7 +3004,7 @@ SynthDef(\leibniz_tono, { |out=0, freq=440, amp=0.1, duracion=0.3|
 )
 \end{verbatim}
 \subsubsection{Babbage y la máquina analítica}
-\label{sec:orgc2b4404}
+\label{babbage}
 Charles Babbage (1791-1871), matemático británico, diseñó dos máquinas
 que nunca llegó a construir completamente: la máquina diferencial
 (1822), para calcular tablas matemáticas sin errores humanos, y la
@@ -3024,7 +3019,7 @@ conflictos con su ingeniero jefe, pero su diseño era correcto. En
 1991, el Museo de Ciencias de Londres construyó una réplica funcional:
 la máquina funciona.
 \subsubsection{Ada Lovelace: la primera programadora}
-\label{sec:org2bbc863}
+\label{ada-lovelace}
 Ada Lovelace (1815-1852), hija del poeta Lord Byron, fue la primera
 persona en comprender que la máquina analítica de Babbage no era solo
 una calculadora: era una máquina de propósito general capaz de
@@ -3040,7 +3035,7 @@ pretensión alguna de originar nada. Puede hacer cualquier cosa que
 sepamos ordenarle que haga». Es la definición más precisa de lo que
 hoy llamamos un programa.
 \subsubsection{Turing y la máquina universal}
-\label{sec:orgc0556f4}
+\label{turing}
 Alan Turing (1912-1954), matemático británico, formalizó en 1936 el
 concepto de «máquina universal»: un dispositivo teórico capaz de
 simular cualquier otra máquina. La máquina de Turing no era un objeto
@@ -3060,7 +3055,7 @@ Turing no era músico, pero su concepto de «máquina universal» es el
 fundamento de todos los sintetizadores digitales. SuperCollider, Pure
 Data, Csound: todos son máquinas de Turing aplicadas al sonido.
 \subsubsection{Von Neumann y la arquitectura del ordenador moderno}
-\label{sec:org5b6c1eb}
+\label{von-neumann}
 John von Neumann (1903-1957), matemático húngaro-estadounidense,
 definió en 1945 la arquitectura que siguen usando todos los
 ordenadores modernos: una unidad de procesamiento, una memoria que
@@ -3076,7 +3071,7 @@ representa. Los mismos bits que codifican una sinfonía de Beethoven
 pueden codificar una imagen o un texto. El significado no está en la
 materia: está en la interpretación (\(M_3\)).
 \subsubsection{Del ordenador al sintetizador}
-\label{sec:orgd7b4dca}
+\label{ordenador-sintetizador}
 En 1957, Max Mathews escribió MUSIC I en un IBM 704: el primer
 programa de síntesis digital. El ordenador tardaba horas en generar
 unos segundos de sonido. Pero el principio estaba establecido: el
@@ -3092,7 +3087,7 @@ El ordenador ya no es una herramienta: es un instrumento. Y el músico
 que programa no es un técnico: es un filósofo que explora las leyes
 materiales del sonido mediante código.
 \subsubsection{La ética hacker y la música libre}
-\label{sec:org11d2377}
+\label{etica-hacker-musica}
 En 1971, Richard Stallman —entonces un joven programador del MIT— se
 topó con una impresora Xerox que se atascaba constantemente. Stallman
 quiso modificar el código para que la impresora avisara a los usuarios
@@ -3111,7 +3106,7 @@ técnica: es una posición ontológica. Si la música es materia sonora,
 las herramientas que la producen deben ser libres. No por ideología,
 sino por coherencia materialista: el conocimiento no tiene dueño.
 \subsubsection{Brian Ferneyhough y la Nueva Complejidad: un espejo incómodo}
-\label{sec:orge0371f7}
+\label{ferneyhough}
 Brian Ferneyhough (1943-) es la figura más visible de la Nueva
 Complejidad. Británico, formado en el Royal College of Music, profesor
 en Friburgo, La Haya, Stanford y San Diego. Ha recibido el Premio
@@ -3121,7 +3116,7 @@ música se programa regularmente en Donaueschingen, Darmstadt e IRCAM,
 instituciones financiadas con fondos públicos.
 \begin{enumerate}
 \item La partitura como campo de fuerzas
-\label{sec:org6b2784b}
+\label{ferneyhough-partitura}
 Ferneyhough escribe partituras que ningún intérprete puede ejecutar
 con precisión absoluta. Ritmos anidados —tresillos dentro de
 quintillos dentro de septillos—, microtonos, dinámicas que cambian
@@ -3299,7 +3294,7 @@ SynthDef(\voz_compleja, { |out=0, freq=440, amp=0.08, gate=1, pan=0|
 // Para detener: C- c C-s
 \end{verbatim}
 \item Un espejo incómodo
-\label{sec:org149f559}
+\label{ferneyhough-espejo}
 Ferneyhough es, para este ensayo, un espejo incómodo. Representa todo
 lo que la academia europea valora: complejidad, especialización,
 innovación formal, financiación institucional. Y representa todo lo
@@ -3322,7 +3317,7 @@ para enseñar a leer partituras en pueblos sin presencia estatal no
 recibe apoyo alguno. La respuesta no es musical: es política. La
 academia financia lo que se parece a ella.
 \item Contrafactual
-\label{sec:org6c42458}
+\label{ferneyhough-contrafactual}
 ¿Qué tendría que ocurrir para que la academia colombiana reconociera
 como Sabedor a alguien que no pasó por sus aulas? Que la academia
 dejara de definir el saber por los títulos y empezara a definirlo por
@@ -3339,7 +3334,7 @@ de la Investigación-Acción Participativa de Fals Borda. No un favor:
 justicia epistémica.
 \end{enumerate}
 \section{De la ontología a la educación: ¿para qué saber?}
-\label{sec:org22941d8}
+\label{ontologia-educacion}
 Este ensayo ha recorrido un largo camino. Desde los presocráticos hasta
 Ferneyhough. Desde el monocordio de Pitágoras hasta SuperCollider.
 Desde las zonas de conflicto del Ariari hasta el software libre. Desde
@@ -3353,7 +3348,7 @@ Pero todo este recorrido tiene un propósito que trasciende la
 ontología. Porque la pregunta no es solo "¿qué es la música?". La
 pregunta es también "¿para qué saber?".
 \subsection{El diagnóstico: una educación fragmentada}
-\label{sec:org262c2e0}
+\label{sec:orgecd8375}
 
 Vivimos una paradoja. Nunca hubo tanto acceso a la información. Nunca
 hubo tan poca capacidad de entrelazarla. La educación primaria y
@@ -3381,7 +3376,7 @@ sino porque el soneto exige sensibilidad, contexto, historia,
 ambigüedad. La educación actual entrena para el examen. No para la
 vida.
 \subsection{La propuesta: el \textbf{trivium} y el \textbf{quadrivium} como modelo}
-\label{sec:org9212da3}
+\label{sec:orga126adf}
 
 Este ensayo no propone una reforma educativa. Pero sí propone un
 modelo que ha demostrado su eficacia durante siglos: las siete artes
@@ -3399,7 +3394,7 @@ siendo número en el tiempo. Y explorar el universo digital es una
 forma de astronomía: no miramos las estrellas, sino los datos; pero la
 estructura es la misma.
 \subsection{El método: aprender haciendo, aprender transformando}
-\label{sec:org3457675}
+\label{sec:orgfb4826c}
 
 La Investigación-Acción Participativa de Orlando Fals Borda ha sido el
 blindaje metodológico de este ensayo. Pero la IAP no es solo una
@@ -3418,7 +3413,7 @@ aplicada— es un intento de responder a esa pregunta. No todos los que
 saben pasaron por la universidad. La ley lo reconoce. La práctica lo
 ignora.
 \subsection{La infraestructura: el software libre como condición material}
-\label{sec:org7777990}
+\label{sec:org7a89bd0}
 
 Si el conocimiento es libre, las herramientas para producirlo también
 deben serlo. No por ideología, sino por coherencia materialista. Un
@@ -3435,7 +3430,7 @@ violar leyes. En un mundo donde el conocimiento está cada vez más
 controlado por corporaciones, aprender a programar con herramientas
 libres es un acto de resistencia.
 \subsection{¿Para qué saber?}
-\label{sec:orgabbd094}
+\label{sec:org7ed2c31}
 
 Este ensayo no tiene una respuesta definitiva. Pero tiene una apuesta.
 
@@ -3468,7 +3463,7 @@ predecir palabras que me ayudó a ordenar el pensamiento. A todos ellos
 les debo lo que aquí está escrito. Las imperfecciones son mías. Los
 aciertos, de todos.
 \section{Petición: Reconocimiento del Saber Situado}
-\label{sec:orga62d8e7}
+\label{peticion}
 Este ensayo ha sido, desde el principio, una petición.
 
 No pido un título formal. No aspiro a que la academia me conceda lo
@@ -3512,7 +3507,7 @@ No pido una respuesta inmediata. Pido una lectura. El resto —el
 debate, la crítica, la decisión— corresponde a la academia. Yo ya he
 hecho mi parte.
 \section{Conclusión}
-\label{sec:org9a52c6f}
+\label{conclusion}
 Este ensayo comenzó con una pregunta: ¿cómo se construye conocimiento
 musical cuando el camino académico se interrumpe, no por fracaso, sino
 por la fuerza de la propia experiencia? La respuesta, desplegada a lo
@@ -3539,7 +3534,7 @@ pueblo nasa: caminar la palabra es sembrar el pensamiento. Este ensayo
 ha sido una larga caminata. No la he hecho solo. Las imperfecciones
 son mías. Los aciertos, de todos.
 \section{Agradecimientos}
-\label{sec:orgb380365}
+\label{agradecimientos}
 A mi madre, Beatriz, y a mi padre, Guillermo: me dieron la vida y el
 nombre. A mis hijos —Amada, Felicidad y Nicolás—: me dieron el futuro.
 A Gloria, madre de mis hijos: me dio la familia que somos. A mi
@@ -3586,9 +3581,20 @@ repositorio público:
 
 \url{https://github.com/rigelsimploke/symploke-sonora}
 \section{Referencias}
-\label{sec:orgecdf1de}
+\label{referencias}
+\printbibliography
+\section{Anexos}
+\label{anexos}
+\begin{itemize}
+\item[{$\square$}] Copia de la Ley 30 de 1992 (artículos pertinentes).
+\item[{$\square$}] Copia de la Sentencia C-109 de 1994.
+\item[{$\square$}] Evidencias de formación académica.
+\item[{$\square$}] Evidencias de producción musical (\textbf{Anarcolombia}, arreglos).
+\item[{$\square$}] Cartas de referencia (si aplica).
+\item[{$\square$}] Códigos fuente (disponibles en el repositorio GitHub).
+\end{itemize}
 \subsection{Legislación y jurisprudencia}
-\label{sec:orgc970112}
+\label{ref-legislacion}
 \begin{itemize}
 \item {[}@ley30-1992] Ley 30 de 1992. \textbf{Por la cual se organiza el servicio
 público de la Educación Superior}. Congreso de la República de
@@ -3597,7 +3603,7 @@ Colombia.
 C-109 de 1994}.
 \end{itemize}
 \subsection{Filosofía y materialismo}
-\label{sec:org3024c8f}
+\label{ref-filosofia}
 \begin{itemize}
 \item {[}@aristoteles-categorias] Aristóteles. \textbf{Categorías} (Κατηγορίαι).
 \item {[}@bueno1992] Bueno, Gustavo. \textbf{Teoría del cierre categorial}.
@@ -3610,7 +3616,7 @@ pluralismo de Gustavo Bueno}.
 "partícula de Dios"}.
 \end{itemize}
 \subsection{Estética y teoría del arte}
-\label{sec:org7a2e24c}
+\label{ref-estetica}
 \begin{itemize}
 \item {[}@baumgarten1750] Baumgarten, Alexander Gottlieb. \textbf{Aesthetica}.
 \begin{enumerate}
@@ -3619,7 +3625,7 @@ pluralismo de Gustavo Bueno}.
 \item {[}@kant1790] Kant, Immanuel. \textbf{Crítica del Juicio}. 1790.
 \end{itemize}
 \subsection{Epistemología e historia de la ciencia}
-\label{sec:org143ada3}
+\label{ref-epistemologia}
 \begin{itemize}
 \item {[}@kuhn1962] Kuhn, Thomas. \textbf{La estructura de las revoluciones
 científicas}. 1962.
@@ -3627,7 +3633,7 @@ científicas}. 1962.
 False Promise of ChatGPT}. The New York Times, 8 de marzo de 2023.
 \end{itemize}
 \subsection{Música y organología}
-\label{sec:orge07ea0d}
+\label{ref-musica}
 \begin{itemize}
 \item {[}@hornbostel-sachs1914] Hornbostel, Erich M. von; Sachs, Curt.
 \textbf{Systematik der Musikinstrumente}. 1914.
@@ -3638,7 +3644,7 @@ Germany. \textbf{Nature}, 460, 737-740.
 Založba ZRC.
 \end{itemize}
 \subsection{Pensamiento latinoamericano}
-\label{sec:org976ebe9}
+\label{ref-latinoamerica}
 \begin{itemize}
 \item {[}@zuleta1980] Zuleta, Estanislao. \textbf{Elogio de la dificultad}. 1980.
 \item {[}@falsborda] Fals Borda, Orlando. \textbf{Ciencia propia y colonialismo
@@ -3646,7 +3652,7 @@ intelectual}. 1970.
 \item {[}@mejia-medicina] Mejía Rivera, Orlando. \textbf{La medicina arcaica}.
 \end{itemize}
 \subsection{Software libre}
-\label{sec:org023038f}
+\label{ref-software}
 \begin{itemize}
 \item {[}@stallman2002] Stallman, Richard. \textbf{Free Software, Free Society}.
 \begin{enumerate}
@@ -3654,7 +3660,7 @@ intelectual}. 1970.
 \end{enumerate}
 \end{itemize}
 \section{Anexos}
-\label{sec:orge5c6591}
+\label{anexos}
 \begin{itemize}
 \item[{$\square$}] Copia de la Ley 30 de 1992 (artículos pertinentes).
 \item[{$\square$}] Copia de la Sentencia C-109 de 1994.
