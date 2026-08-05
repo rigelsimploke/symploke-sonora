@@ -1,4 +1,4 @@
-// Algoritmo Karplus-Strong (1983) - Síntesis por guía de onda
+s.boot;
 
 (
 SynthDef(\karplus_strong, { |out=0, freq=220, amp=0.3, decay=3, pan=0|

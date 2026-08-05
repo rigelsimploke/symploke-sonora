@@ -1,6 +1,6 @@
 #+TITLE: Hacia una Ontología Materialista de la Música desde la Experiencia Vital
 #+SUBTITLE: Filosofía, sonido y soberanía tecnológica — Postulación como Sabedor ante el Grupo Tántalo
-#+AUTHOR: Rigel Valencia Osorio, hijo de Beatriz y Guillermo
+#+AUTHOR: Rigel Valencia Osorio
 #+DATE: Julio de 2026
 #+LANGUAGE: es
 #+OPTIONS: toc:t num:t
@@ -44,7 +44,6 @@
 #+LATEX_HEADER: \addbibresource{/home/spock/Documents/symploke-sonora/referencias.bib}
 #+LATEX_HEADER: \setlength{\headheight}{14.0pt}
 #+LATEX_HEADER: \hyphenation{elo-gio}
-
 * Resumen Ejecutivo
   :PROPERTIES:
   :CUSTOM_ID: resumen
@@ -93,182 +92,97 @@ mismo del conocimiento auténtico."
 — Estanislao Zuleta
 #+END_QUOTE
 
-* Defensa Metodológica: La Investigación-Acción Participativa como Fundamento
-  :PROPERTIES:
-  :CUSTOM_ID: defensa-metodologica
-  :END:
+** Defensa Metodológica: La Investigación-Acción Participativa como Fundamento
+   :PROPERTIES:
+   :CUSTOM_ID: defensa-metodologica
+   :END:
 
-Mi presencia en los territorios del Ariari, en el Distrito de
-Aguablanca, en los ensambles de jazz de la Universidad INCA y en las
-comunidades de software libre no ha sido la de un observador externo
-que extrae datos para luego analizarlos desde la comodidad de un
-cubículo académico. Ha sido la de un sujeto que se sumerge en la
-realidad para transformarla y ser transformado por ella. Esta
-posición no es un capricho biográfico; es una decisión metodológica
-que se inscribe en la tradición de la Investigación-Acción
-Participativa (IAP), consolidada por el sociólogo colombiano Orlando
-Fals Borda.
+Mi inserción en los territorios del Ariari, en el Distrito de Aguablanca, en los ensambles de jazz de la Universidad INCA y en las comunidades de software libre no ha sido la de un observador externo —alguien que extrae datos para analizarlos desde la distancia aséptica del cubículo académico—; ha sido, por el contrario, la de un agente que se sumerge en la realidad para transformarla y ser transformado por ella. No es un capricho biográfico; es una decisión metodológica. Se inscribe en la tradición de la Investigación-Acción Participativa (IAP), consolidada por el sociólogo colombiano Orlando Fals Borda.
+
+La IAP, nacida en el Sur Global como respuesta crítica a las metodologías extractivistas del Norte, sostiene que el conocimiento no se produce en el hiato entre un sujeto que investiga y un objeto que es investigado —esa distancia que la tradición occidental ha llamado *θεωρία* (contemplación)—, sino en la relación dialéctica entre ambos: una *πρᾶξις* (acción transformadora) donde el investigador es también participante y la comunidad es interlocutora, no yacimiento de datos. El saber que emerge de ese encuentro no es propiedad del académico, sino patrimonio del colectivo que lo ha producido.
+
+Desde el materialismo filosófico, esta posición es perfectamente coherente. La IAP es, en el fondo, una metodología del entrelazamiento —de aquella *συμπλοκή* que ya hemos definido—: articula al investigador con la comunidad, al saber académico con el saber popular, a la teoría con la práctica, sin confundir sus planos. No se trata de que el investigador «descienda» al territorio para iluminar a los ignorantes; se trata de que el territorio interpela al investigador y lo obliga a replantear sus categorías. Como aprendí con los músicos naturales del Ariari: mi tarea no era enseñarles, sino encontrar estrategias para que ellos dispusieran de herramientas sin perder su esencia. Ellos me enseñaron tanto como yo pude ofrecerles.
+
+Orlando Fals Borda (1925-2008), sociólogo colombiano, es una de las figuras más influyentes del pensamiento latinoamericano. Fundador de la IAP junto con Paulo Freire y otros intelectuales del Sur, insistía en que la investigación no puede ser neutral: o está al servicio de la dominación, o está al servicio de la liberación. Su obra, que combinó el rigor sociológico con el compromiso político, demostró que es posible hacer ciencia sin renunciar a la militancia, y que el conocimiento producido por las comunidades campesinas, indígenas y afrodescendientes tiene tanto valor como el producido en las universidades. Fals Borda decía que «la ciencia no es un fetiche, sino una herramienta de liberación» \autocite{falsborda1979}. Eso es lo que este ensayo pretende: usar las herramientas de la filosofía materialista, de la musicología, de la física y de la computación, no para adornar un currículum, sino para liberar un saber que ha sido producido en los márgenes de la academia y que merece ser reconocido en su centro.
+
+Esta metodología me blinda frente a dos críticas que la academia podría dirigir a mi ensayo. La primera es la del extractivismo epistemológico: «¿con qué derecho viene este músico sin título a hablarnos de los saberes de las periferias?». La respuesta es: con el derecho que da haber estado allí —no como turista, sino como compañero de ruta. La segunda es la del subjetivismo: «¿cómo podemos confiar en un conocimiento que se basa en la experiencia personal?». La respuesta es: la IAP no es subjetivismo; es intersubjetividad. El conocimiento que emerge de la IAP no es la opinión de un individuo; es el producto de una relación dialéctica entre el investigador y la comunidad, validado por la práctica y orientado a la transformación.
+
+La figura del «Sabedor» —contemplada en los reglamentos internos de la Universidad de Caldas, en consonancia con la figura del «Experto» definida por la Corte Constitucional en la Sentencia C-109 de 1994— encuentra en la IAP su fundamento metodológico. Si el Sabedor es aquella persona que, sin título profesional, acredita una preparación especial —empírica o técnica—, entonces la IAP es el método que permite acreditar esa preparación: no mediante papeles, sino mediante la práctica transformadora. Mi trayectoria no es una acumulación de experiencias inconexas; es una investigación-acción que ha producido conocimientos musicales, pedagógicos y tecnológicos en contextos donde la academia no llega. Lo que solicito no es un privilegio: es el reconocimiento de una metodología que la propia academia latinoamericana ha validado.
 
 ** La IAP como metodología del Sur Global
    :PROPERTIES:
    :CUSTOM_ID: iap-sur-global
    :END:
 
-La IAP, nacida en el Sur Global como respuesta crítica a las
-metodologías extractivistas del Norte, sostiene que el conocimiento
-no se produce en la distancia aséptica entre un sujeto que investiga
-y un objeto que es investigado, sino en la relación dialéctica entre
-ambos. El investigador no es un espectador; es un participante. La
-comunidad no es un yacimiento de datos; es una interlocutora. Y el
-saber que emerge de esa relación no es propiedad del académico, sino
-patrimonio del colectivo que lo ha producido.
+La IAP, nacida en el Sur Global como respuesta crítica a las metodologías extractivistas del Norte —entiéndase esto en un sentido geopolítico, no como una adscripción partidista—, sostiene que el conocimiento no se produce en la distancia aséptica entre un sujeto que investiga y un objeto que es investigado, sino en la relación dialéctica entre ambos. El investigador no es un espectador; es un participante. La comunidad no es un yacimiento de datos; es una interlocutora. El saber que emerge de esa relación no es propiedad del académico, sino patrimonio del colectivo que lo ha producido.
 
-Desde el materialismo filosófico, esta posición es perfectamente
-coherente. La IAP es, en el fondo, una metodología de la *symploké*
-(συμπλοκή): entrelaza al investigador con la comunidad, al saber
-académico con el saber popular, a la teoría con la práctica, sin
-confundirlos. No es que el investigador "baje" al territorio a
-iluminar a los ignorantes; es que el territorio interpela al
-investigador y lo obliga a replantear sus categorías. Como aprendí
-con los músicos naturales: mi tarea no era enseñarles, sino encontrar
-estrategias para que ellos tuvieran herramientas sin perder su
-esencia. Ellos me enseñaron tanto como yo pude ofrecerles.
+Desde el materialismo filosófico, esta posición es coherente. La IAP es, en el fondo, una metodología del entrelazamiento —de aquella *συμπλοκή* que ya hemos definido—: articula al investigador con la comunidad, al saber académico con el saber popular, a la *θεωρία* con la *πρᾶξις*, sin confundir sus planos. No se trata de que el investigador «descienda» al territorio para iluminar a los ignorantes —eso sería un gesto de sofista, no de filósofo—, sino de que el territorio interpela al investigador y lo obliga a replantear sus categorías. Como aprendí con los músicos naturales del Ariari: mi tarea no era enseñarles, sino encontrar estrategias para que ellos dispusieran de herramientas sin perder su esencia. Ellos me enseñaron tanto como yo pude ofrecerles.
+
+Esta distinción —entre el que impone su saber y el que aprende en el diálogo— la tomo de la tradición que va de Sócrates a Aristóteles, pero no para invalidar el pensamiento americano anterior a la colonización. Los pueblos de este continente también desarrollaron formas de conocimiento —algunas plasmadas en sistemas de escritura glífica (los mayas), otras en registros pictográficos (los mexicas), otras en dispositivos mnemotécnicos como los *quipus* (los incas), y muchas más en una tradición oral que algunos autores denominan *oralitura*—. No son sistemas «menores»; son modos distintos de fijar el relato, de pensar el mundo. Mi formación no los desconoce; los incorpora en la medida en que puedo acceder a ellos, consciente de que la mayoría son *ágrafa* y de que mi herramienta principal —la escritura alfabética— es ya una mediación occidental.
+
+No soy filósofo en el sentido gremial —no he sido formado en una facultad—, pero he procurado estudiar la filosofía respetando su tradición: desde los presocráticos hasta Sócrates, pasando por Platón y Aristóteles, sin desdeñar los desarrollos posteriores. Mi aproximación no es autodidacta —eso sería egocéntrico—, sino *didáctica*: he aprendido de otros, en diálogo con textos y con personas. Durante todo este ensayo iré insertando, progresivamente, los filósofos que he leído, en paralelo con la matemática, la física y la química. Aprecio la psicología, pero no me reduzco a ella; valoro los esfuerzos de Freud y sus herederos, aunque los hallazgos de la neurología hayan dejado atrás buena parte del psicoanálisis. Utilizo, en lo posible, la *γνωσιολογία* (gnoseología) y la *ὀντολογία* (ontología) como herramientas, no como dogmas.
+
+En este punto conviene recordar una figura mayor de la tradición hispánica: Francisco Suárez (1548-1617), el *Doctor Eximius*. No es un autor menor ni un nombre de catálogo; es el pensador que, en sus *Disputationes Metaphysicae* (1597), ofreció el primer tratado sistemático de metafísica que no era un comentario a Aristóteles, y que durante dos siglos fue texto de referencia en las universidades europeas, tanto católicas como protestantes \autocite{sep-suarez}. Su *Defensio fidei* (1613) y su *De Legibus* (1612) defendieron una teoría del poder político que socavaba el derecho absoluto de los monarcas, afirmando que el pueblo es el titular original de la autoridad política —una idea que resonaría en los procesos de emancipación de la América hispánica \autocite{iep-suarez}. Suárez no es un escolástico arcaico; es un pensador del derecho natural y de la soberanía racional, una figura que permite pensar la tradición hispánica no como un legado de dominación, sino como un horizonte de diálogo entre razón, derecho y comunidad \autocite{britannica-suarez}. He recurrido a sus textos no para erudición vacía, sino para anclar esta reflexión en una tradición que, desde la escolástica hispánica, ya había formulado preguntas sobre la legitimidad del poder y la naturaleza del conocimiento.
+
+Lo que solicito no es un privilegio académico; es el reconocimiento de una metodología —la IAP— que la propia academia hispanoamericana ha validado, y de una trayectoria que, sin ser gremial, es filosófica en el sentido más antiguo: la búsqueda del saber por el saber, en diálogo con otros, sin imposturas.
 
 ** Fals Borda: ciencia y liberación
    :PROPERTIES:
    :CUSTOM_ID: fals-borda
    :END:
 
-Orlando Fals Borda (1925-2008), sociólogo colombiano, es una de las
-figuras más influyentes del pensamiento latinoamericano. Fundador de
-la IAP junto con Paulo Freire y otros intelectuales del Sur, Fals
-Borda insistía en que la investigación no puede ser neutral: o está
-al servicio de la dominación, o está al servicio de la liberación. Su
-obra, que combinaba el rigor sociológico con el compromiso político,
-demostró que es posible hacer ciencia sin renunciar a la militancia,
-y que el conocimiento producido por las comunidades campesinas,
-indígenas y afrodescendientes tiene tanto valor como el producido en
-las universidades.
+Orlando Fals Borda (1925-2008), sociólogo colombiano, es una de las figuras más influyentes del pensamiento hispanoamericano. Fundador de la IAP junto con Paulo Freire y otros intelectuales del Sur, Fals Borda insistía en que la investigación no puede ser neutral: o está al servicio de la dominación, o está al servicio de la liberación. Esta afirmación no es una consigna partidista; es una constatación epistemológica: toda ciencia —toda *ἐπιστήμη*— se ejerce en un campo de fuerzas sociales, y el científico, como el músico, elige qué lugar ocupar en ese campo.
 
-Fals Borda decía que "la ciencia no es un fetiche, sino una
-herramienta de liberación". Eso es lo que este ensayo pretende: usar
-las herramientas de la filosofía materialista, de la musicología, de
-la física y de la computación, no para adornar un currículum, sino
-para liberar un saber que ha sido producido en los márgenes de la
-academia y que merece ser reconocido en su centro.
+Su obra, que combinó el rigor sociológico con el compromiso político, demostró que es posible hacer ciencia sin renunciar a la militancia, y que el conocimiento producido por las comunidades campesinas, indígenas y afrodescendientes tiene tanto valor —epistémico y ético— como el producido en las universidades. Fals Borda decía que «la ciencia no es un fetiche, sino una herramienta de liberación» \autocite{falsborda1979}. Esa frase condensa una actitud que comparto: usar las herramientas de la filosofía materialista, de la musicología, de la física y de la computación no para adornar un currículum, sino para liberar un saber producido en los márgenes de la academia.
+
+Esta posición —como ya he señalado— no es «de izquierdas» en el sentido militante del término; es, más bien, una posición que reconoce la diferencia entre el filósofo —aquel que busca la verdad en diálogo con otros— y el sofista —aquel que usa el saber para dominar, para imponer su retórica sin someterla a crítica—. De Platón aprendí que la dialéctica es el camino. De Aristóteles, que las categorías deben estar bien delimitadas para que el pensamiento no se extravíe. Pero también aprendí de los pensadores americanos —mayas, incas, pueblos de la oralitura— que el conocimiento puede fijarse de otros modos: en glifos, en nudos, en la memoria viva de una comunidad.
+
+No soy filósofo gremial. No he sido formado en una facultad. He leído a los presocráticos, a Platón, a Aristóteles, y a muchos otros —desde los estoicos hasta los fenomenólogos, pasando por el *Doctor Eximius* Francisco Suárez y su concepción de la soberanía racional—, pero siempre en diálogo con mi práctica musical y con mi experiencia en los territorios. Este ensayo no es un ejercicio de erudición; es un intento de pensar con herramientas filosóficas, matemáticas, físicas y químicas, sin perder de vista que el conocimiento no es propiedad de nadie, sino patrimonio de quienes lo producen y lo comparten.
+
+La IAP, como metodología, es la forma práctica de esta convicción: no hay conocimiento sin participación, no hay ciencia sin comunidad, no hay liberación sin diálogo.
 
 ** Blindaje frente a dos críticas
    :PROPERTIES:
    :CUSTOM_ID: blindaje-criticas
    :END:
 
-Esta metodología me blinda frente a dos críticas que la academia
-podría hacer a mi ensayo. La primera es la del "extractivismo
-epistemológico": ¿con qué derecho viene este músico sin título a
-hablarnos de los saberes de las periferias? La respuesta es: con el
-derecho que da haber estado allí, no como turista, sino como
-compañero. La segunda es la del "subjetivismo": ¿cómo podemos confiar
-en un conocimiento que se basa en la experiencia personal? La
-respuesta es: la IAP no es subjetivismo; es intersubjetividad. El
-conocimiento que emerge de la IAP no es la opinión de un individuo;
-es el producto de una relación dialéctica entre el investigador y la
-comunidad, validado por la práctica y orientado a la transformación.
+Esta metodología me blinda frente a dos críticas que la academia podría dirigir a mi ensayo.
+
+La primera es la del extractivismo epistemológico: «¿con qué derecho viene este músico sin título a hablarnos de los saberes de las periferias? ¿Qué se cree, filósofo y además matemático, físico y químico?». La respuesta es doble. Por un lado, con el derecho que da haber estado allí —no como un curioso que observa desde la orilla, sino como un compañero de ruta que ha compartido el oficio y la fatiga—. Por otro, con el derecho que da el estudio: he seguido el hilo de la tradición —desde los presocráticos hasta los neoplatónicos, como Plotino y Porfirio—, y he aprendido que la filosofía no es un título, sino una disposición. El mismo Sócrates, a quien una pitonisa en Delfos declaró el más sabio de los atenienses, no escribió una línea ni ostentó cátedra alguna; su saber era el de quien sabe que no sabe, y su música era la filosofía misma.
+
+La segunda es la del subjetivismo: «¿cómo podemos confiar en un conocimiento que se basa en la experiencia personal?». La respuesta es: la IAP no es subjetivismo; es intersubjetividad. El conocimiento que emerge de la IAP no es la opinión de un individuo; es el producto de una relación dialéctica entre el investigador y la comunidad, validado por la práctica y orientado a la transformación. No se trata de imponer una visión personal, sino de construir, en diálogo, un saber que trasciende la mera subjetividad.
 
 ** La IAP y la figura del Sabedor
    :PROPERTIES:
    :CUSTOM_ID: iap-sabedor
    :END:
 
-La figura del "Sabedor" —contemplada en los reglamentos internos de la
-Universidad de Caldas, no en la Ley 30 de 1992, pero en consonancia
-con la figura del "Experto" definida por la Corte Constitucional en la
-Sentencia C-109 de 1994— encuentra en la IAP su fundamento
-metodológico. Si el "Sabedor" es aquella persona que, sin título
-profesional, acredita una preparación especial, empírica o técnica,
-entonces la IAP es el método que permite acreditar esa preparación: no
-mediante papeles, sino mediante la práctica transformadora. Mi
-trayectoria no es una acumulación de experiencias inconexas; es una
-investigación-acción que ha producido conocimientos musicales,
-pedagógicos y tecnológicos en contextos donde la academia no llega. Lo
-que solicito no es un privilegio; es el reconocimiento de una
-metodología que la propia academia latinoamericana ha validado.
+La figura del «Sabedor» —contemplada en los reglamentos internos de la Universidad de Caldas, no en la Ley 30 de 1992 ni en la Sentencia C-109 de 1994, pues ninguna de estas define tal figura— encuentra en la IAP su fundamento metodológico. No es un estatus jurídico, sino un reconocimiento institucional: una forma que la universidad ha creado para valorar saberes que no se acreditan mediante títulos formales, pero que son fundamentales para la vida de las comunidades.
+
+Si el Sabedor es aquella persona que, sin título profesional, acredita una preparación especial —empírica o técnica—, entonces la IAP es el método que permite acreditar esa preparación. No mediante papeles, sino mediante la práctica transformadora y el diálogo con la comunidad. Mi trayectoria no es una acumulación de experiencias inconexas; es una investigación-acción que ha producido conocimientos musicales, pedagógicos y tecnológicos en contextos donde la academia no llega.
+
+Lo que solicito no es un privilegio académico; es que el Grupo Tántalo —con sus líneas de investigación en epistemología, estética y filosofía de la ciencia— considere si mi trayectoria merece ser reconocida como un saber filosófico en sentido pleno. No vengo a pedir que se me aplique una norma que no existe; vengo a proponer un diálogo. La pregunta no es si encajo en una categoría predefinida, sino si mi práctica —mi *πρᾶξις*— puede ser pensada como filosofía, y si la filosofía, a su vez, puede ser pensada como una forma de música.
+
+El reconocimiento que busco no es el de un título; es el de una metodología —la IAP— que la propia academia hispanoamericana ha validado en la práctica, y el de una trayectoria que, sin ser gremial, es filosófica en el sentido más antiguo: la búsqueda de la verdad en diálogo con otros, sin imposturas.
 
 * Introducción: El Músico como Sujeto Ontológico, Político y Digital
   :PROPERTIES:
   :CUSTOM_ID: introduccion
   :END:
 
-El músico no es un producto de la industria y el comercio; tampoco
-niega su valía. Esta es la primera afirmación que sostiene este
-ensayo, y quizás la más incómoda para una sociedad que ha reducido el
-arte a entretenimiento o a mercancía. El músico es, ante todo, un ser
-político activo: consciente de su posición en la estructura social y
-responsable de su lugar en la historia.
+El músico no es un producto de la industria y el comercio; tampoco niega su valía. Esta afirmación, que sostiene el ensayo, puede resultar incómoda para una sociedad que ha reducido el arte a entretenimiento o a mercancía. El músico es, ante todo, un ser político activo: consciente de su posición en la estructura social y responsable de su lugar en la historia.
 
-Esta conciencia no es un lujo teórico; es una exigencia que se impone
-cuando la música se vive como un acto real en el tiempo y en el
-espacio: cuando se toca en territorios donde el Estado no hace
-presencia efectiva, cuando se comparte con músicos que aprendieron a
-escuchar antes que a leer partituras. Esta dimensión política se
-vuelve explícita en esas regiones donde la ausencia del Estado es
-llenada por otros poderes; allí la música puede ser tanto un puente
-como una amenaza, y el músico, sin buscarlo, se convierte en un
-mediador entre mundos que no se hablan.
+Esta conciencia no es un lujo teórico; es una exigencia que se impone cuando la música se vive como un acto real en el tiempo y en el espacio: cuando se toca en territorios donde el Estado no hace presencia efectiva, cuando se comparte con músicos que aprendieron a escuchar antes que a leer partituras. Esta dimensión política se vuelve explícita en esas regiones donde la ausencia del Estado es llenada por otros poderes; allí la música puede ser tanto un puente como una amenaza, y el músico, sin buscarlo, se convierte en un mediador entre mundos que no se hablan.
 
-Pero mi posición no se agota en lo político. A mis 53 años, me
-considero un estudiante permanente. Mi formación incluye también las
-ciencias de la computación, y soy un entusiasta convencido del
-software libre. No del "código abierto" —término que diluye el
-compromiso ético—, sino del software libre tal como lo defiende
-Richard Stallman: una cuestión de libertad, no de precio. Aprecio la
-filosofía de Unix, pero mi lealtad está con GNU y el kernel Linux.
-Mis herramientas cotidianas son Emacs/Lisp, la shell Bash, R para el
-análisis estadístico, y SuperCollider con sus ramificaciones
-(SuperDirt, FoxDot) para la síntesis y la composición algorítmica. El
-kernel que utilizo está compilado y optimizado para baja latencia de
-audio: una decisión técnica que es también una decisión filosófica,
-porque afirma que la materia sonora merece un tratamiento riguroso
-también en el dominio digital.
+Más allá de lo político —que es un hecho de la vida en sociedad—, mi posición se abre hacia otros campos. Me considero un aprendiz perenne —alguien que se actualiza permanentemente, que no da nada por sabido—. Mi formación incluye también las ciencias de la computación, y soy un entusiasta convencido del software libre. No del "código abierto" —término que diluye el compromiso ético—, sino del software libre tal como lo defiende Richard Stallman: una cuestión de libertad, no de precio \autocite{stallman2002}. Aprecio la filosofía de Unix, pero mi lealtad está con GNU y el kernel Linux. Mis herramientas cotidianas son Emacs/Lisp, la shell Bash, R para el análisis estadístico, y SuperCollider con sus ramificaciones (SuperDirt, FoxDot) para la síntesis y la composición algorítmica. El kernel que utilizo está compilado y optimizado para baja latencia de audio: una decisión técnica que es también una decisión filosófica, porque afirma que la materia sonora merece un tratamiento riguroso también en el dominio digital.
 
-Creo en una educación basada en el *trivium* (gramática, lógica,
-retórica) y el *quadrivium* (aritmética, geometría, música,
-astronomía): las siete artes liberales que estructuraron el
-pensamiento medieval y que, en plena era del silicio, siguen siendo
-un modelo de formación integral. Para mí es natural hacer puentes
-entre la música y el cálculo lambda, entre la organología y la
-arquitectura de un sistema operativo, entre la notación musical y un
-lenguaje de programación. Estoy acostumbrado a los cambios de
-paradigma (παράδειγμα, *parádeigma*: modelo, patrón), como los
-describe Kuhn en su epistemología \autocite{kuhn1962}.
+He obtenido resultados trabajando con una educación basada en el *trivium* (gramática, lógica, retórica) y el *quadrivium* (aritmética, geometría, música, astronomía): las siete artes liberales que estructuraron el pensamiento medieval y que, en plena era del silicio, siguen siendo un modelo de formación integral. No es una imposición; es mi método de trabajo. Para mí es natural hacer puentes entre la música y el cálculo lambda, entre la organología y la arquitectura de un sistema operativo, entre la notación musical y un lenguaje de programación. He aprendido a reconocer los cambios de paradigma —entendiendo que no todas las personas están dispuestas a asumir transformaciones tan radicales como las que supuso, por ejemplo, el paso de Newton a Einstein—, y los abordo como los describe Kuhn en su epistemología \autocite{kuhn1962}.
 
-Soy materialista, en el sentido preciso del materialismo filosófico
-de Gustavo Bueno y su desarrollo musical por Vicente Chuliá. No soy
-un repetidor de este sistema; observo que aporta herramientas
-poderosas para pensar la música y la academia, y las utilizo
-críticamente. Mi posición se sostiene sobre los tres pilares del
-pluralismo buenista: la *symploké* (συμπλοκή) —el entrelazamiento de
-las cosas, donde ni todo está conectado con todo ni nada está
-conectado con nada—, la discontinuidad de la materia —que impide
-reducirla a una unidad abstracta— y el no-monismo —que rechaza tanto
-el monismo idealista como el monismo materialista grosero—. Estos
-tres pilares no son independientes: la *symploké* es la forma misma
-del entrelazamiento entre materialidades discontinuas; la
-discontinuidad es la condición ontológica que hace imposible el
-monismo; y el no-monismo es la consecuencia de reconocer que la
-materia se da en géneros irreductibles. Mi intención en la academia
-no es obtener un título; es la investigación.
+Mi posición se sostiene sobre el materialismo filosófico de Gustavo Bueno y su desarrollo musical por Vicente Chuliá \autocite{bueno1972, chulia2019}. No pretendo ser un repetidor de este sistema; observo que aporta herramientas poderosas para pensar la música y la academia, y las utilizo críticamente. Es, más bien, la manera de articular un sistema que está en proceso —no un objeto final, sino, en música, tecnología y filosofía, un instrumento para triturar conceptos e ideas—. Mi posición se sostiene sobre los tres pilares del pluralismo buenista: la *symploké* (συμπλοκή) —el entrelazamiento de las cosas, donde ni todo está conectado con todo ni nada está conectado con nada—, la discontinuidad de la materia —que impide reducirla a una unidad abstracta— y el no-monismo —que rechaza tanto el monismo idealista como el monismo materialista grosero—. Estos tres pilares no son independientes: la *symploké* es la forma misma del entrelazamiento entre materialidades discontinuas; la discontinuidad es la condición ontológica que hace imposible el monismo; y el no-monismo es la consecuencia de reconocer que la materia se da en géneros irreductibles. Mi intención en la academia no es obtener un título; es la investigación.
 
-Como decía Gabriel García Márquez, hay dos caminos para el escritor:
-bajar el nivel de su escritura hasta el analfabetismo funcional, o
-escribir según su propio nivel, elevando la exigencia cultural y
-esperando que algún día el nivel del pueblo pueda llegar a esa altura.
-No es clasismo: es apostar por la inteligencia del lector. Esa es la
-apuesta de este ensayo.
+He recurrido en ocasiones a una imagen que García Márquez compartió en una entrevista con Germán Castro Caycedo: el escritor se enfrenta a dos caminos —bajar el nivel de su escritura hasta el analfabetismo funcional, o escribir según su propio nivel, elevando la exigencia cultural y esperando que el público pueda alcanzarlo. No es una cuestión de clasismo; es una apuesta por la inteligencia del lector. Esa es la apuesta de este ensayo.
 
-Mi trayectoria es, en ese sentido, un caso particular de una pregunta
-universal: ¿cómo se construye conocimiento musical cuando el camino
-académico se interrumpe, no por fracaso, sino por la fuerza de la
-propia experiencia?
+Mi trayectoria es, en ese sentido, un caso particular de una pregunta que bien podría formularse en los términos del imperativo categórico kantiano: ¿cómo se construye conocimiento musical cuando el camino académico se interrumpe, no por fracaso, sino por la fuerza de la propia experiencia? No se trata de una ley universal, sino de una pregunta que, como la máxima kantiana, exige ser pensada en su singularidad y, al mismo tiempo, en su posible validez para otros.
 
 * Trayectoria Formativa: Dialéctica entre Academia y Experiencia
   :PROPERTIES:
@@ -281,19 +195,32 @@ propia experiencia?
    :CUSTOM_ID: formacion-academica
    :END:
 
-*** Orquesta Sinfónica Juvenil de Bogotá
-    :PROPERTIES:
-    :CUSTOM_ID: orquesta-juvenil
-    :END:
+** Trayectoria Formativa: Dialéctica entre Academia y Experiencia
+   :PROPERTIES:
+   :CUSTOM_ID: trayectoria
+   :END:
 
-A los quince años inicié mis estudios básicos en la Orquesta
-Sinfónica Juvenil de Bogotá, donde adquirí las bases de la
-interpretación musical en formato orquestal. Mi instrumento principal
-fue la guitarra clásica, y tuve como maestro a Andrés Sánchez,
-reconocido contrabajista de la Orquesta Sinfónica de Colombia,
-arreglista y guitarrista. Con él tomé mis primeros rudimentos de
-solfeo y senté las bases técnicas que me acompañarían durante toda mi
-trayectoria.
+Mi formación no puede comprenderse como una línea recta que va de un punto A a un punto B, sino como una espiral que vuelve sobre sí misma, cada vez en un nivel distinto. Esta dialéctica entre la academia y la experiencia empírica no es una anomalía que deba ser corregida; es el método mismo por el cual he llegado a formular las preguntas que este ensayo intenta responder.
+
+
+*** Formación académica formal
+   :PROPERTIES:
+   :CUSTOM_ID: formacion-academica
+   :END:
+
+**** El maestro Fanor y los primeros recitales
+     :PROPERTIES:
+     :CUSTOM_ID: fanor
+     :END:
+
+Antes de la orquesta, hubo un maestro llamado Fanor. En el colegio, fue él quien me inculcó un amor y un compromiso con la música que no han cesado. Nos llevaba a tocar recitales en el León de Greiff de la Universidad Nacional de Colombia, compartiendo escenario con grupos como Nueva Cultura, con un repertorio que alternaba el repertorio clásico y el colombiano. Fanor no enseñaba técnica solamente; enseñaba presencia, respeto por el público, y la convicción de que la música era un oficio que merecía ser tomado en serio. Fue ese preámbulo —esa primera experiencia del escenario como un lugar sagrado y no como un escaparate— lo que me preparó para el siguiente paso.
+
+**** Orquesta Sinfónica Juvenil de Bogotá
+     :PROPERTIES:
+     :CUSTOM_ID: orquesta-juvenil
+     :END:
+
+A los quince años inicié mis estudios básicos en la Orquesta Sinfónica Juvenil de Bogotá, donde adquirí las bases de la interpretación musical en formato orquestal. Mi instrumento principal fue la guitarra clásica, y tuve como maestro a Andrés Sánchez, reconocido contrabajista de la Orquesta Sinfónica de Colombia, arreglista y guitarrista. Con él tomé mis primeros rudimentos de solfeo y senté las bases técnicas que me acompañarían durante toda mi trayectoria.
 
 *** Servicio militar — Banda de Guerra
     :PROPERTIES:
@@ -323,33 +250,24 @@ aprendí de los ensambles que dirigía el músico Edy Martínez.
     :CUSTOM_ID: universidad-cundinamarca
     :END:
 
-Tuve la oportunidad de estudiar en la Universidad de Cundinamarca,
-Facultad de Música, con una beca obtenida por haber sido el mejor
-estudiante en el primer semestre. Allí conocí a Carlos Julio Ramírez,
-Premio Nacional de Composición en Colombia. Él me alentó a estudiar
-composición y me instó a profundizar en matemáticas y física para
-entender las relaciones entre el número aritmético y el número
-geométrico. De allí la música como número en el tiempo y en el espacio.
+** Formación académica formal
+   :PROPERTIES:
+   :CUSTOM_ID: formacion-academica
+   :END:
 
-Fue él quien me puso en el centro del debate entre Pitágoras y
-Filolao, y me ayudó a tomar posición: soy no monista. La materia es
-discontinua; no se reduce a una unidad abstracta.
+Mi formación formal no fue una línea recta; fue un entramado de experiencias que, vistas en retrospectiva, configuran una unidad de sentido.
 
-En la Facultad de Música entablé también una relación fundamental con
-el maestro Jaime Cardona, decano de la facultad. Fue él quien me
-relacionó con músicos de la talla del maestro Mario Posada, primer
-violinista de la Orquesta Sinfónica de Colombia. El maestro Cardona
-era un puente viviente hacia la gran tradición sinfónica del país.
+Todo comenzó en el colegio, con el maestro Fanor. Él no me enseñó técnica solamente; me enseñó que la música era un oficio serio, que merecía presencia y respeto. Nos llevaba a tocar al León de Greiff de la Universidad Nacional, compartiendo escenario con grupos como Nueva Cultura, en un repertorio que alternaba lo clásico y lo colombiano. Esa primera experiencia del escenario como lugar sagrado —no como escaparate— fue el preámbulo de todo lo que vino después.
 
-El maestro Mario Posada me dio los rudimentos del violín. Con él
-aprendí no solo técnica, sino una forma de escuchar: la precisión del
-arco, la colocación del vibrato, la disciplina del ensayo.
+A los quince años ingresé a la Orquesta Sinfónica Juvenil de Bogotá, donde estudié guitarra clásica con Andrés Sánchez, contrabajista de la Sinfónica de Colombia. Con él senté las bases del solfeo y de la interpretación orquestal.
 
-No toco varios instrumentos por un deseo profundo: meterme en los
-zapatos del músico que los toca, comprender sus capacidades y
-límites, y así poder componer mejor. La guitarra es mi instrumento
-principal; el piano es mi herramienta pedagógica y el ordenador mi
-DAW.
+Luego vino el servicio militar, y con él una experiencia que aún no termino de procesar. Toqué el toque de silencio en la Banda de Guerra. Doce notas para honrar a los soldados caídos. Pero nunca me preguntaron si debía tocarse también cuando muere un guerrillero o un paramilitar. Esa pregunta me acompañó durante años, y aún no tiene respuesta.
+
+En la Universidad INCA de Colombia comencé estudiando guitarra clásica. Pero al escuchar los ensambles de jazz que dirigía el maestro Edy Martínez, algo cambió. Me interesó el bebop, la improvisación, la posibilidad de dialogar en tiempo real con otros músicos. Y descubrí que ese lenguaje —el jazz, el blues, el bossa nova— no era una importación ajena; podía expresar también nuestras músicas: una cumbia, un bambuco, podían ser dichos en ese idioma. Como en la filosofía, donde en América hemos aprendido a resolver los problemas de manera distinta, sin renunciar a la tradición pero sin repetirla, así también en la música: el bebop no es una copia, es una conversación con nuestras raíces.
+
+El giro filosófico llegó en la Universidad de Cundinamarca, donde obtuve una beca por haber sido el mejor estudiante del primer semestre. Allí conocí a Carlos Julio Ramírez, Premio Nacional de Composición. Él me abrió la puerta a una idea poderosa: la música como número en el tiempo y en el espacio, análoga a la aritmética y la geometría. Fue un preámbulo valioso, pero no me quedé allí. Tomé una ruta diferente: la música no es una ciencia aplicada; se ayuda de las matemáticas y de la física para explicar ciertos fenómenos, pero las desborda. No hay un cierre categorial en la música como lo hay en las ciencias —o, más precisamente, hay otro tipo de cierre, uno que no se reduce a teoremas ni a leyes físicas. La música piensa con la materia sonora, no con conceptos abstractos; su lógica es otra.
+
+En la misma facultad, el maestro Jaime Cardona me relacionó con Mario Posada, primer violinista de la Orquesta Sinfónica de Colombia. Con él aprendí los rudimentos del violín, y comprendí que tocar varios instrumentos no es un afán de virtuosismo; es una forma de meterse en la piel del otro músico, de entender sus límites y posibilidades para componer mejor. Mi instrumento principal es la guitarra; el piano es mi herramienta pedagógica; el ordenador, mi estudio.
 
 ** Formación autodidacta en Ciencias de la Computación y Software Libre
    :PROPERTIES:
@@ -403,18 +321,12 @@ sigue sonando. A veces el portátil colapsa —un xrun, un buffer
 underrun—, pero el músico sigue adelante. No hay errores en la música,
 decía Miles Davis: se generan oportunidades.
 
-*** El método: cambiar pantallas, heredar del jazz
+*** La polifonía del trabajo: voces que cambian de cantus firmus
     :PROPERTIES:
-    :CUSTOM_ID: metodo-jazz
+    :CUSTOM_ID: polifonia-trabajo
     :END:
 
-Mi metodología de trabajo es una herencia del jazz: cambio de
-pantallas para ir viendo el código preestablecido, lo modifico en la
-marcha, lo llevo al extremo. No parto de la nada —*ex nihilo*—:
-modifico, forkéo, reapropio. La mayoría de mis códigos son
-modificaciones de códigos libres. Como dicta la ética hacker: la
-información debe ser libre, el conocimiento no tiene dueño, y el
-mérito se juzga por la calidad del trabajo, no por los títulos.
+Mi metodología de trabajo es una polifonía. No hay una voz principal que domine; hay capas que se superponen, se responden, se transforman. Cambio de pantallas —del código al audio, del análisis al gesto—, voy viendo el material preestablecido, lo modifico en la marcha, lo llevo al extremo. No parto de la nada —*ex nihilo*—: modifico, forkéo, reapropio. La mayoría de mis códigos son modificaciones de códigos libres. Como dicta la ética hacker: la información debe ser libre, el conocimiento no tiene dueño, y el mérito se juzga por la calidad del trabajo, no por los títulos. Pero esa ética no es una declaración; es una práctica que se ejecuta en el momento, como un músico de jazz que toma un *standard* y lo hace suyo cambiando el *cantus firmus* sobre la marcha.
 
 ** Formación empírica y experiencia de campo
    :PROPERTIES:
@@ -463,62 +375,29 @@ herramientas sin perder su esencia.
     :CUSTOM_ID: aguablanca
     :END:
 
-He estado en guetos como el Distrito de Aguablanca en Cali. Allí las
-personas con poco acceso a la educación quieren expresarse como
-pueden, y encuentran en la música de las periferias —como el hip hop
-crítico de Asilo 38 y el álbum *Anarcolombia*— un grito contra una
-sociedad violenta. En ese álbum participé como arreglista y productor.
-He visto morir a músicos con talento inmenso; compañeros que cayeron
-en el camino. He entendido que la música en Colombia no es un lujo:
-es un acto de supervivencia, una forma de resistencia y de memoria.
+He conocido personas que viven en el Distrito de Aguablanca, en Cali, y que enfrentan la violencia día a día. Para ellas, la música es una manera de expresar lo que viven; los libera de ese círculo vicioso que genera la falta de educación. Allí la música no era un refugio; era una resistencia. En los ensambles de salsa, en las agrupaciones de rap, en las comparsas de tambores, la música era una forma de decir "estoy vivo" en medio de la muerte.
 
-*** La Tropa Malagamba: una biografía de *symploké*
-    :PROPERTIES:
-    :CUSTOM_ID: tropa-malagamba
-    :END:
+En ese contexto conocí a Asilo 38, grupo de rap fundado en el mismo Distrito de Aguablanca en 1999[fn:2]. Colaboré activamente en la creación musical de su álbum *Anarkolombia* (2016)[fn:3] y participé en las conversaciones sobre las letras que iban a dar el mensaje. No era solo música: era un grito contra el Plan Colombia, el TLC, los crímenes de Estado, la guerra y el paramilitarismo. Por esas manifestaciones artísticas fuimos marginados; ese tipo de música no podía sonar en la radio. Era —y es— resistencia cultural. En ese trabajo entendí que la música en Colombia no es un lujo: es un acto de supervivencia, una forma de resistencia y de memoria. He visto morir a músicos con talento inmenso; compañeros que cayeron en el camino. El silencio que seguía a una balacera era el preludio de una canción que volvía a empezar. Allí aprendí que la música puede ser un arma, pero también un escudo.
 
-A principios de los años dos mil, en una montaña de La Calera, conocí
-a Francisco Magyarof —Panchis—, guitarrista gitano formado en la
-tradición de Django Reinhardt. Desde el primer acorde, hubo
-*symploké*: dos tradiciones discontinuas —el jazz gitano y la
-formación clásica— que se entrelazaban sin fundirse.
+[fn:2] Asilo 38 es un grupo de rap y hip hop colombiano originario del Distrito de Aguablanca en Cali. Su nombre hace referencia a la antigua nomenclatura del barrio. El grupo ha sido un referente del rap social y crítico en Colombia desde finales de los años 1990.
 
-Panchis tenía el flamenco interiorizado, pero lo interpretaba de una
-manera que los académicos llamarían "sucia". No era un defecto: era
-un estilo. Con él aprendí los palos flamencos. Todo era oral:
-imitación, admiración mutua. Yo escribía en notación musical lo que
-tocábamos —$M_1$ sobre el papel, $M_3$ en gestación—. Fue entonces
-cuando descubrí la progresión napolitana y entendí, por fin, qué era
-el fraseo.
+[fn:3] *Anarkolombia* (2016) es el álbum más reconocido de Asilo 38. Sus letras abordan temas como el conflicto armado colombiano, la violencia estatal, el paramilitarismo y la resistencia cultural desde las periferias urbanas.
 
-Con él fundé la Tropa Malagamba, un grupo callejero que incorporaba
-bandola llanera, tiple, viola, banjo y guitarra. Luego llegó César
-Reyes, sobrino del maestro Ernesto Díaz —fundador de la Orquesta
-Sinfónica de Colombia—, tocando la viola. El grupo creció hasta
-convertirse en Ganjariquies: una banda eléctrica de quince
-integrantes, parte del movimiento de Resistencia Cultural que, con
-hip hop, ska y reggae, denunciaba los crímenes de Estado en pueblos
-donde la presencia del gobierno era un rumor.
 
-Para entrar a esos territorios había que ir como misionero
-claretiano. Los Misioneros Claretianos fueron nuestro salvoconducto.
+** Tropa Malagamba: fusión, calle y resistencia
+   :PROPERTIES:
+   :CUSTOM_ID: tropa-malagamba
+   :END:
 
-César Reyes —el violista de la Tropa— era sobrino del maestro Ernesto
-Díaz. Yo estudié en esa orquesta cuando era adolescente. César me
-presentó a su madre, Teresa, sobrina del maestro Ernesto. Y a su
-padrastro: Andrés Sánchez. Mi primer maestro de guitarra. El hombre
-que me enseñó los rudimentos del solfeo cuando yo tenía quince años.
-La *symploké* no es un concepto. Es una biografía.
+Tropa Malagamba fue, en su origen, un grupo acústico que tocaba en las calles, en el SENA y en las universidades. Banjo, guitarra, contrabajo, viola y dos cantantes —los hermanos Maggaroff, Juanita la Francesa, César Reyes y este servidor— conformaban el núcleo inicial. Pero el grupo no se quedó en un formato fijo; se transformó en una banda de fusión que incorporó hip hop, reggae, ska, blues, música gitana, flamenco, bossa y repertorio clásico. No era un eclecticismo de catálogo; era un reflejo de los músicos que llegaban y de los públicos que encontrábamos en cada esquina.
 
-Las categorías del materialismo filosófico no eran teoría: eran
-práctica. La materia sonora ($M_1$) vibraba entre la guitarra gitana
-y la barroca; la percepción ($M_2$) de un público que bailaba sin
-saber qué era una progresión napolitana; y el concepto ($M_3$) se
-materializaba en letras que hoy son documentos históricos.
+Con el tiempo, la Tropa se entrelazó con otros grupos de resistencia social: Por razones de Estado, El Foribundo Serna y Skartel, entre otros. Sus integrantes se sumaron a nuestros ensambles, y nosotros a los suyos. No fue una fusión de estilos solamente; fue una fusión de oficios, de trayectorias, de formas de entender la música como un acto político. En la calle, la música no se toca para un público pasivo; se toca con la gente, y la gente responde.
 
-Hace unos años perdí el contacto con mi grupo. La música en Colombia
-no es entretenimiento: es supervivencia. Y a veces, ni siquiera eso
-alcanza.
+Esa experiencia me enseñó que la música de ensamble no es una suma de individualidades, sino una entidad que emerge del encuentro —una *συμπλοκή* en acto. Cada músico aporta su voz, pero la voz colectiva es más que la suma de esas voces. En la Tropa aprendí que el músico no es un solista que brilla; es un eslabón en una cadena que solo funciona si todos tiran en la misma dirección, aunque cada uno tenga su propio ritmo.
+
+Las categorías del materialismo filosófico no eran teoría: eran práctica. La materia sonora (*M₁*) vibraba entre la guitarra gitana y la barroca; la percepción (*M₂*) de un público que bailaba sin saber qué era una progresión napolitana; y el concepto (*M₃*) se materializaba en letras que hoy son documentos históricos.
+
+Hace unos años perdí el contacto con la Tropa. No fue el desgaste del tiempo ni la distancia geográfica; fue que muchos de mis compañeros tuvieron que irse del país por razones de seguridad. Sus posiciones políticas —las mismas que cantábamos en las calles— les costaron el exilio. La música en Colombia no es entretenimiento: es supervivencia. Y a veces, ni siquiera eso alcanza.
 
 # ============================================================
 # PARTE 2: QUÉ PIENSO
@@ -628,34 +507,11 @@ precisamente porque ninguna de ellas puede absorber a las otras dos.
    :CUSTOM_ID: antecedentes-filosoficos
    :END:
 
-El materialismo filosófico no surge de la nada. Sus tesis —la
-discontinuidad de la materia, el entrelazamiento de géneros, la música
-como ontología— fueron anticipadas, negadas o desviadas por la
-tradición filosófica anterior. Recuperar esa tradición no es un
-ejercicio de arqueología: es un acto de justicia epistémica.
+El materialismo filosófico no surge de la nada. Sus tesis —la discontinuidad de la materia, el entrelazamiento de géneros, la música como ontología— fueron anticipadas, negadas o desviadas por la tradición filosófica anterior. Recuperar esa tradición no es un ejercicio de arqueología: es un acto de justicia epistémica.
 
-Pero antes de la tradición escrita, hubo música. Los hallazgos
-arqueológicos lo confirman: en la cueva de Hohle Fels, en el suroeste
-de Alemania, se encontraron flautas talladas en hueso de buitre y
-marfil de mamut datadas entre 40,000 y 43,000 años de antigüedad
-[cite:@conard2009]. Son los instrumentos musicales más antiguos
-conocidos fabricados por *Homo sapiens*. En Divje Babe, Eslovenia, un
-fémur de oso de las cavernas con perforaciones —datado entre 43,000 y
-60,000 años— podría ser una flauta neandertal, aunque su origen sigue
-siendo debatido [cite:@turk1997].
+Pero antes de la tradición escrita, y aun antes de la filosofía, hubo música. Los hallazgos arqueológicos lo confirman[fn:arqueo]. El sonido no necesita concepto (*M₃*) para existir: necesita materia que vibre (*M₁*) y un oído que lo perciba (*M₂*). Los filósofos griegos no inventaron la música; heredaron una práctica milenaria y la sometieron a reflexión sistemática. Lo que sigue es el rastreo de esa reflexión —desde los presocráticos hasta Aristóteles— atendiendo no solo a lo que pensaron, sino a las tecnologías concretas que tenían a su disposición para pensarla.
 
-Estos hallazgos revelan algo fundamental: la música no es un invento
-de la civilización. Es una práctica material que antecede a la
-escritura, a la agricultura, al Estado. Antes de que existiera la
-palabra «filosofía», ya existía la vibración organizada. El sonido no
-necesita concepto ($M_3$) para existir: necesita materia que vibre
-($M_1$) y un oído que la perciba ($M_2$).
-
-Los filósofos griegos no inventaron la música. Heredaron una práctica
-milenaria y la sometieron a reflexión sistemática. Lo que sigue es el
-rastreo de esa reflexión, desde los presocráticos hasta Aristóteles,
-atendiendo no solo a lo que pensaron, sino a las tecnologías concretas
-que tenían a su disposición para pensarla.
+[fn:arqueo] Los instrumentos musicales más antiguos conocidos fabricados por *Homo sapiens* son las flautas talladas en hueso de buitre y marfil de mamut encontradas en la cueva de Hohle Fels (suroeste de Alemania), datadas entre 40,000 y 43,000 años de antigüedad \autocite{conard2009}. En Divje Babe (Eslovenia), un fémur de oso de las cavernas con perforaciones —datado entre 43,000 y 60,000 años— podría ser una flauta neandertal, aunque su origen sigue siendo debatido \autocite{turk1997}. Estos hallazgos revelan que la música no es un invento de la civilización, sino una práctica material que antecede a la escritura, a la agricultura y al Estado.
 
 *** Los presocráticos: el número, el devenir y el ser
     :PROPERTIES:
